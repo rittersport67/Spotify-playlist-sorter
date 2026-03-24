@@ -117,14 +117,21 @@ def fetch_new_liked_tracks(sp: spotipy.Spotify, last_id: Optional[str]) -> list[
 
 
 def fetch_audio_features(sp: spotipy.Spotify, track_ids: list[str]) -> dict[str, dict]:
-    """Retourne un dict {track_id: features}. Batch de 100 max."""
+    """Retourne un dict {track_id: features}. Batch de 100 max.
+    Retourne un dict vide si l'endpoint est inaccessible (403)."""
     result = {}
     for i in range(0, len(track_ids), 100):
         batch_ids = track_ids[i:i + 100]
-        features = sp.audio_features(batch_ids)
-        for f in features:
-            if f:
-                result[f["id"]] = f
+        try:
+            features = sp.audio_features(batch_ids) or []
+            for f in features:
+                if f:
+                    result[f["id"]] = f
+        except spotipy.exceptions.SpotifyException as e:
+            if e.http_status == 403:
+                log.warning("Audio features inaccessibles (403) — classification sans features audio.")
+                return {}
+            raise
     return result
 
 
