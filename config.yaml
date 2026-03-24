@@ -1,0 +1,144 @@
+# ============================================================
+# Spotify Sorter — Configuration des genres
+# ============================================================
+# Chaque genre définit :
+#   keywords        : mots présents dans les genres Spotify de l'artiste
+#   audio_features  : règles sur les features Spotify (min/max entre 0 et 1, sauf tempo en BPM)
+#   confidence_threshold : score minimum pour valider la classification par règles (0 à 1)
+#
+# Si le score est insuffisant → fallback LLM (llama-3.1-8b-instant via Groq)
+# Si le genre retourné par le LLM n'est pas dans cette liste → nouvelle playlist créée automatiquement
+# ============================================================
+
+genres:
+
+  Hip-Hop:
+    keywords:
+      - hip hop
+      - rap
+      - trap
+      - drill
+      - boom bap
+      - gangsta rap
+    audio_features:
+      speechiness:
+        min: 0.1
+      danceability:
+        min: 0.55
+    confidence_threshold: 0.6
+
+  Électro:
+    keywords:
+      - electronic
+      - edm
+      - house
+      - techno
+      - trance
+      - electro
+      - dance
+      - club
+    audio_features:
+      energy:
+        min: 0.65
+      acousticness:
+        max: 0.25
+    confidence_threshold: 0.6
+
+  Rock:
+    keywords:
+      - rock
+      - metal
+      - punk
+      - grunge
+      - alternative rock
+      - indie rock
+      - hard rock
+    audio_features:
+      energy:
+        min: 0.6
+      acousticness:
+        max: 0.35
+    confidence_threshold: 0.55
+
+  Pop:
+    keywords:
+      - pop
+      - synth-pop
+      - indie pop
+      - electropop
+      - dream pop
+    audio_features:
+      danceability:
+        min: 0.5
+      valence:
+        min: 0.3
+    confidence_threshold: 0.5
+
+  R&B:
+    keywords:
+      - r&b
+      - soul
+      - neo soul
+      - contemporary r&b
+      - funk
+    audio_features:
+      danceability:
+        min: 0.5
+      energy:
+        max: 0.75
+    confidence_threshold: 0.55
+
+  Acoustique:
+    keywords:
+      - acoustic
+      - folk
+      - singer-songwriter
+      - country
+      - bluegrass
+    audio_features:
+      acousticness:
+        min: 0.6
+      energy:
+        max: 0.6
+    confidence_threshold: 0.6
+
+  Jazz:
+    keywords:
+      - jazz
+      - bebop
+      - swing
+      - blues
+      - bossa nova
+    audio_features:
+      instrumentalness:
+        min: 0.1
+      acousticness:
+        min: 0.3
+    confidence_threshold: 0.55
+
+  K-Pop:
+    keywords:
+      - k-pop
+      - korean pop
+      - k pop
+    audio_features:
+      danceability:
+        min: 0.55
+      energy:
+        min: 0.5
+    confidence_threshold: 0.65
+
+  Classique:
+    keywords:
+      - classical
+      - orchestra
+      - symphony
+      - chamber music
+      - opera
+      - piano
+    audio_features:
+      instrumentalness:
+        min: 0.6
+      acousticness:
+        min: 0.5
+    confidence_threshold: 0.65

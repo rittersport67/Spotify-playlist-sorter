@@ -191,6 +191,15 @@ cython_debug/
 # Ruff stuff:
 .ruff_cache/
 
+# macOS
+.DS_Store
+
+# Spotify sorter
+.spotify_cache
+bin/
+include/
+pyvenv.cfg
+
 # PyPI configuration file
 .pypirc
 

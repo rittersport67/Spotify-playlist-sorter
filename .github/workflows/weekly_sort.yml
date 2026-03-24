@@ -1,0 +1,51 @@
+name: Spotify Sorter — Run hebdomadaire
+
+on:
+  schedule:
+    # Chaque lundi à 8h00 UTC
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+    # Permet de lancer manuellement depuis l'onglet Actions
+
+jobs:
+  sort:
+    name: Classer les nouveaux likes
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # nécessaire pour committer state.json + logs
+
+    steps:
+      - name: Checkout du repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installation des dépendances
+        run: pip install -r requirements.txt
+
+      - name: Écriture du cache Spotify (refresh token)
+        run: |
+          echo '${{ secrets.SPOTIFY_CACHE }}' > .spotify_cache
+        # Le contenu de SPOTIFY_CACHE est le JSON généré lors de l'auth initiale
+
+      - name: Lancer le sorter
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_REDIRECT_URI: ${{ secrets.SPOTIFY_REDIRECT_URI }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python sorter.py
+
+      - name: Commit des fichiers mis à jour
+        run: |
+          git config user.name "spotify-sorter[bot]"
+          git config user.email "spotify-sorter@users.noreply.github.com"
+          git add state.json HISTORY.md logs/
+          git diff --cached --quiet || git commit -m "chore: run $(date +'%Y-%m-%d') — mise à jour état et logs"
+          git push
