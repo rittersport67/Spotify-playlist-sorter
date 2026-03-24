@@ -14,6 +14,10 @@ import json
 from pathlib import Path
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 SCOPE = (
     "user-library-read "
@@ -27,7 +31,7 @@ CACHE_PATH = Path(".spotify_cache")
 def main():
     sp = spotipy.Spotify(
         auth_manager=SpotifyOAuth(
-            client_id=os.env iron["SPOTIFY_CLIENT_ID"],
+            client_id=os.environ["SPOTIFY_CLIENT_ID"],
             client_secret=os.environ["SPOTIFY_CLIENT_SECRET"],
             redirect_uri=os.environ["SPOTIFY_REDIRECT_URI"],
             scope=SCOPE,
