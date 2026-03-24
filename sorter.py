@@ -136,14 +136,21 @@ def fetch_audio_features(sp: spotipy.Spotify, track_ids: list[str]) -> dict[str,
 
 
 def fetch_artist_genres(sp: spotipy.Spotify, artist_ids: list[str]) -> dict[str, list[str]]:
-    """Retourne un dict {artist_id: [genres]}. Batch de 50 max."""
+    """Retourne un dict {artist_id: [genres]}. Batch de 50 max.
+    Retourne un dict vide si l'endpoint est inaccessible (403)."""
     result = {}
     unique_ids = list(set(artist_ids))
     for i in range(0, len(unique_ids), 50):
-        batch = sp.artists(unique_ids[i:i + 50])
-        for artist in batch["artists"]:
-            if artist:
-                result[artist["id"]] = artist.get("genres", [])
+        try:
+            batch = sp.artists(unique_ids[i:i + 50]) or {}
+            for artist in batch.get("artists", []):
+                if artist:
+                    result[artist["id"]] = artist.get("genres", [])
+        except spotipy.exceptions.SpotifyException as e:
+            if e.http_status == 403:
+                log.warning("Genres artistes inaccessibles (403) — classification via LLM uniquement.")
+                return {}
+            raise
     return result
 
 
