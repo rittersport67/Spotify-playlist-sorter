@@ -51,3 +51,30 @@ jobs:
           git add state.json HISTORY.md logs/
           git diff --cached --quiet || git commit -m "chore: run $(date +'%Y-%m-%d %H:%M UTC') — mise à jour état et logs"
           git push
+
+      - name: Notification push
+        if: always()
+        run: |
+          STATUS="${{ job.status }}"
+          LATEST_LOG=$(ls -t logs/*.md 2>/dev/null | head -1)
+          if [ -n "$LATEST_LOG" ]; then
+            SUMMARY=$(awk '/## Résumé/{f=1} f && /\|/{print} /## Détail/{exit}' "$LATEST_LOG" | grep -v "Métrique" | grep -v "^|[-]" | sed 's/|//g;s/^ *//;s/ *$//')
+          else
+            SUMMARY="Aucun log disponible"
+          fi
+          if [ "$STATUS" = "success" ]; then
+            TITLE="Spotify Sorter OK"
+            PRIORITY="default"
+            TAGS="white_check_mark,spotify"
+          else
+            TITLE="Spotify Sorter ECHOUE"
+            PRIORITY="high"
+            TAGS="x,spotify"
+            SUMMARY="Consulte les logs GitHub Actions."
+          fi
+          printf '%s\n\n%s' "$(date +'%H:%M UTC')" "$SUMMARY" | curl -s \
+            -H "Title: $TITLE" \
+            -H "Priority: $PRIORITY" \
+            -H "Tags: $TAGS" \
+            --data-binary @- \
+            "https://ntfy.sh/${{ secrets.NTFY_TOPIC }}"
