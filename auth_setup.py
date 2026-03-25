@@ -10,7 +10,6 @@ Son contenu doit être copié dans le secret GitHub SPOTIFY_CACHE.
 """
 
 import os
-import json
 from pathlib import Path
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth

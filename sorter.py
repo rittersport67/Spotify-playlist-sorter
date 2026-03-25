@@ -366,7 +366,6 @@ def update_history(report: str, run_datetime: str) -> None:
 
 def main() -> None:
     log.info("=== Spotify Sorter — démarrage ===")
-    run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     run_datetime = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     config = load_config()
