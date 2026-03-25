@@ -300,48 +300,53 @@ def classify_track(
 # ---------------------------------------------------------------------------
 
 def generate_run_report(
-    run_date: str,
+    run_datetime: str,
     stats: dict,
     classifications: list[dict],
+    new_genres: list[str] = [],
 ) -> str:
     lines = [
-        f"# Run du {run_date}",
+        f"# Run du {run_datetime}",
         "",
         "## Résumé",
         "",
-        f"| Métrique | Valeur |",
-        f"|----------|--------|",
+        "| Métrique | Valeur |",
+        "|----------|--------|",
         f"| Titres traités | {stats['total']} |",
         f"| Ajoutés aux playlists | {stats['added']} |",
-        f"| Ignorés (déjà classés) | {stats['skipped']} |",
-        f"| Classifiés par règles | {stats['rule_classified']} |",
+        f"| Ignorés | {stats['skipped']} |",
         f"| Classifiés par Last.fm | {stats['lastfm_classified']} |",
         f"| Classifiés par LLM | {stats['llm_classified']} |",
         f"| Nouvelles playlists créées | {stats['new_playlists']} |",
         "",
     ]
 
+    if new_genres:
+        lines += [
+            "## Nouveaux genres découverts cette session",
+            "",
+        ] + [f"- `{g}`" for g in new_genres] + [""]
+
     if classifications:
         lines += [
             "## Détail des classifications",
             "",
-            "| Titre | Artiste | Genre | Méthode |",
-            "|-------|---------|-------|---------|",
+            "| Titre | Artiste | Genre |",
+            "|-------|---------|-------|",
         ]
         for c in classifications:
-            lines.append(
-                f"| {c['name']} | {c['artist']} | {c['genre']} | {c['method']} |"
-            )
+            lines.append(f"| {c['name']} | {c['artist']} | {c['genre']} |")
         lines.append("")
 
     return "\n".join(lines)
 
 
-def update_history(report: str, run_date: str) -> None:
+def update_history(report: str, run_datetime: str) -> None:
     """Prepend le rapport dans HISTORY.md et écrit le fichier de log du jour."""
     # Log individuel
     LOGS_DIR.mkdir(exist_ok=True)
-    log_file = LOGS_DIR / f"{run_date}.md"
+    log_filename = run_datetime.replace(" ", "_").replace(":", "-")
+    log_file = LOGS_DIR / f"{log_filename}.md"
     log_file.write_text(report)
 
     # HISTORY.md — le plus récent en premier
@@ -352,7 +357,7 @@ def update_history(report: str, run_date: str) -> None:
     else:
         HISTORY_PATH.write_text(report)
 
-    log.info(f"Logs écrits : logs/{run_date}.md + HISTORY.md")
+    log.info(f"Logs écrits : logs/{log_filename}.md + HISTORY.md")
 
 
 # ---------------------------------------------------------------------------
@@ -362,6 +367,7 @@ def update_history(report: str, run_date: str) -> None:
 def main() -> None:
     log.info("=== Spotify Sorter — démarrage ===")
     run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    run_datetime = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     config = load_config()
     state = load_state()
@@ -401,8 +407,8 @@ def main() -> None:
     if not tracks:
         log.info("Rien de nouveau. Fin du run.")
         update_history(
-            generate_run_report(run_date, stats, classifications),
-            run_date,
+            generate_run_report(run_datetime, stats, classifications),
+            run_datetime,
         )
         return
 
@@ -461,8 +467,9 @@ def main() -> None:
     save_state(state)
 
     # 6. Rapport
-    report = generate_run_report(run_date, stats, classifications)
-    update_history(report, run_date)
+    new_genres = [g for g in playlist_buckets if g not in list(genre_rules.keys())]
+    report = generate_run_report(run_datetime, stats, classifications, new_genres)
+    update_history(report, run_date, run_datetime)
 
     log.info("=== Run terminé ===")
     log.info(
