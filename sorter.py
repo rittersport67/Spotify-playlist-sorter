@@ -399,8 +399,8 @@ def main() -> None:
     log.info(f"Dernier ID traité : {last_id or 'aucun (premier run)'}")
     tracks = fetch_new_liked_tracks(sp, last_id)
     if MAX_TRACKS:
-        log.info(f"{len(tracks)} nouveaux titres à traiter (limité à {MAX_TRACKS})")
-        tracks = tracks[:MAX_TRACKS]
+        tracks = tracks[-MAX_TRACKS:]
+        log.info(f"{len(tracks)} nouveaux titres à traiter (limité aux {MAX_TRACKS} plus anciens)")
     else:
         log.info(f"{len(tracks)} nouveaux titres à traiter")
 
@@ -469,7 +469,7 @@ def main() -> None:
     # 6. Rapport
     new_genres = [g for g in playlist_buckets if g not in list(genre_rules.keys())]
     report = generate_run_report(run_datetime, stats, classifications, new_genres)
-    update_history(report, run_date, run_datetime)
+    update_history(report, run_datetime)
 
     log.info("=== Run terminé ===")
     log.info(
