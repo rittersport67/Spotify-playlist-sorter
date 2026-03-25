@@ -1,3 +1,33 @@
+# Run du 2026-03-25 22:18 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 2 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| The End - Carnage & Breaux Remix | Eptic | Dubstep |
+| Rail Breaker (feat. Rico Act) | Riot Ten | Dubstep |
+| Au DD | PNL | Hip-Hop |
+| SouthSide | DJ Snake | EDM |
+| Magenta Riddim | DJ Snake | Riddim |
+| Taki Taki (with Selena Gomez, Ozuna & Cardi B) | DJ Snake | EDM |
+| Lights Go Down - Sikdope Remix | Zeds Dead | EDM |
+| Lights Go Down - Duke & Jones Remix | Zeds Dead | EDM |
+| Lights Go Down - Gentlemens Club Remix | Zeds Dead | EDM |
+| Lights Go Down - LICK Remix | Zeds Dead | Dubstep |
+
+---
+
 # Run du 2026-03-25 22:05 UTC
 
 ## Résumé
