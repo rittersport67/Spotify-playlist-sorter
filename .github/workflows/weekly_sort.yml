@@ -59,8 +59,10 @@ jobs:
           LATEST_LOG=$(ls -t logs/*.md 2>/dev/null | head -1)
           if [ -n "$LATEST_LOG" ]; then
             SUMMARY=$(awk '/## Résumé/{f=1} f && /\|/{print} /## Détail/{exit}' "$LATEST_LOG" | grep -v "Métrique" | grep -v "^|[-]" | sed 's/|//g;s/^ *//;s/ *$//')
+            DETAILS=$(awk '/## Détail des classifications/{f=1; next} f && /\|/{print}' "$LATEST_LOG" | grep -v "Titre" | grep -v "^|[-]" | sed 's/|/ |/g' | head -20)
           else
             SUMMARY="Aucun log disponible"
+            DETAILS=""
           fi
           if [ "$STATUS" = "success" ]; then
             TITLE="Spotify Sorter OK"
@@ -71,8 +73,9 @@ jobs:
             PRIORITY="high"
             TAGS="x,spotify"
             SUMMARY="Consulte les logs GitHub Actions."
+            DETAILS=""
           fi
-          printf '%s\n\n%s' "$(date +'%H:%M UTC')" "$SUMMARY" | curl -s \
+          printf '%s\n\n%s\n\n%s' "$(date +'%H:%M UTC')" "$SUMMARY" "$DETAILS" | curl -s \
             -H "Title: $TITLE" \
             -H "Priority: $PRIORITY" \
             -H "Tags: $TAGS" \
