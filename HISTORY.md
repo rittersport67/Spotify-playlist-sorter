@@ -1,3 +1,33 @@
+# Run du 2026-03-25 23:25 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Get Low | Dillon Francis | EDM |
+| Lunatic | DJ MERCER | EDM |
+| Propaganda | DJ Snake | EDM |
+| Oh Me Oh My | DJ Snake | EDM |
+| Broken Summer | DJ Snake | EDM |
+| Ocho Cinco | DJ Snake | EDM |
+| You Know You Like It | DJ Snake | EDM |
+| Sahara | DJ Snake | EDM |
+| Gassed Up | Jauz | Dubstep |
+| Public Enemy | Yellow Claw | Hip-Hop |
+
+---
+
 # Run du 2026-03-25 22:54 UTC
 
 ## Résumé
