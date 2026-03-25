@@ -40,6 +40,7 @@ jobs:
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           SPOTIFY_REDIRECT_URI: ${{ secrets.SPOTIFY_REDIRECT_URI }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
         run: python sorter.py
 
       - name: Commit des fichiers mis à jour

@@ -27,16 +27,13 @@ genres:
         min: 0.55
     confidence_threshold: 0.6
 
-  Électro:
+  EDM:
     keywords:
       - electronic
       - edm
       - house
-      - techno
       - trance
       - electro
-      - dance
-      - club
     audio_features:
       energy:
         min: 0.65
@@ -133,8 +130,6 @@ genres:
       - dubstep
       - brostep
       - bass music
-      - electro bass
-      - uk bass
     audio_features:
       energy:
         min: 0.75

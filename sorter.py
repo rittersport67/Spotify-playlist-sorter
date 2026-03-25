@@ -6,10 +6,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
+import requests
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from groq import Groq
 import yaml
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ---------------------------------------------------------------------------
 # Config
@@ -22,6 +26,8 @@ HISTORY_PATH = BASE_DIR / "HISTORY.md"
 LOGS_DIR = BASE_DIR / "logs"
 
 GROQ_MODEL = "llama-3.1-8b-instant"
+LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY")
+MAX_TRACKS = int(os.environ["MAX_TRACKS"]) if os.environ.get("MAX_TRACKS") else None
 SPOTIFY_SCOPE = (
     "user-library-read "
     "playlist-read-private "
@@ -116,41 +122,19 @@ def fetch_new_liked_tracks(sp: spotipy.Spotify, last_id: Optional[str]) -> list[
     return tracks
 
 
-def fetch_audio_features(sp: spotipy.Spotify, track_ids: list[str]) -> dict[str, dict]:
-    """Retourne un dict {track_id: features}. Batch de 100 max.
-    Retourne un dict vide si l'endpoint est inaccessible (403)."""
-    result = {}
-    for i in range(0, len(track_ids), 100):
-        batch_ids = track_ids[i:i + 100]
-        try:
-            features = sp.audio_features(batch_ids) or []
-            for f in features:
-                if f:
-                    result[f["id"]] = f
-        except spotipy.exceptions.SpotifyException as e:
-            if e.http_status == 403:
-                log.warning("Audio features inaccessibles (403) — classification sans features audio.")
-                return {}
-            raise
-    return result
 
-
-def fetch_artist_genres(sp: spotipy.Spotify, artist_ids: list[str]) -> dict[str, list[str]]:
-    """Retourne un dict {artist_id: [genres]}. Batch de 50 max.
-    Retourne un dict vide si l'endpoint est inaccessible (403)."""
+def fetch_existing_playlists(sp: spotipy.Spotify) -> dict[str, str]:
+    """Retourne un dict {nom_playlist: id} des playlists de l'utilisateur."""
     result = {}
-    unique_ids = list(set(artist_ids))
-    for i in range(0, len(unique_ids), 50):
-        try:
-            batch = sp.artists(unique_ids[i:i + 50]) or {}
-            for artist in batch.get("artists", []):
-                if artist:
-                    result[artist["id"]] = artist.get("genres", [])
-        except spotipy.exceptions.SpotifyException as e:
-            if e.http_status == 403:
-                log.warning("Genres artistes inaccessibles (403) — classification via LLM uniquement.")
-                return {}
-            raise
+    offset = 0
+    while True:
+        data = sp._get("me/playlists", limit=50, offset=offset)
+        for item in data.get("items", []):
+            if item:
+                result[item["name"]] = item["id"]
+        if data.get("next") is None:
+            break
+        offset += 50
     return result
 
 
@@ -161,13 +145,11 @@ def get_or_create_playlist(sp: spotipy.Spotify, name: str, state: dict) -> str:
     if name in playlist_ids:
         return playlist_ids[name]
 
-    user_id = sp.current_user()["id"]
-    playlist = sp.user_playlist_create(
-        user=user_id,
-        name=name,
-        public=False,
-        description=f"Auto-générée par Spotify Sorter — {name}",
-    )
+    playlist = sp._post("me/playlists", payload={
+        "name": name,
+        "public": False,
+        "description": f"Auto-générée par Spotify Sorter — {name}",
+    })
     playlist_ids[name] = playlist["id"]
     log.info(f"Playlist créée : '{name}' ({playlist['id']})")
     return playlist["id"]
@@ -176,7 +158,8 @@ def get_or_create_playlist(sp: spotipy.Spotify, name: str, state: dict) -> str:
 def add_tracks_to_playlist(sp: spotipy.Spotify, playlist_id: str, track_ids: list[str]) -> None:
     """Ajoute des titres par batch de 100."""
     for i in range(0, len(track_ids), 100):
-        sp.playlist_add_items(playlist_id, track_ids[i:i + 100])
+        uris = [f"spotify:track:{tid}" for tid in track_ids[i:i + 100]]
+        sp._post(f"playlists/{playlist_id}/items", payload={"uris": uris})
 
 
 # ---------------------------------------------------------------------------
@@ -236,30 +219,34 @@ def rule_based_classify(
 def llm_classify(
     groq_client: Groq,
     track: dict,
-    features: dict,
-    artist_genres: list[str],
     available_genres: list[str],
-) -> str:
+    lastfm_tags: list[str],
+    genre_rules: dict,
+) -> Optional[str]:
     """
     Classifie via Groq llama-3.1-8b-instant.
-    Peut retourner un genre de la liste ou en créer un nouveau.
+    Retourne un genre de la liste ou None si aucun ne convient.
     """
-    genres_str = ", ".join(available_genres)
-    af = {
-        k: round(features.get(k, 0), 2)
-        for k in ["energy", "danceability", "acousticness", "valence", "speechiness", "tempo"]
-    }
+    tags_str = ", ".join(lastfm_tags) if lastfm_tags else "aucun"
+    genres_context = "\n".join(
+        f"- {name} (mots-clés : {', '.join(rules.get('keywords', []))})"
+        for name, rules in genre_rules.items()
+    )
+    genres_list = ", ".join(available_genres)
 
-    prompt = f"""Tu es un expert en classification musicale. Classe ce titre dans UN genre parmi la liste, ou propose un nouveau genre court si aucun ne convient.
+    prompt = f"""Tu es un expert en classification musicale. Classe ce titre dans UN genre de la liste ci-dessous.
+Si aucun genre ne correspond, réponds uniquement par "aucun".
 
 Titre : {track['name']}
 Artiste : {track['artist']}
-Genres Spotify de l'artiste : {', '.join(artist_genres) or 'inconnu'}
-Audio features : {json.dumps(af)}
+Tags Last.fm : {tags_str}
 
-Genres disponibles : {genres_str}
+Genres disponibles et leurs mots-clés :
+{genres_context}
 
-Réponds UNIQUEMENT avec le nom du genre (un seul mot ou expression courte, ex: "Hip-Hop", "Électro", "K-Pop"). Aucune explication."""
+Liste exacte des genres autorisés : {genres_list}
+
+Réponds UNIQUEMENT avec le nom exact du genre tel qu'il apparaît dans la liste, ou "aucun". Aucune explication."""
 
     response = groq_client.chat.completions.create(
         model=GROQ_MODEL,
@@ -267,34 +254,44 @@ Réponds UNIQUEMENT avec le nom du genre (un seul mot ou expression courte, ex: 
         max_tokens=20,
         temperature=0.1,
     )
-    return response.choices[0].message.content.strip().strip('"').strip("'")
+    result = response.choices[0].message.content.strip().strip('"').strip("'")
+    return None if result.lower() == "aucun" else result
+
+
+def fetch_lastfm_tags(artist: str, title: str) -> list[str]:
+    """Retourne les top tags Last.fm pour un titre (vide si API non configurée ou erreur)."""
+    if not LASTFM_API_KEY:
+        return []
+    try:
+        response = requests.get(
+            "https://ws.audioscrobbler.com/2.0/",
+            params={
+                "method": "track.getTopTags",
+                "artist": artist,
+                "track": title,
+                "api_key": LASTFM_API_KEY,
+                "format": "json",
+            },
+            timeout=5,
+        )
+        tags = response.json().get("toptags", {}).get("tag", [])
+        return [t["name"].lower() for t in tags[:15]]
+    except Exception:
+        return []
 
 
 def classify_track(
     track: dict,
-    features: Optional[dict],
-    artist_genres: list[str],
-    genre_rules: dict,
     groq_client: Groq,
     available_genres: list[str],
+    genre_rules: dict,
     stats: dict,
-) -> str:
-    """Pipeline de classification : règles d'abord, LLM si ambigu."""
-    if features is None:
-        features = {}
-
-    result = rule_based_classify(track, features, artist_genres, genre_rules)
-
-    if result:
-        genre, confidence = result
-        stats["rule_classified"] += 1
-        log.debug(f"  [rules] '{track['name']}' → {genre} (conf: {confidence:.2f})")
-        return genre
-
-    # Fallback LLM
+) -> Optional[str]:
+    """Pipeline de classification : LLM avec tags Last.fm comme contexte."""
+    tags = fetch_lastfm_tags(track["artist"], track["name"])
     stats["llm_classified"] += 1
-    genre = llm_classify(groq_client, track, features, artist_genres, available_genres)
-    log.debug(f"  [llm]   '{track['name']}' → {genre}")
+    genre = llm_classify(groq_client, track, available_genres, tags, genre_rules)
+    log.info(f"  [llm] '{track['artist']}-{track['name']}' → {genre or 'aucun'} (tags: {tags[:5]})")
     return genre
 
 
@@ -318,6 +315,7 @@ def generate_run_report(
         f"| Ajoutés aux playlists | {stats['added']} |",
         f"| Ignorés (déjà classés) | {stats['skipped']} |",
         f"| Classifiés par règles | {stats['rule_classified']} |",
+        f"| Classifiés par Last.fm | {stats['lastfm_classified']} |",
         f"| Classifiés par LLM | {stats['llm_classified']} |",
         f"| Nouvelles playlists créées | {stats['new_playlists']} |",
         "",
@@ -373,11 +371,17 @@ def main() -> None:
     sp = get_spotify_client()
     groq_client = Groq(api_key=os.environ["GROQ_API_KEY"])
 
+    log.info("Synchronisation des playlists existantes…")
+    existing = fetch_existing_playlists(sp)
+    state.setdefault("playlist_ids", {}).update(existing)
+    log.info(f"{len(existing)} playlists existantes chargées")
+
     stats = {
         "total": 0,
         "added": 0,
         "skipped": 0,
         "rule_classified": 0,
+        "lastfm_classified": 0,
         "llm_classified": 0,
         "new_playlists": 0,
     }
@@ -388,7 +392,11 @@ def main() -> None:
     last_id = state.get("last_processed_id")
     log.info(f"Dernier ID traité : {last_id or 'aucun (premier run)'}")
     tracks = fetch_new_liked_tracks(sp, last_id)
-    log.info(f"{len(tracks)} nouveaux titres à traiter")
+    if MAX_TRACKS:
+        log.info(f"{len(tracks)} nouveaux titres à traiter (limité à {MAX_TRACKS})")
+        tracks = tracks[:MAX_TRACKS]
+    else:
+        log.info(f"{len(tracks)} nouveaux titres à traiter")
 
     if not tracks:
         log.info("Rien de nouveau. Fin du run.")
@@ -400,17 +408,7 @@ def main() -> None:
 
     stats["total"] = len(tracks)
 
-    # 2. Audio features + genres artistes (batch)
-    track_ids = [t["id"] for t in tracks]
-    artist_ids = [t["artist_id"] for t in tracks]
-
-    log.info("Récupération des audio features…")
-    all_features = fetch_audio_features(sp, track_ids)
-
-    log.info("Récupération des genres artistes…")
-    all_artist_genres = fetch_artist_genres(sp, artist_ids)
-
-    # 3. Classification + ajout dans playlists
+    # 2. Classification + ajout dans playlists
     playlist_buckets: dict[str, list[str]] = {}  # genre → [track_ids]
     new_last_id = tracks[0]["id"]  # le plus récent
 
@@ -419,36 +417,27 @@ def main() -> None:
             stats["skipped"] += 1
             continue
 
-        features = all_features.get(track["id"])
-        artist_genres = all_artist_genres.get(track["artist_id"], [])
-
         genre = classify_track(
             track=track,
-            features=features,
-            artist_genres=artist_genres,
-            genre_rules=genre_rules,
             groq_client=groq_client,
             available_genres=available_genres,
+            genre_rules=genre_rules,
             stats=stats,
         )
 
-        method = "LLM" if stats["llm_classified"] > 0 and stats["rule_classified"] == 0 else "Règles"
-        # Recalcul précis de la méthode pour ce titre
-        prev_llm = stats["llm_classified"]
-        method = "LLM" if prev_llm > 0 else "Règles"
+        if genre is None:
+            log.info(f"  '{track['name']}' — genre non identifié, ignoré")
+            stats["skipped"] += 1
+            already_classified.add(track["id"])
+            continue
 
         playlist_buckets.setdefault(genre, []).append(track["id"])
         classifications.append({
             "name": track["name"],
             "artist": track["artist"],
             "genre": genre,
-            "method": method,
+            "method": "LLM",
         })
-
-        # Si genre inconnu, on l'ajoute pour les prochaines classifications
-        if genre not in available_genres:
-            available_genres.append(genre)
-            log.info(f"Nouveau genre détecté : '{genre}'")
 
         already_classified.add(track["id"])
         stats["added"] += 1
