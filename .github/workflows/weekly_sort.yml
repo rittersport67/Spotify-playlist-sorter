@@ -34,13 +34,14 @@ jobs:
           echo '${{ secrets.SPOTIFY_CACHE }}' > .spotify_cache
         # Le contenu de SPOTIFY_CACHE est le JSON généré lors de l'auth initiale
 
-      - name: Lancer le sorter
+      - name: Lancer le spotify sorter
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           SPOTIFY_REDIRECT_URI: ${{ secrets.SPOTIFY_REDIRECT_URI }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          MAX_TRACKS: ${{ vars.MAX_TRACKS }}
         run: python sorter.py
 
       - name: Commit des fichiers mis à jour
@@ -48,5 +49,5 @@ jobs:
           git config user.name "spotify-sorter[bot]"
           git config user.email "spotify-sorter@users.noreply.github.com"
           git add state.json HISTORY.md logs/
-          git diff --cached --quiet || git commit -m "chore: run $(date +'%Y-%m-%d') — mise à jour état et logs"
+          git diff --cached --quiet || git commit -m "chore: run $(date +'%Y-%m-%d %H:%M UTC') — mise à jour état et logs"
           git push

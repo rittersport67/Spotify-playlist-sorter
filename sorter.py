@@ -27,7 +27,7 @@ LOGS_DIR = BASE_DIR / "logs"
 
 GROQ_MODEL = "llama-3.1-8b-instant"
 LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY")
-MAX_TRACKS = int(os.environ["MAX_TRACKS"]) if os.environ.get("MAX_TRACKS") else None
+MAX_TRACKS = int(os.environ["MAX_TRACKS"]) if os.environ.get("MAX_TRACKS") else 100
 SPOTIFY_SCOPE = (
     "user-library-read "
     "playlist-read-private "
