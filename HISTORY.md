@@ -1,3 +1,33 @@
+# Run du 2026-03-26 20:27 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Jackie Chan | Tiësto | EDM |
+| Anthem (We Love House Music) | Don Diablo | EDM |
+| Broken Summer | DJ Snake | EDM |
+| Shuffle Shuttle | Madison Mars | EDM |
+| Beastmode | Yellow Claw | EDM |
+| Moon Love | Boombox Cartel | EDM |
+| Public Enemy | Yellow Claw | Hip-Hop |
+| Atom | Madison Mars | EDM |
+| REMEDY | Alesso | EDM |
+| Fake Chanel | Yellow Claw | EDM |
+
+---
+
 # Run du 2026-03-26 01:24 UTC
 
 ## Résumé
