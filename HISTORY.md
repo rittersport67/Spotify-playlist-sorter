@@ -1,3 +1,33 @@
+# Run du 2026-03-26 21:23 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 1 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Evidence | NuBass | Dubstep |
+| No Warning | Taiki Nulight | Dubstep |
+| Spicy Noodles | Flava D | Dubstep |
+| Stubborn | Freddie Martin | Rock |
+| Go Hard | XX92 | Hip-Hop |
+| Vulpix | YAKO | Riddim |
+| Pack Rack | Dommix | Hip-Hop |
+| Back Again | Jauz | Dubstep |
+| Lick It | Valentino Khan | Dubstep |
+| GUD VIBRATIONS | NGHTMRE | Dubstep |
+
+---
+
 # Run du 2026-03-26 20:27 UTC
 
 ## Résumé
