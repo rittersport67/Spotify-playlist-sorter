@@ -1,3 +1,33 @@
+# Run du 2026-03-26 01:24 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Instruction (feat. Demi Lovato & Stefflon Don) | Jax Jones | EDM |
+| Bird Machine | DJ Snake | EDM |
+| Welcome to the Party (with French Montana & Lil Pump, feat. Zhavia Ward) - from Deadpool 2 | Diplo | Hip-Hop |
+| Let's Get Ill | DJ Snake | EDM |
+| How Deep Is Your Love - DJ Snake Remix | Calvin Harris | EDM |
+| Intro (A86) | DJ Snake | EDM |
+| Here Comes The Night | DJ Snake | EDM |
+| Future Pt 2 | DJ Snake | EDM |
+| 4 Life | DJ Snake | EDM |
+| Pigalle | DJ Snake | EDM |
+
+---
+
 # Run du 2026-03-25 23:25 UTC
 
 ## Résumé
