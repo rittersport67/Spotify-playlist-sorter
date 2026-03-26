@@ -12,7 +12,23 @@
 
 genres:
 
-  Hip-Hop:
+  Rap FR:
+    keywords:
+      - french hip hop
+      - french rap
+      - rap français
+      - rap francais
+      - trap français
+      - rap fr
+      - cloud rap français
+    audio_features:
+      speechiness:
+        min: 0.1
+      danceability:
+        min: 0.5
+    confidence_threshold: 0.6
+
+  Rap US:
     keywords:
       - hip hop
       - rap
@@ -20,6 +36,9 @@ genres:
       - drill
       - boom bap
       - gangsta rap
+      - east coast hip hop
+      - west coast hip hop
+      - southern hip hop
     audio_features:
       speechiness:
         min: 0.1
@@ -130,6 +149,7 @@ genres:
       - dubstep
       - brostep
       - bass music
+      - melodic dubstep
     audio_features:
       energy:
         min: 0.75
@@ -169,6 +189,40 @@ genres:
         min: 160
       acousticness:
         max: 0.1
+    confidence_threshold: 0.65
+
+  Trap:
+    keywords:
+      - trap music
+      - trap edm
+      - festival trap
+      - melodic trap
+      - hybrid trap
+      - wonky
+    audio_features:
+      energy:
+        min: 0.6
+      danceability:
+        min: 0.55
+      acousticness:
+        max: 0.15
+    confidence_threshold: 0.65
+
+  Hardstyle:
+    keywords:
+      - hardstyle
+      - hardcore
+      - hard trance
+      - happy hardcore
+      - rawstyle
+      - frenchcore
+      - terrorcore
+      - gabber
+    audio_features:
+      energy:
+        min: 0.85
+      acousticness:
+        max: 0.05
     confidence_threshold: 0.65
 
   Classique:
