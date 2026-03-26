@@ -32,6 +32,7 @@ Lis ces fichiers avant d'intervenir sur le projet :
 | `.claude/skills/architecture.md` | Avant toute modification structurelle, ajout de fonctionnalité majeure, refactoring |
 | `.claude/skills/code-quality.md` | Avant de modifier `sorter.py`, pour une revue de code, pour ajouter une fonction |
 | `.claude/skills/deployment.md` | Pour tout ce qui touche au CI/CD, GitHub Actions, secrets, auth Spotify |
+| `.claude/skills/review-pr.md` | Pour reviewer une PR : lit le diff, applique architecture + code quality, rend un verdict |
 
 ## Stack
 
