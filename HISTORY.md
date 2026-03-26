@@ -1,3 +1,33 @@
+# Run du 2026-03-26 22:19 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| What 2 Say | Holy Goof | Rap FR |
+| About To Get Hype | Pelikann | Rap FR |
+| The Force | Holy Goof | EDM |
+| I Believe | FooR | Rap FR |
+| Supersonic | Livsey | Rap FR |
+| Gully | Holy Goof | Rap FR |
+| Show Me How | Bushbaby | Rap FR |
+| Take Me Away | XX92 | Rap FR |
+| Edge | Shapes | Rap FR |
+| Countdown | DJ Q | Rap FR |
+
+---
+
 # Run du 2026-03-26 21:23 UTC
 
 ## Résumé
