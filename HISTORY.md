@@ -1,3 +1,33 @@
+# Run du 2026-03-26 23:23 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Pop Dat | 4B | Rap US |
+| Shut 'Em Down | SVDDEN DEATH | Rap US |
+| Headbang Gang | Trampa | Rap FR |
+| Throwin' Elbows | Excision | Dubstep |
+| M.O.D | Holy Goof | Rap FR |
+| Only Us - VIP | Francois & Louis Benton | Rap FR |
+| Shutdown - VIP | Holy Goof | Rap FR |
+| Time | NOTION | Rap FR |
+| Let You Go | Holy Goof | EDM |
+| Flows | Skue-K | Rap FR |
+
+---
+
 # Run du 2026-03-26 22:19 UTC
 
 ## Résumé
