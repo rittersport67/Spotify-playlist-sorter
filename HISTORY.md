@@ -1,3 +1,33 @@
+# Run du 2026-03-27 10:39 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Extraterrestrial | TYNAN | Rap FR |
+| Maniac | PEEKABOO | Rap FR |
+| Try me | Plastic Toy | Rap FR |
+| Make You Wanna | ACRAZE | EDM |
+| Utopia (4B Remix) | Dombresky | EDM |
+| God's Plan | Freekill | Rap FR |
+| Don't You Know - Radio Edit | Kungs | EDM |
+| I Feel So Bad | Kungs | EDM |
+| This Girl (Kungs Vs. Cookin' On 3 Burners) | Kungs | EDM |
+| Shades (feat. Donnie Sloan & Ricky Ducati) | Tchami | EDM |
+
+---
+
 # Run du 2026-03-27 09:44 UTC
 
 ## Résumé
