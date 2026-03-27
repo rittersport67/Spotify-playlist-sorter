@@ -1,3 +1,33 @@
+# Run du 2026-03-27 23:23 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Pressure - Alesso Remix | Nadia Ali | EDM |
+| Wasteland | Phiso | Rap FR |
+| Calling (Lose My Mind) - Radio Edit | Sebastian Ingrosso | EDM |
+| Rainer - k?d Remix | RL Grime | Rap US |
+| Fourth Impact | Rezz | EDM |
+| Teleportal | Rezz | EDM |
+| Witching Hour | Rezz | EDM |
+| Pressure | RL Grime | Rap US |
+| Reims | RL Grime | Rap FR |
+| I Wanna Know | RL Grime | Rap US |
+
+---
+
 # Run du 2026-03-27 22:22 UTC
 
 ## Résumé
