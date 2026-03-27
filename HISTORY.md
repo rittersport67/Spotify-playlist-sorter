@@ -1,3 +1,33 @@
+# Run du 2026-03-27 09:44 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Aurra | Tchami | EDM |
+| Bylina (Bellecour Remix) | Malaa | EDM |
+| Bling Bling (Matroda Remix) | Malaa | EDM |
+| Cash Money | Malaa | Rap FR |
+| Prophecy | Tchami | EDM |
+| Notorious | Malaa | Rap FR |
+| Be Right Here - Tony Romera Remix | Kungs | EDM |
+| Oldskool | Tony Romera | EDM |
+| Blast Off | Red Hood Squad | Rap FR |
+| Get Fucked | Bass System | Rap FR |
+
+---
+
 # Run du 2026-03-27 08:41 UTC
 
 ## Résumé
