@@ -1,3 +1,33 @@
+# Run du 2026-03-27 22:22 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Diamonds (feat. Micky Blue) | Tiësto | EDM |
+| Novocaine | Valentino Khan | EDM |
+| OVERLOAD (feat. Micah Martin) | Kayzo | EDM |
+| Necronomicon | Dubloadz | Dubstep |
+| WTF - Riot Ten Remix | Herobust | Rap US |
+| Rampage Anthem VIP | SASASAS | Rap FR |
+| WAITING | Kayzo | EDM |
+| Break the Rail (feat. Sullivan King) | Dubloadz | Dubstep |
+| Warp Zone | Ray Volpe | EDM |
+| Origin | Ray Volpe | Rap US |
+
+---
+
 # Run du 2026-03-27 21:26 UTC
 
 ## Résumé
