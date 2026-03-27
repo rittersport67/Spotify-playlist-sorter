@@ -1,3 +1,33 @@
+# Run du 2026-03-27 04:26 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Pump | Valentino Khan | EDM |
+| Dirty Vibe (with Diplo, G-Dragon, and CL) | Skrillex | EDM |
+| Bangarang (feat. Sirah) | Skrillex | Dubstep |
+| HOT DRUM | JOYRYDE | EDM |
+| Rumble | Excision | Dubstep |
+| Scary Monsters and Nice Sprites | Skrillex | Dubstep |
+| Edge | Rezz | EDM |
+| HUMBLE. - SKRILLEX REMIX | Skrillex | EDM |
+| All Is Fair in Love and Brostep (with Ragga Twins) | Skrillex | Dubstep |
+| Lone Wolf | Zomboy | Dubstep |
+
+---
+
 # Run du 2026-03-27 01:23 UTC
 
 ## Résumé
