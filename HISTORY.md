@@ -1,3 +1,33 @@
+# Run du 2026-03-27 12:42 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Thicc Boi | Wooli | Rap US |
+| Arrival | PEEKABOO | Rap FR |
+| Rover | TYNAN | Rap FR |
+| Rocket Fuel | Trampa | Rap FR |
+| Rise | SVDDEN DEATH | Rap US |
+| Boss | AFK | Rap FR |
+| WTF | Herobust | Rap US |
+| Rapture | Kompany | Rap FR |
+| FAKE FAKE FAKE (feat. xo sad) | Kayzo | EDM |
+| Rail Breaker (feat. Rico Act) - Code: Pandorum Remix | Riot Ten | Rap US |
+
+---
+
 # Run du 2026-03-27 11:35 UTC
 
 ## Résumé
