@@ -1,3 +1,33 @@
+# Run du 2026-03-28 05:50 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| New World | Krewella | EDM |
+| The Paradox | Excision | Dubstep |
+| Wasted Space | Kayzo | EDM |
+| Party Starter | Flux Pavilion | Dubstep |
+| Move Your Body (Future House) | Tchami | EDM |
+| Say My Name | David Guetta | EDM |
+| This Ain't Techno | David Guetta | EDM |
+| Everytime We Touch | Cascada | EDM |
+| Buffalo Soldier | Bob Marley & The Wailers | Rap US |
+| Vas y Francky c'est bon | Francky Vincent | Rap FR |
+
+---
+
 # Run du 2026-03-28 04:11 UTC
 
 ## Résumé
