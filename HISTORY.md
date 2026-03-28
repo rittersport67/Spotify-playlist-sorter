@@ -1,3 +1,33 @@
+# Run du 2026-03-28 11:21 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| On Fleek (feat. Quavo) | Offset | Rap US |
+| rockstar | Post Malone | Rap US |
+| XO TOUR Llif3 | Lil Uzi Vert | Rap US |
+| Moonlight | XXXTENTACION | Rap US |
+| Praise The Lord (Da Shine) (feat. Skepta) | A$AP Rocky | Rap US |
+| ZEZE (feat. Travis Scott & Offset) | Kodak Black | Rap US |
+| Mo Bamba | Sheck Wes | Rap US |
+| Ghostface Killers (feat. Travis Scott) | 21 Savage | Rap US |
+| a lot | 21 Savage | Rap US |
+| Bank Account | 21 Savage | Rap US |
+
+---
+
 # Run du 2026-03-28 10:23 UTC
 
 ## Résumé
