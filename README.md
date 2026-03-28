@@ -11,8 +11,12 @@ Tourne toutes les heures sur GitHub Actions — zéro intervention manuelle.
 ```
 Nouveaux likes Spotify
         ↓
-   Last.fm tags        →  classification par tags communautaires
-        ↓ (si insuffisant)
+   Last.fm tags        →  tags du titre (track.getTopTags)
+                       +  tags de l'artiste (artist.getTopTags)
+        ↓
+   Règles Last.fm      →  matching exact keywords ↔ tags
+                          (tags titre prioritaires sur tags artiste)
+        ↓ (si ambigu ou aucun match)
    LLM Groq            →  classification par IA (llama-3.1-8b-instant)
                            contexte : titre + artiste + tags + genres du config
         ↓
@@ -29,20 +33,23 @@ Chaque run ne traite que les **nouveaux likes** depuis le dernier run (incrémen
 
 | Genre | Exemples de keywords |
 |-------|---------------------|
-| Hip-Hop | hip hop, rap, trap, drill |
-| Électro | electronic, edm, house, techno |
-| Rock | rock, metal, punk, grunge |
-| Pop | pop, synth-pop, indie pop |
+| Rap FR | french hip hop, rap français, trap français |
+| Rap US | hip hop, rap, trap, drill, boom bap |
+| EDM | electronic, edm, house, trance, electro |
+| Rock | rock, metal, punk, grunge, alternative rock |
+| Pop | pop, synth-pop, indie pop, electropop |
 | R&B | r&b, soul, neo soul, funk |
-| Acoustique | acoustic, folk, singer-songwriter |
+| Acoustique | acoustic, folk, singer-songwriter, country |
 | Jazz | jazz, bebop, blues, bossa nova |
-| K-Pop | k-pop, korean pop |
-| Dubstep | dubstep, brostep, bass music |
-| Riddim | riddim, riddim dubstep |
-| Drum and Bass | dnb, jungle, neurofunk |
-| Classique | classical, orchestra, symphony |
+| K-Pop | k-pop, korean pop, kpop |
+| Dubstep | dubstep, brostep, bass music, melodic dubstep |
+| Riddim | riddim, riddim dubstep, heavy bass |
+| Drum and Bass | dnb, jungle, neurofunk, drumstep |
+| Trap | trap music, trap edm, festival trap, melodic trap |
+| Hardstyle | hardstyle, hardcore, rawstyle, frenchcore |
+| Classique | classical, orchestra, symphony, piano |
 
-Les genres sont entièrement configurables dans `config.yaml` — sans toucher au code.
+Les genres et leurs keywords sont entièrement configurables dans `config.yaml` — sans toucher au code.
 
 ---
 
@@ -122,6 +129,10 @@ python3 sorter.py
 
 # Run limité à 10 titres (pour tester)
 MAX_TRACKS=10 python3 sorter.py
+
+# Tester les APIs sur un titre sans rien écrire (state / playlists / logs intacts)
+python3 debug.py "Get Low" "DJ Snake"
+python3 debug.py                        # utilise le dernier like Spotify
 ```
 
 ---
