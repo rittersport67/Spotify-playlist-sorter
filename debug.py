@@ -26,10 +26,11 @@ load_dotenv()
 # ---------------------------------------------------------------------------
 from sorter import (
     get_spotify_client,
-    fetch_lastfm_artist_tags,
     fetch_lastfm_tags,
     rule_based_classify,
     build_llm_prompt,
+    extract_remixer,
+    _resolve_artist_tags,
     load_config,
     GROQ_MODEL,
 )
@@ -181,18 +182,24 @@ def main() -> None:
     ok("Explicit",   "oui" if track["explicit"] else "non")
 
     # --- 4. Tags artiste Last.fm ---
-    section("4/7 · API Last.fm — artist.getTopTags")
+    section("4/7 · API Last.fm — artist.getTopTags (remix + multi-artistes)")
     lastfm_key_artist = os.environ.get("LASTFM_API_KEY")
     if not lastfm_key_artist:
         warn("Last.fm artiste", "LASTFM_API_KEY absent — tags ignorés")
         artist_genres = []
     else:
-        print(f"  → Appel artist.getTopTags(artist='{track['artist']}')")
-        artist_genres = fetch_lastfm_artist_tags(track["artist"])
+        remixer = extract_remixer(track["name"])
+        all_artists = track.get("all_artists") or [track["artist"]]
+        if remixer:
+            ok("Remix détecté", f"remixeur : {remixer!r} (artiste original ignoré)")
+        elif len(all_artists) > 1:
+            ok("Multi-artistes", ", ".join(all_artists))
+        print(f"  → Appel _resolve_artist_tags()")
+        artist_genres = _resolve_artist_tags(track)
         if artist_genres:
-            ok("Tags artiste Last.fm", ", ".join(artist_genres))
+            ok("Tags artiste(s) fusionnés", ", ".join(artist_genres))
         else:
-            warn("Tags artiste Last.fm", "aucun tag déclaré pour cet artiste")
+            warn("Tags artiste(s)", "aucun tag retourné")
     track["artist_genres"] = artist_genres
 
     # --- 5. Tags Last.fm ---

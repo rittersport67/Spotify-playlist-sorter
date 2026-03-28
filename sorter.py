@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import time
 import logging
@@ -336,6 +337,55 @@ def fetch_lastfm_tags(artist: str, title: str) -> list[str]:
         return []
 
 
+_REMIX_RE = re.compile(
+    r'[\(\[]\s*(.+?)\s+(?:remix|edit|bootleg|mix|rework|vip|flip|re-edit)\s*[\)\]]',
+    re.IGNORECASE,
+)
+
+
+def extract_remixer(title: str) -> Optional[str]:
+    """Extrait le nom du remixeur depuis le titre si c'est un remix.
+    Ex : 'Get Low (DJ Snake Remix)' → 'DJ Snake'
+    Retourne None si le titre n'est pas un remix ou si le remixeur n'est pas identifiable.
+    """
+    match = _REMIX_RE.search(title)
+    if not match:
+        return None
+    candidate = match.group(1).strip()
+    # Exclure les faux positifs sans nom d'artiste (ex: "Original", "Radio", "Extended")
+    generic = {"original", "radio", "extended", "club", "instrumental", "acoustic", "official"}
+    if candidate.lower() in generic:
+        return None
+    return candidate
+
+
+def _resolve_artist_tags(track: dict) -> list[str]:
+    """Retourne les tags Last.fm de l'artiste pertinent pour la classification.
+
+    - Si remix détecté dans le titre → tags du remixeur (priorité)
+    - Sinon → union des tags de tous les artistes (max 3), dédupliqués.
+    """
+    # Remix : priorité au remixeur
+    remixer = extract_remixer(track["name"])
+    if remixer:
+        tags = fetch_lastfm_artist_tags(remixer)
+        log.info(f"  [remix] remixeur détecté : {remixer!r} → {tags[:3]}")
+        if tags:
+            return tags
+        log.info(f"  [remix] aucun tag Last.fm pour {remixer!r} — fallback artiste principal")
+
+    # Multi-artistes : fusion des tags de tous les artistes (max 3)
+    all_artists: list[str] = track.get("all_artists") or [track["artist"]]
+    merged: list[str] = []
+    seen: set[str] = set()
+    for artist in all_artists[:3]:
+        for tag in fetch_lastfm_artist_tags(artist):
+            if tag not in seen:
+                merged.append(tag)
+                seen.add(tag)
+    return merged
+
+
 def classify_track(
     track: dict,
     groq_client: Groq,
@@ -346,7 +396,7 @@ def classify_track(
     """Pipeline de classification : règles Last.fm → fallback LLM.
     Retourne (genre, method) ou None si le titre n'a pu être classifié.
     """
-    artist_tags = fetch_lastfm_artist_tags(track["artist"])
+    artist_tags = _resolve_artist_tags(track)
     tags = fetch_lastfm_tags(track["artist"], track["name"])
 
     # 1. Classification par règles (tags Last.fm — sans appel LLM)
