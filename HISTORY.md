@@ -1,3 +1,33 @@
+# Run du 2026-03-28 01:17 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| BOOM | Tiësto | EDM |
+| The Nights | Avicii | EDM |
+| I Want You To Know | Zedd | EDM |
+| Runaway (U & I) | Galantis | EDM |
+| Watch Me (Whip / Nae Nae) | Silentó | Rap US |
+| Sugar (feat. Francesco Yates) | Robin Schulz | EDM |
+| Call on Me - Ryan Riback Remix | Starley | EDM |
+| Perfect Strangers | Jonas Blue | EDM |
+| Sun Goes Down (feat. Jasmine Thompson) - Radio Mix | Robin Schulz | EDM |
+| Red Lights | Tiësto | EDM |
+
+---
+
 # Run du 2026-03-27 23:23 UTC
 
 ## Résumé
