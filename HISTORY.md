@@ -1,3 +1,33 @@
+# Run du 2026-03-28 22:19 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Ichor | SVDDEN DEATH | Dubstep |
+| World of Wonk | Monxx | Trap |
+| Doom | Hekler | Rap US |
+| Wdgaf (Wooli Vip) | Wooli | Rap US |
+| Cruise Control - IVORY Remix | Space Laces | Dubstep |
+| Aulos Reloaded | Vladimir Cauchemar | Rap FR |
+| Diva (with Swae Lee & Tove Lo) | Aazar | Rap FR |
+| All Around The World (La La La) | R3HAB | EDM |
+| Where Have You Gone (Anywhere) | Lucas & Steve | EDM |
+| Recess (with Kill The Noise, Fatman Scoop, and Michael Angelakos) | Skrillex | EDM |
+
+---
+
 # Run du 2026-03-28 21:21 UTC
 
 ## Résumé
