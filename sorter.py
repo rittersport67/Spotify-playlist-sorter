@@ -151,7 +151,8 @@ def fetch_lastfm_artist_tags(artist: str) -> list[str]:
         result = [t["name"].lower() for t in tags_sorted[:10]]
         log.info(f"  [lastfm] artiste {artist!r} → tags : {result or 'aucun'}")
         return result
-    except Exception:
+    except Exception as exc:
+        log.warning(f"fetch_lastfm_artist_tags: artiste {artist!r} inaccessible — {exc}")
         return []
 
 
@@ -242,17 +243,13 @@ def rule_based_classify(
     return winners[0]
 
 
-def llm_classify(
-    groq_client: Groq,
+def build_llm_prompt(
     track: dict,
     available_genres: list[str],
     lastfm_tags: list[str],
     genre_rules: dict,
-) -> Optional[str]:
-    """
-    Classifie via Groq llama-3.1-8b-instant.
-    Retourne un genre de la liste ou None si aucun ne convient.
-    """
+) -> str:
+    """Construit le prompt de classification pour le LLM."""
     tags_str = ", ".join(lastfm_tags) if lastfm_tags else "aucun"
     genres_context = "\n".join(
         f"- {name} (mots-clés : {', '.join(rules.get('keywords', []))})"
@@ -270,7 +267,7 @@ def llm_classify(
     duration_str = f"{duration_ms // 60000}min{(duration_ms % 60000) // 1000}s" if duration_ms else "inconnue"
     explicit_str = "oui" if track.get("explicit") else "non"
 
-    prompt = f"""Tu es un expert en classification musicale. Classe ce titre dans UN genre de la liste ci-dessous.
+    return f"""Tu es un expert en classification musicale. Classe ce titre dans UN genre de la liste ci-dessous.
 Si aucun genre ne correspond, réponds uniquement par "aucun".
 
 === Informations sur le titre ===
@@ -293,6 +290,19 @@ Liste exacte des genres autorisés : {genres_list}
 
 Réponds UNIQUEMENT avec le nom exact du genre tel qu'il apparaît dans la liste, ou "aucun". Aucune explication."""
 
+
+def llm_classify(
+    groq_client: Groq,
+    track: dict,
+    available_genres: list[str],
+    lastfm_tags: list[str],
+    genre_rules: dict,
+) -> Optional[str]:
+    """
+    Classifie via Groq llama-3.1-8b-instant.
+    Retourne un genre de la liste ou None si aucun ne convient.
+    """
+    prompt = build_llm_prompt(track, available_genres, lastfm_tags, genre_rules)
     response = groq_client.chat.completions.create(
         model=GROQ_MODEL,
         messages=[{"role": "user", "content": prompt}],
@@ -332,8 +342,10 @@ def classify_track(
     available_genres: list[str],
     genre_rules: dict,
     stats: dict,
-) -> Optional[str]:
-    """Pipeline de classification : règles Last.fm → fallback LLM."""
+) -> Optional[tuple[str, str]]:
+    """Pipeline de classification : règles Last.fm → fallback LLM.
+    Retourne (genre, method) ou None si le titre n'a pu être classifié.
+    """
     artist_tags = fetch_lastfm_artist_tags(track["artist"])
     tags = fetch_lastfm_tags(track["artist"], track["name"])
 
@@ -345,7 +357,7 @@ def classify_track(
             f"  [rules] '{track['artist']} — {track['name']}' → {genre} "
             f"(artist_tags: {artist_tags[:3]}, track_tags: {tags[:3]})"
         )
-        return genre
+        return (genre, "lastfm")
 
     # 2. Fallback LLM si les règles sont insuffisantes
     track_enriched = {**track, "artist_genres": artist_tags}
@@ -355,7 +367,7 @@ def classify_track(
         f"  [llm] '{track['artist']} — {track['name']}' → {genre or 'aucun'} "
         f"(artist_tags: {artist_tags[:3]}, track_tags: {tags[:3]})"
     )
-    return genre
+    return (genre, "llm") if genre is not None else None
 
 
 # ---------------------------------------------------------------------------
@@ -448,7 +460,6 @@ def main() -> None:
         "total": 0,
         "added": 0,
         "skipped": 0,
-        "rule_classified": 0,
         "lastfm_classified": 0,
         "llm_classified": 0,
         "new_playlists": 0,
@@ -485,7 +496,7 @@ def main() -> None:
             stats["skipped"] += 1
             continue
 
-        genre = classify_track(
+        result = classify_track(
             track=track,
             groq_client=groq_client,
             available_genres=available_genres,
@@ -493,18 +504,19 @@ def main() -> None:
             stats=stats,
         )
 
-        if genre is None:
+        if result is None:
             log.info(f"  '{track['name']}' — genre non identifié, ignoré")
             stats["skipped"] += 1
             already_classified.add(track["id"])
             continue
 
+        genre, method = result
         playlist_buckets.setdefault(genre, []).append(track["id"])
         classifications.append({
             "name": track["name"],
             "artist": track["artist"],
             "genre": genre,
-            "method": "LLM",
+            "method": method,
         })
 
         already_classified.add(track["id"])

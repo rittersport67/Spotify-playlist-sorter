@@ -29,6 +29,7 @@ from sorter import (
     fetch_lastfm_artist_tags,
     fetch_lastfm_tags,
     rule_based_classify,
+    build_llm_prompt,
     load_config,
     GROQ_MODEL,
 )
@@ -100,50 +101,7 @@ def _spotify_item_to_track(track: dict) -> dict:
     }
 
 
-# ---------------------------------------------------------------------------
-# Construction du prompt (miroir exact de llm_classify dans sorter.py)
-# ---------------------------------------------------------------------------
-
-def build_prompt(track: dict, lastfm_tags: list[str], genre_rules: dict, available_genres: list[str]) -> str:
-    tags_str = ", ".join(lastfm_tags) if lastfm_tags else "aucun"
-    genres_context = "\n".join(
-        f"- {name} (mots-clés : {', '.join(rules.get('keywords', []))})"
-        for name, rules in genre_rules.items()
-    )
-    genres_list = ", ".join(available_genres)
-
-    all_artists = track.get("all_artists", [])
-    artists_str = ", ".join(all_artists) if len(all_artists) > 1 else track["artist"]
-    artist_genres_str = ", ".join(track.get("artist_genres", [])) or "inconnus"
-    popularity_str = str(track["popularity"]) if track.get("popularity") is not None else "inconnue"
-    release_year_str = str(track["release_year"]) if track.get("release_year") else "inconnue"
-    album_str = track.get("album_name") or "inconnu"
-    duration_ms: Optional[int] = track.get("duration_ms")
-    duration_str = f"{duration_ms // 60000}min{(duration_ms % 60000) // 1000}s" if duration_ms else "inconnue"
-    explicit_str = "oui" if track.get("explicit") else "non"
-
-    return f"""Tu es un expert en classification musicale. Classe ce titre dans UN genre de la liste ci-dessous.
-Si aucun genre ne correspond, réponds uniquement par "aucun".
-
-=== Informations sur le titre ===
-Titre : {track['name']}
-Artiste(s) : {artists_str}
-Album : {album_str} ({release_year_str})
-Durée : {duration_str}
-Popularité Spotify : {popularity_str}/100
-Contenu explicite : {explicit_str}
-
-=== Indices de genre ===
-Tags Last.fm de l'artiste : {artist_genres_str}
-Tags Last.fm (triés par popularité) : {tags_str}
-
-=== Classification ===
-Genres disponibles et leurs mots-clés :
-{genres_context}
-
-Liste exacte des genres autorisés : {genres_list}
-
-Réponds UNIQUEMENT avec le nom exact du genre tel qu'il apparaît dans la liste, ou "aucun". Aucune explication."""
+# build_llm_prompt est importé depuis sorter.py — source unique de vérité pour le prompt
 
 
 # ---------------------------------------------------------------------------
@@ -264,7 +222,7 @@ def main() -> None:
     # --- 7. Prompt + Groq ---
     section("7/7 · Groq — Prompt complet + réponse LLM")
 
-    prompt = build_prompt(track, lastfm_tags, genre_rules, available_genres)
+    prompt = build_llm_prompt(track, available_genres, lastfm_tags, genre_rules)
 
     print("\n  ┌─ PROMPT ENVOYÉ AU LLM " + "─" * 46)
     for line in prompt.splitlines():

@@ -2,12 +2,14 @@
 # Spotify Sorter — Configuration des genres
 # ============================================================
 # Chaque genre définit :
-#   keywords        : mots présents dans les genres Spotify de l'artiste
-#   audio_features  : règles sur les features Spotify (min/max entre 0 et 1, sauf tempo en BPM)
-#   confidence_threshold : score minimum pour valider la classification par règles (0 à 1)
+#   keywords : mots-clés comparés aux tags Last.fm de l'artiste et du titre
+#              (normalisation : minuscules, sans tirets ni espaces)
 #
-# Si le score est insuffisant → fallback LLM (llama-3.1-8b-instant via Groq)
-# Si le genre retourné par le LLM n'est pas dans cette liste → nouvelle playlist créée automatiquement
+# Classification :
+#   1. rule_based_classify() matche les tags Last.fm contre les keywords
+#      → tags du titre (poids 1.0) > tags de l'artiste (poids 0.7)
+#      → le genre avec le score le plus élevé et unique gagne
+#   2. Si aucun match clair → fallback LLM (llama-3.1-8b-instant via Groq)
 # ============================================================
 
 genres:
@@ -21,12 +23,6 @@ genres:
       - trap français
       - rap fr
       - cloud rap français
-    audio_features:
-      speechiness:
-        min: 0.1
-      danceability:
-        min: 0.5
-    confidence_threshold: 0.6
 
   Rap US:
     keywords:
@@ -39,12 +35,6 @@ genres:
       - east coast hip hop
       - west coast hip hop
       - southern hip hop
-    audio_features:
-      speechiness:
-        min: 0.1
-      danceability:
-        min: 0.55
-    confidence_threshold: 0.6
 
   EDM:
     keywords:
@@ -53,12 +43,6 @@ genres:
       - house
       - trance
       - electro
-    audio_features:
-      energy:
-        min: 0.65
-      acousticness:
-        max: 0.25
-    confidence_threshold: 0.6
 
   Rock:
     keywords:
@@ -69,12 +53,6 @@ genres:
       - alternative rock
       - indie rock
       - hard rock
-    audio_features:
-      energy:
-        min: 0.6
-      acousticness:
-        max: 0.35
-    confidence_threshold: 0.55
 
   Pop:
     keywords:
@@ -83,12 +61,6 @@ genres:
       - indie pop
       - electropop
       - dream pop
-    audio_features:
-      danceability:
-        min: 0.5
-      valence:
-        min: 0.3
-    confidence_threshold: 0.5
 
   R&B:
     keywords:
@@ -97,12 +69,6 @@ genres:
       - neo soul
       - contemporary r&b
       - funk
-    audio_features:
-      danceability:
-        min: 0.5
-      energy:
-        max: 0.75
-    confidence_threshold: 0.55
 
   Acoustique:
     keywords:
@@ -111,12 +77,6 @@ genres:
       - singer-songwriter
       - country
       - bluegrass
-    audio_features:
-      acousticness:
-        min: 0.6
-      energy:
-        max: 0.6
-    confidence_threshold: 0.6
 
   Jazz:
     keywords:
@@ -125,24 +85,13 @@ genres:
       - swing
       - blues
       - bossa nova
-    audio_features:
-      instrumentalness:
-        min: 0.1
-      acousticness:
-        min: 0.3
-    confidence_threshold: 0.55
 
   K-Pop:
     keywords:
       - k-pop
       - korean pop
       - k pop
-    audio_features:
-      danceability:
-        min: 0.55
-      energy:
-        min: 0.5
-    confidence_threshold: 0.65
+      - kpop
 
   Dubstep:
     keywords:
@@ -150,28 +99,12 @@ genres:
       - brostep
       - bass music
       - melodic dubstep
-    audio_features:
-      energy:
-        min: 0.75
-      danceability:
-        min: 0.5
-      acousticness:
-        max: 0.1
-    confidence_threshold: 0.65
 
   Riddim:
     keywords:
       - riddim
       - riddim dubstep
       - heavy bass
-    audio_features:
-      energy:
-        min: 0.8
-      danceability:
-        min: 0.5
-      acousticness:
-        max: 0.1
-    confidence_threshold: 0.65
 
   Drum and Bass:
     keywords:
@@ -182,14 +115,6 @@ genres:
       - liquid funk
       - neurofunk
       - drumstep
-    audio_features:
-      energy:
-        min: 0.7
-      tempo:
-        min: 160
-      acousticness:
-        max: 0.1
-    confidence_threshold: 0.65
 
   Trap:
     keywords:
@@ -199,14 +124,6 @@ genres:
       - melodic trap
       - hybrid trap
       - wonky
-    audio_features:
-      energy:
-        min: 0.6
-      danceability:
-        min: 0.55
-      acousticness:
-        max: 0.15
-    confidence_threshold: 0.65
 
   Hardstyle:
     keywords:
@@ -218,12 +135,6 @@ genres:
       - frenchcore
       - terrorcore
       - gabber
-    audio_features:
-      energy:
-        min: 0.85
-      acousticness:
-        max: 0.05
-    confidence_threshold: 0.65
 
   Classique:
     keywords:
@@ -233,9 +144,3 @@ genres:
       - chamber music
       - opera
       - piano
-    audio_features:
-      instrumentalness:
-        min: 0.6
-      acousticness:
-        min: 0.5
-    confidence_threshold: 0.65
