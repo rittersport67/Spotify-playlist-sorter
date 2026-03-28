@@ -11,16 +11,24 @@ Pipeline Python automatique qui classe les titres likés Spotify dans des playli
 ```
 Likes Spotify
     ↓
-fetch_new_liked_tracks()   → API Spotify /me/tracks (depuis le dernier run)
+fetch_new_liked_tracks()      → API Spotify /me/tracks (depuis le dernier run)
     ↓
 classify_track()
-    ├─ fetch_lastfm_tags()  → API Last.fm track.getTopTags
-    └─ llm_classify()       → Groq llama-3.1-8b-instant
-                              (prompt : titre + artiste + tags Last.fm + genres config)
+    ├─ _resolve_artist_tags()      → résout les tags artiste selon le contexte :
+    │    ├─ extract_remixer()        · remix détecté (parens ou tiret) → tags du remixeur
+    │    └─ multi-artistes          · plusieurs artistes → union tags (max 3, dédupliqués)
+    ├─ fetch_lastfm_tags()         → API Last.fm track.getTopTags (tags du titre)
+    ├─ rule_based_classify()       → matching exact tags Last.fm ↔ keywords config
+    │                                (tags titre poids 1.0 > tags artiste poids 0.7)
+    │                                → retourne (genre, "lastfm") si match unique
+    └─ llm_classify()              → Groq llama-3.1-8b-instant (fallback si règles insuffisantes)
+         build_llm_prompt()          · remix : remixeur en tête du prompt (style de référence)
+                                     · standard : tags artiste(s)
+                                     → retourne (genre, "llm") ou None
     ↓
-get_or_create_playlist()   → API Spotify /me/playlists + /playlists/{id}/items
+get_or_create_playlist()      → API Spotify /me/playlists + /playlists/{id}/items
     ↓
-state.json (checkpoint)    → committé automatiquement par GitHub Actions
+state.json (checkpoint)       → committé automatiquement par GitHub Actions
 ```
 
 ## Skills disponibles
@@ -63,21 +71,23 @@ playlist-modify-private
 playlist-modify-public
 ```
 
-## Endpoint Last.fm utilisé
+## Endpoints Last.fm utilisés
 
-| Endpoint | Usage |
-|----------|-------|
-| `GET https://ws.audioscrobbler.com/2.0/?method=track.getTopTags` | Récupérer les top 15 tags communautaires d'un titre (artist + track) |
+| Endpoint | Fonction | Usage |
+|----------|----------|-------|
+| `track.getTopTags` | `fetch_lastfm_tags()` | Top 15 tags communautaires d'un titre (artist + track) |
+| `artist.getTopTags` | `fetch_lastfm_artist_tags()` | Top 10 tags communautaires d'un artiste |
 
-Appelé dans `fetch_lastfm_tags()` — retourne `[]` si `LASTFM_API_KEY` absent ou si erreur réseau.
+Les deux fonctions retournent `[]` si `LASTFM_API_KEY` absent ou erreur réseau (log.warning en cas d'erreur).
 
 ## Fichiers critiques
 
 - `sorter.py` — pipeline principal, ne pas casser le flux incrémental
 - `config.yaml` — genres et keywords, modifiable sans toucher au code
 - `state.json` — **ne jamais modifier manuellement** sauf rollback intentionnel
-- `.github/workflows/weekly_sort.yml` — cron et secrets
+- `.github/workflows/hourly_sort.yml` — cron et secrets
 - `auth_setup.py` — à exécuter une seule fois en local pour générer le token
+- `debug.py` — outil de test des APIs sans écriture (state / playlists / logs intacts)
 
 ## Variables d'environnement
 
@@ -94,7 +104,7 @@ Appelé dans `fetch_lastfm_tags()` — retourne `[]` si `LASTFM_API_KEY` absent 
 
 ## Configuration GitHub Actions (cron)
 
-**Fichier :** `.github/workflows/weekly_sort.yml`
+**Fichier :** `.github/workflows/hourly_sort.yml`
 
 ### Déclencheurs
 
@@ -103,7 +113,7 @@ Appelé dans `fetch_lastfm_tags()` — retourne `[]` si `LASTFM_API_KEY` absent 
 | `schedule` | `0 * * * *` | Toutes les heures (minute 0) |
 | `workflow_dispatch` | — | Lancement manuel depuis l'onglet Actions |
 
-### Steps du job `sort` (runner : `ubuntu-latest`)
+### Steps du job `sort` (runner : `ubuntu-latest`, timeout : 15 min)
 
 | # | Step | Détail |
 |---|------|--------|
@@ -139,11 +149,15 @@ python3 sorter.py
 # Lancer avec limite de titres
 MAX_TRACKS=10 python3 sorter.py
 
+# Tester les APIs sur un titre sans rien écrire
+python3 debug.py "Get Low" "DJ Snake"
+python3 debug.py                        # utilise le dernier like Spotify
+
 # Vérifier la syntaxe
-python3 -m py_compile sorter.py
+python3 -m py_compile sorter.py debug.py
 
 # Linting
-ruff check sorter.py
+ruff check sorter.py debug.py
 ```
 
 ## Règles importantes
@@ -153,4 +167,8 @@ ruff check sorter.py
 3. Toute valeur configurable dans `config.yaml`, pas hardcodée dans `sorter.py`
 4. Ne pas appeler les endpoints Spotify `/audio-features` ni `/artists` batch — ils retournent 403
 5. Utiliser `sp._post()` / `sp._get()` pour les endpoints non couverts par Spotipy
-6. Le LLM Groq est le **fallback final** — Last.fm passe en premier
+6. `rule_based_classify()` est le **premier filtre** — LLM Groq uniquement en fallback si aucun match clair
+7. `classify_track()` retourne `Optional[tuple[str, str]]` — toujours déstructurer `genre, method = result`
+8. `config.yaml` ne contient que des `keywords` — plus de `audio_features` ni `confidence_threshold`
+9. Pour les remixes, utiliser `extract_remixer()` puis `_resolve_artist_tags()` — le remixeur prime sur l'artiste original
+10. `fetch_lastfm_artist_tags()` est mis en cache (`lru_cache`) — appeler sans crainte de doublons API

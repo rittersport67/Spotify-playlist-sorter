@@ -1,8 +1,10 @@
 import os
+import re
 import json
 import time
 import logging
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 from typing import Optional
 
@@ -107,12 +109,20 @@ def fetch_new_liked_tracks(sp: spotipy.Spotify, last_id: Optional[str]) -> list[
                 continue
             if last_id and track["id"] == last_id:
                 return tracks  # on a rattrapé le dernier run
+            release_date_raw: str = track.get("album", {}).get("release_date", "") or ""
+            release_year: Optional[int] = int(release_date_raw[:4]) if release_date_raw[:4].isdigit() else None
             tracks.append({
                 "id": track["id"],
                 "name": track["name"],
                 "artist": track["artists"][0]["name"],
                 "artist_id": track["artists"][0]["id"],
+                "all_artists": [a["name"] for a in track.get("artists", [])],
                 "added_at": item["added_at"],
+                "popularity": track.get("popularity"),
+                "duration_ms": track.get("duration_ms"),
+                "album_name": track.get("album", {}).get("name"),
+                "release_year": release_year,
+                "explicit": track.get("explicit", False),
             })
 
         if batch["next"] is None:
@@ -121,6 +131,32 @@ def fetch_new_liked_tracks(sp: spotipy.Spotify, last_id: Optional[str]) -> list[
 
     return tracks
 
+
+
+@lru_cache(maxsize=256)
+def fetch_lastfm_artist_tags(artist: str) -> list[str]:
+    """Retourne les top tags Last.fm d'un artiste via artist.getTopTags (vide si API non configurée ou erreur)."""
+    if not LASTFM_API_KEY:
+        return []
+    try:
+        response = requests.get(
+            "https://ws.audioscrobbler.com/2.0/",
+            params={
+                "method": "artist.getTopTags",
+                "artist": artist,
+                "api_key": LASTFM_API_KEY,
+                "format": "json",
+            },
+            timeout=5,
+        )
+        tags = response.json().get("toptags", {}).get("tag", [])
+        tags_sorted = sorted(tags, key=lambda t: int(t.get("count", 0)), reverse=True)
+        result = [t["name"].lower() for t in tags_sorted[:10]]
+        log.info(f"  [lastfm] artiste {artist!r} → tags : {result or 'aucun'}")
+        return result
+    except Exception as exc:
+        log.warning(f"fetch_lastfm_artist_tags: artiste {artist!r} inaccessible — {exc}")
+        return []
 
 
 def fetch_existing_playlists(sp: spotipy.Spotify) -> dict[str, str]:
@@ -166,54 +202,109 @@ def add_tracks_to_playlist(sp: spotipy.Spotify, playlist_id: str, track_ids: lis
 # Classification
 # ---------------------------------------------------------------------------
 
+def _norm_tag(s: str) -> str:
+    """Normalise un tag/keyword : minuscules, sans tirets ni espaces."""
+    return s.lower().replace("-", "").replace(" ", "")
+
+
 def rule_based_classify(
-    track: dict,
-    features: dict,
-    artist_genres: list[str],
+    artist_tags: list[str],
+    track_tags: list[str],
     genre_rules: dict,
-) -> Optional[tuple[str, float]]:
+) -> Optional[str]:
     """
-    Tente de classifier le titre par règles.
-    Retourne (genre_name, confidence) ou None si ambigu.
+    Tente de classifier par correspondance exacte tags Last.fm ↔ keywords config.
+    Tags du titre (poids 1.0) ont priorité sur tags artiste (poids 0.7).
+    Chaque keyword ne compte qu'une fois — si match track ET artiste, on prend le meilleur.
+    Retourne le genre gagnant si score unique, None si tie ou aucun match.
     """
-    artist_genres_lower = [g.lower() for g in artist_genres]
+    track_norms = {_norm_tag(t) for t in track_tags}
+    artist_norms = {_norm_tag(t) for t in artist_tags}
+    scored: dict[str, float] = {}
 
     for genre_name, rules in genre_rules.items():
         score = 0.0
-        hits = 0
+        for keyword in rules.get("keywords", []):
+            kw = _norm_tag(keyword)
+            if kw in track_norms:
+                score += 1.0
+            elif kw in artist_norms:
+                score += 0.7
+        if score > 0:
+            scored[genre_name] = score
 
-        # Correspondance sur les genres Spotify de l'artiste
-        keywords = [k.lower() for k in rules.get("keywords", [])]
-        for keyword in keywords:
-            for ag in artist_genres_lower:
-                if keyword in ag:
-                    score += 0.6
-                    hits += 1
-                    break
+    if not scored:
+        return None
 
-        # Règles sur les audio features
-        af_rules = rules.get("audio_features", {})
-        for feature, condition in af_rules.items():
-            if feature not in features:
-                continue
-            value = features[feature]
-            passed = False
-            if "min" in condition and value >= condition["min"]:
-                passed = True
-            if "max" in condition and value <= condition["max"]:
-                passed = True
-            if "min" in condition and "max" in condition:
-                passed = value >= condition["min"] and value <= condition["max"]
-            if passed:
-                score += 0.3
-                hits += 1
+    best_score = max(scored.values())
+    winners = [g for g, s in scored.items() if s == best_score]
 
-        if hits > 0:
-            confidence = min(score, 1.0)
-            if confidence >= rules.get("confidence_threshold", 0.6):
-                return (genre_name, confidence)
+    # Tie → ambiguïté, laisser le LLM trancher
+    if len(winners) > 1:
+        return None
 
-    return None
+    return winners[0]
+
+
+def build_llm_prompt(
+    track: dict,
+    available_genres: list[str],
+    lastfm_tags: list[str],
+    genre_rules: dict,
+) -> str:
+    """Construit le prompt de classification pour le LLM."""
+    tags_str = ", ".join(lastfm_tags) if lastfm_tags else "aucun"
+    genres_context = "\n".join(
+        f"- {name} (mots-clés : {', '.join(rules.get('keywords', []))})"
+        for name, rules in genre_rules.items()
+    )
+    genres_list = ", ".join(available_genres)
+
+    all_artists = track.get("all_artists", [])
+    artists_str = ", ".join(all_artists) if len(all_artists) > 1 else track["artist"]
+    popularity_str = str(track["popularity"]) if track.get("popularity") is not None else "inconnue"
+    release_year_str = str(track["release_year"]) if track.get("release_year") else "inconnue"
+    album_str = track.get("album_name") or "inconnu"
+    duration_ms: Optional[int] = track.get("duration_ms")
+    duration_str = f"{duration_ms // 60000}min{(duration_ms % 60000) // 1000}s" if duration_ms else "inconnue"
+    explicit_str = "oui" if track.get("explicit") else "non"
+
+    remixer_name: Optional[str] = track.get("remixer_name")
+    remixer_tags: list[str] = track.get("remixer_tags") or []
+    original_tags: list[str] = track.get("artist_genres") or []
+
+    if remixer_name and remixer_tags:
+        genre_hints = (
+            f"Remixeur : {remixer_name}\n"
+            f"Tags Last.fm du remixeur (style de référence) : {', '.join(remixer_tags)}\n"
+            f"Tags Last.fm de l'artiste original (contexte) : {', '.join(original_tags) or 'inconnus'}"
+        )
+    else:
+        artist_genres_str = ", ".join(original_tags) or "inconnus"
+        genre_hints = f"Tags Last.fm de l'artiste : {artist_genres_str}"
+
+    return f"""Tu es un expert en classification musicale. Classe ce titre dans UN genre de la liste ci-dessous.
+Si aucun genre ne correspond, réponds uniquement par "aucun".
+
+=== Informations sur le titre ===
+Titre : {track['name']}
+Artiste(s) : {artists_str}
+Album : {album_str} ({release_year_str})
+Durée : {duration_str}
+Popularité Spotify : {popularity_str}/100
+Contenu explicite : {explicit_str}
+
+=== Indices de genre ===
+{genre_hints}
+Tags Last.fm du titre (triés par popularité) : {tags_str}
+
+=== Classification ===
+Genres disponibles et leurs mots-clés :
+{genres_context}
+
+Liste exacte des genres autorisés : {genres_list}
+
+Réponds UNIQUEMENT avec le nom exact du genre tel qu'il apparaît dans la liste, ou "aucun". Aucune explication."""
 
 
 def llm_classify(
@@ -227,27 +318,7 @@ def llm_classify(
     Classifie via Groq llama-3.1-8b-instant.
     Retourne un genre de la liste ou None si aucun ne convient.
     """
-    tags_str = ", ".join(lastfm_tags) if lastfm_tags else "aucun"
-    genres_context = "\n".join(
-        f"- {name} (mots-clés : {', '.join(rules.get('keywords', []))})"
-        for name, rules in genre_rules.items()
-    )
-    genres_list = ", ".join(available_genres)
-
-    prompt = f"""Tu es un expert en classification musicale. Classe ce titre dans UN genre de la liste ci-dessous.
-Si aucun genre ne correspond, réponds uniquement par "aucun".
-
-Titre : {track['name']}
-Artiste : {track['artist']}
-Tags Last.fm : {tags_str}
-
-Genres disponibles et leurs mots-clés :
-{genres_context}
-
-Liste exacte des genres autorisés : {genres_list}
-
-Réponds UNIQUEMENT avec le nom exact du genre tel qu'il apparaît dans la liste, ou "aucun". Aucune explication."""
-
+    prompt = build_llm_prompt(track, available_genres, lastfm_tags, genre_rules)
     response = groq_client.chat.completions.create(
         model=GROQ_MODEL,
         messages=[{"role": "user", "content": prompt}],
@@ -275,9 +346,66 @@ def fetch_lastfm_tags(artist: str, title: str) -> list[str]:
             timeout=5,
         )
         tags = response.json().get("toptags", {}).get("tag", [])
-        return [t["name"].lower() for t in tags[:15]]
+        tags_sorted = sorted(tags, key=lambda t: int(t.get("count", 0)), reverse=True)
+        return [t["name"].lower() for t in tags_sorted[:15]]
     except Exception:
         return []
+
+
+# Format parenthèses/crochets : "Song (Artist Remix)", "Song [Artist Edit]"
+_REMIX_PAREN_RE = re.compile(
+    r'[\(\[]\s*(.+?)\s+(?:remix|edit|bootleg|mix|rework|vip|flip|re-edit)\s*[\)\]]',
+    re.IGNORECASE,
+)
+# Format tiret : "Song - Artist Remix", "Song — Artist Mix"
+_REMIX_DASH_RE = re.compile(
+    r'[-–—]\s*(.+?)\s+(?:remix|edit|bootleg|mix|rework|vip|flip|re-edit)\s*$',
+    re.IGNORECASE,
+)
+_REMIX_GENERIC = {"original", "radio", "extended", "club", "instrumental", "acoustic", "official"}
+
+
+def extract_remixer(title: str) -> Optional[str]:
+    """Extrait le nom du remixeur depuis le titre si c'est un remix.
+    Gère deux formats :
+      · parenthèses/crochets : 'Get Low (DJ Snake Remix)' → 'DJ Snake'
+      · tiret               : 'I Wanna Go - John Summit Remix' → 'John Summit'
+    Retourne None si pas de remix détecté ou remixeur non identifiable.
+    """
+    match = _REMIX_PAREN_RE.search(title) or _REMIX_DASH_RE.search(title)
+    if not match:
+        return None
+    candidate = match.group(1).strip()
+    if candidate.lower() in _REMIX_GENERIC:
+        return None
+    return candidate
+
+
+def _resolve_artist_tags(track: dict) -> list[str]:
+    """Retourne les tags Last.fm de l'artiste pertinent pour la classification.
+
+    - Si remix détecté dans le titre → tags du remixeur (priorité)
+    - Sinon → union des tags de tous les artistes (max 3), dédupliqués.
+    """
+    # Remix : priorité au remixeur
+    remixer = extract_remixer(track["name"])
+    if remixer:
+        tags = fetch_lastfm_artist_tags(remixer)
+        log.info(f"  [remix] remixeur détecté : {remixer!r} → {tags[:3]}")
+        if tags:
+            return tags
+        log.info(f"  [remix] aucun tag Last.fm pour {remixer!r} — fallback artiste principal")
+
+    # Multi-artistes : fusion des tags de tous les artistes (max 3)
+    all_artists: list[str] = track.get("all_artists") or [track["artist"]]
+    merged: list[str] = []
+    seen: set[str] = set()
+    for artist in all_artists[:3]:
+        for tag in fetch_lastfm_artist_tags(artist):
+            if tag not in seen:
+                merged.append(tag)
+                seen.add(tag)
+    return merged
 
 
 def classify_track(
@@ -286,13 +414,52 @@ def classify_track(
     available_genres: list[str],
     genre_rules: dict,
     stats: dict,
-) -> Optional[str]:
-    """Pipeline de classification : LLM avec tags Last.fm comme contexte."""
+) -> Optional[tuple[str, str]]:
+    """Pipeline de classification : règles Last.fm → fallback LLM.
+    Retourne (genre, method) ou None si le titre n'a pu être classifié.
+    """
+    artist_tags = _resolve_artist_tags(track)
     tags = fetch_lastfm_tags(track["artist"], track["name"])
+
+    # 1. Classification par règles (tags Last.fm — sans appel LLM)
+    genre = rule_based_classify(artist_tags, tags, genre_rules)
+    if genre is not None:
+        stats["lastfm_classified"] += 1
+        log.info(
+            f"  [rules] '{track['artist']} — {track['name']}' → {genre} "
+            f"(artist_tags: {artist_tags[:3]}, track_tags: {tags[:3]})"
+        )
+        return (genre, "lastfm")
+
+    # 2. Fallback LLM — enrichir avec remixeur et tags artiste original séparément
+    remixer = extract_remixer(track["name"])
+    if remixer:
+        remixer_tags = fetch_lastfm_artist_tags(remixer)  # déjà en cache via _resolve_artist_tags
+        all_artists: list[str] = track.get("all_artists") or [track["artist"]]
+        seen: set[str] = set()
+        original_tags: list[str] = []
+        for a in all_artists[:3]:
+            for t in fetch_lastfm_artist_tags(a):
+                if t not in seen:
+                    original_tags.append(t)
+                    seen.add(t)
+    else:
+        remixer_tags = []
+        original_tags = artist_tags
+
+    track_enriched = {
+        **track,
+        "artist_genres": original_tags,
+        "remixer_name": remixer,
+        "remixer_tags": remixer_tags,
+    }
     stats["llm_classified"] += 1
-    genre = llm_classify(groq_client, track, available_genres, tags, genre_rules)
-    log.info(f"  [llm] '{track['artist']}-{track['name']}' → {genre or 'aucun'} (tags: {tags[:5]})")
-    return genre
+    genre = llm_classify(groq_client, track_enriched, available_genres, tags, genre_rules)
+    log.info(
+        f"  [llm] '{track['artist']} — {track['name']}' → {genre or 'aucun'} "
+        f"(remixer: {remixer!r}, artist_tags: {original_tags[:3]}, track_tags: {tags[:3]})"
+    )
+    return (genre, "llm") if genre is not None else None
 
 
 # ---------------------------------------------------------------------------
@@ -385,7 +552,6 @@ def main() -> None:
         "total": 0,
         "added": 0,
         "skipped": 0,
-        "rule_classified": 0,
         "lastfm_classified": 0,
         "llm_classified": 0,
         "new_playlists": 0,
@@ -422,7 +588,7 @@ def main() -> None:
             stats["skipped"] += 1
             continue
 
-        genre = classify_track(
+        result = classify_track(
             track=track,
             groq_client=groq_client,
             available_genres=available_genres,
@@ -430,18 +596,19 @@ def main() -> None:
             stats=stats,
         )
 
-        if genre is None:
+        if result is None:
             log.info(f"  '{track['name']}' — genre non identifié, ignoré")
             stats["skipped"] += 1
             already_classified.add(track["id"])
             continue
 
+        genre, method = result
         playlist_buckets.setdefault(genre, []).append(track["id"])
         classifications.append({
             "name": track["name"],
             "artist": track["artist"],
             "genre": genre,
-            "method": "LLM",
+            "method": method,
         })
 
         already_classified.add(track["id"])
