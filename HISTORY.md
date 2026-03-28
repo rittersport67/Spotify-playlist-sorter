@@ -1,3 +1,38 @@
+# Run du 2026-03-28 23:21 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 2 |
+
+## Nouveaux genres découverts cette session
+
+- `Cumbia En El Monte`
+- `Cumbia Del Monte`
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Believe in Me | Ray Volpe | Rap US |
+| Save Me | Ray Volpe | Rap US |
+| Cumbia En El Monte | Pedro Laza Y Sus Pelayeros | Cumbia En El Monte |
+| Cumbia Del Monte | Pedro Laza Y Sus Pelayeros | Cumbia Del Monte |
+| Rave | Sikdope | EDM |
+| Revolt | Malaa | Rap FR |
+| 11 Minutes (feat. Travis Barker) - Kayzo Remix | YUNGBLUD | Rap US |
+| Slaughter Them All | 12th Planet | Rap US |
+| Bop It | Zomboy | Dubstep |
+| All The Smoke (feat. Bok Nero) | Riot Ten | Rap US |
+
+---
+
 # Run du 2026-03-28 22:19 UTC
 
 ## Résumé
