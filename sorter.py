@@ -4,6 +4,7 @@ import json
 import time
 import logging
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 from typing import Optional
 
@@ -132,6 +133,7 @@ def fetch_new_liked_tracks(sp: spotipy.Spotify, last_id: Optional[str]) -> list[
 
 
 
+@lru_cache(maxsize=256)
 def fetch_lastfm_artist_tags(artist: str) -> list[str]:
     """Retourne les top tags Last.fm d'un artiste via artist.getTopTags (vide si API non configurée ou erreur)."""
     if not LASTFM_API_KEY:
@@ -260,13 +262,26 @@ def build_llm_prompt(
 
     all_artists = track.get("all_artists", [])
     artists_str = ", ".join(all_artists) if len(all_artists) > 1 else track["artist"]
-    artist_genres_str = ", ".join(track.get("artist_genres", [])) or "inconnus"
     popularity_str = str(track["popularity"]) if track.get("popularity") is not None else "inconnue"
     release_year_str = str(track["release_year"]) if track.get("release_year") else "inconnue"
     album_str = track.get("album_name") or "inconnu"
     duration_ms: Optional[int] = track.get("duration_ms")
     duration_str = f"{duration_ms // 60000}min{(duration_ms % 60000) // 1000}s" if duration_ms else "inconnue"
     explicit_str = "oui" if track.get("explicit") else "non"
+
+    remixer_name: Optional[str] = track.get("remixer_name")
+    remixer_tags: list[str] = track.get("remixer_tags") or []
+    original_tags: list[str] = track.get("artist_genres") or []
+
+    if remixer_name and remixer_tags:
+        genre_hints = (
+            f"Remixeur : {remixer_name}\n"
+            f"Tags Last.fm du remixeur (style de référence) : {', '.join(remixer_tags)}\n"
+            f"Tags Last.fm de l'artiste original (contexte) : {', '.join(original_tags) or 'inconnus'}"
+        )
+    else:
+        artist_genres_str = ", ".join(original_tags) or "inconnus"
+        genre_hints = f"Tags Last.fm de l'artiste : {artist_genres_str}"
 
     return f"""Tu es un expert en classification musicale. Classe ce titre dans UN genre de la liste ci-dessous.
 Si aucun genre ne correspond, réponds uniquement par "aucun".
@@ -280,8 +295,8 @@ Popularité Spotify : {popularity_str}/100
 Contenu explicite : {explicit_str}
 
 === Indices de genre ===
-Tags Last.fm de l'artiste : {artist_genres_str}
-Tags Last.fm (triés par popularité) : {tags_str}
+{genre_hints}
+Tags Last.fm du titre (triés par popularité) : {tags_str}
 
 === Classification ===
 Genres disponibles et leurs mots-clés :
@@ -337,24 +352,31 @@ def fetch_lastfm_tags(artist: str, title: str) -> list[str]:
         return []
 
 
-_REMIX_RE = re.compile(
+# Format parenthèses/crochets : "Song (Artist Remix)", "Song [Artist Edit]"
+_REMIX_PAREN_RE = re.compile(
     r'[\(\[]\s*(.+?)\s+(?:remix|edit|bootleg|mix|rework|vip|flip|re-edit)\s*[\)\]]',
     re.IGNORECASE,
 )
+# Format tiret : "Song - Artist Remix", "Song — Artist Mix"
+_REMIX_DASH_RE = re.compile(
+    r'[-–—]\s*(.+?)\s+(?:remix|edit|bootleg|mix|rework|vip|flip|re-edit)\s*$',
+    re.IGNORECASE,
+)
+_REMIX_GENERIC = {"original", "radio", "extended", "club", "instrumental", "acoustic", "official"}
 
 
 def extract_remixer(title: str) -> Optional[str]:
     """Extrait le nom du remixeur depuis le titre si c'est un remix.
-    Ex : 'Get Low (DJ Snake Remix)' → 'DJ Snake'
-    Retourne None si le titre n'est pas un remix ou si le remixeur n'est pas identifiable.
+    Gère deux formats :
+      · parenthèses/crochets : 'Get Low (DJ Snake Remix)' → 'DJ Snake'
+      · tiret               : 'I Wanna Go - John Summit Remix' → 'John Summit'
+    Retourne None si pas de remix détecté ou remixeur non identifiable.
     """
-    match = _REMIX_RE.search(title)
+    match = _REMIX_PAREN_RE.search(title) or _REMIX_DASH_RE.search(title)
     if not match:
         return None
     candidate = match.group(1).strip()
-    # Exclure les faux positifs sans nom d'artiste (ex: "Original", "Radio", "Extended")
-    generic = {"original", "radio", "extended", "club", "instrumental", "acoustic", "official"}
-    if candidate.lower() in generic:
+    if candidate.lower() in _REMIX_GENERIC:
         return None
     return candidate
 
@@ -409,13 +431,33 @@ def classify_track(
         )
         return (genre, "lastfm")
 
-    # 2. Fallback LLM si les règles sont insuffisantes
-    track_enriched = {**track, "artist_genres": artist_tags}
+    # 2. Fallback LLM — enrichir avec remixeur et tags artiste original séparément
+    remixer = extract_remixer(track["name"])
+    if remixer:
+        remixer_tags = fetch_lastfm_artist_tags(remixer)  # déjà en cache via _resolve_artist_tags
+        all_artists: list[str] = track.get("all_artists") or [track["artist"]]
+        seen: set[str] = set()
+        original_tags: list[str] = []
+        for a in all_artists[:3]:
+            for t in fetch_lastfm_artist_tags(a):
+                if t not in seen:
+                    original_tags.append(t)
+                    seen.add(t)
+    else:
+        remixer_tags = []
+        original_tags = artist_tags
+
+    track_enriched = {
+        **track,
+        "artist_genres": original_tags,
+        "remixer_name": remixer,
+        "remixer_tags": remixer_tags,
+    }
     stats["llm_classified"] += 1
     genre = llm_classify(groq_client, track_enriched, available_genres, tags, genre_rules)
     log.info(
         f"  [llm] '{track['artist']} — {track['name']}' → {genre or 'aucun'} "
-        f"(artist_tags: {artist_tags[:3]}, track_tags: {tags[:3]})"
+        f"(remixer: {remixer!r}, artist_tags: {original_tags[:3]}, track_tags: {tags[:3]})"
     )
     return (genre, "llm") if genre is not None else None
 

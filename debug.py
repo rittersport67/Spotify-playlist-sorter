@@ -26,6 +26,7 @@ load_dotenv()
 # ---------------------------------------------------------------------------
 from sorter import (
     get_spotify_client,
+    fetch_lastfm_artist_tags,
     fetch_lastfm_tags,
     rule_based_classify,
     build_llm_prompt,
@@ -118,8 +119,8 @@ EXPECTED_SECTIONS = [
     "Popularité Spotify :",
     "Contenu explicite :",
     "=== Indices de genre ===",
-    "Tags Last.fm de l'artiste :",
-    "Tags Last.fm (triés par popularité) :",
+    # Tags artiste : conditionnel selon remix ou non — non validé ici
+    "Tags Last.fm du titre (triés par popularité) :",
     "=== Classification ===",
     "Genres disponibles et leurs mots-clés :",
     "Liste exacte des genres autorisés :",
@@ -183,29 +184,52 @@ def main() -> None:
 
     # --- 4. Tags artiste Last.fm ---
     section("4/7 · API Last.fm — artist.getTopTags (remix + multi-artistes)")
-    lastfm_key_artist = os.environ.get("LASTFM_API_KEY")
-    if not lastfm_key_artist:
+    # artist_tags_for_rules : tags passés à rule_based_classify (remixeur prioritaire)
+    # track["remixer_*"] + track["artist_genres"] : enrichissement du prompt LLM
+    artist_tags_for_rules: list[str] = []
+    if not os.environ.get("LASTFM_API_KEY"):
         warn("Last.fm artiste", "LASTFM_API_KEY absent — tags ignorés")
-        artist_genres = []
+        track["remixer_name"] = None
+        track["remixer_tags"] = []
+        track["artist_genres"] = []
     else:
         remixer = extract_remixer(track["name"])
         all_artists = track.get("all_artists") or [track["artist"]]
         if remixer:
-            ok("Remix détecté", f"remixeur : {remixer!r} (artiste original ignoré)")
-        elif len(all_artists) > 1:
-            ok("Multi-artistes", ", ".join(all_artists))
-        print(f"  → Appel _resolve_artist_tags()")
-        artist_genres = _resolve_artist_tags(track)
-        if artist_genres:
-            ok("Tags artiste(s) fusionnés", ", ".join(artist_genres))
+            ok("Remix détecté", f"remixeur : {remixer!r}")
+            remixer_tags = fetch_lastfm_artist_tags(remixer)  # mis en cache
+            if remixer_tags:
+                ok("Tags remixeur", ", ".join(remixer_tags))
+            else:
+                warn("Tags remixeur", f"aucun tag Last.fm pour {remixer!r}")
+            seen: set[str] = set()
+            original_tags: list[str] = []
+            for a in all_artists[:3]:
+                for t in fetch_lastfm_artist_tags(a):
+                    if t not in seen:
+                        original_tags.append(t)
+                        seen.add(t)
+            ok("Tags artiste original (contexte)", ", ".join(original_tags) or "aucun")
+            track["remixer_name"] = remixer
+            track["remixer_tags"] = remixer_tags
+            track["artist_genres"] = original_tags
+            artist_tags_for_rules = remixer_tags or original_tags
         else:
-            warn("Tags artiste(s)", "aucun tag retourné")
-    track["artist_genres"] = artist_genres
+            if len(all_artists) > 1:
+                ok("Multi-artistes", ", ".join(all_artists))
+            merged = _resolve_artist_tags(track)
+            if merged:
+                ok("Tags artiste(s) fusionnés", ", ".join(merged))
+            else:
+                warn("Tags artiste(s)", "aucun tag retourné")
+            track["remixer_name"] = None
+            track["remixer_tags"] = []
+            track["artist_genres"] = merged
+            artist_tags_for_rules = merged
 
     # --- 5. Tags Last.fm ---
     section("5/7 · API Last.fm — track.getTopTags")
-    lastfm_key = os.environ.get("LASTFM_API_KEY")
-    if not lastfm_key:
+    if not os.environ.get("LASTFM_API_KEY"):
         warn("Last.fm", "LASTFM_API_KEY absent — tags ignorés")
         lastfm_tags = []
     else:
@@ -220,7 +244,7 @@ def main() -> None:
 
     # --- 6. Classification par règles ---
     section("6/7 · Classification par règles Last.fm")
-    rules_genre = rule_based_classify(artist_genres, lastfm_tags, genre_rules)
+    rules_genre = rule_based_classify(artist_tags_for_rules, lastfm_tags, genre_rules)
     if rules_genre is not None:
         ok("Résultat", f"{rules_genre} → LLM court-circuité")
     else:

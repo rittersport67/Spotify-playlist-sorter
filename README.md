@@ -12,13 +12,16 @@ Tourne toutes les heures sur GitHub Actions — zéro intervention manuelle.
 Nouveaux likes Spotify
         ↓
    Last.fm tags        →  tags du titre (track.getTopTags)
-                       +  tags de l'artiste (artist.getTopTags)
+                       +  tags artiste(s) — avec détection automatique :
+                          · remix  → tags du remixeur en priorité
+                          · feat.  → union des tags de tous les artistes
         ↓
    Règles Last.fm      →  matching exact keywords ↔ tags
                           (tags titre prioritaires sur tags artiste)
         ↓ (si ambigu ou aucun match)
    LLM Groq            →  classification par IA (llama-3.1-8b-instant)
-                           contexte : titre + artiste + tags + genres du config
+                          · remix : tags remixeur mis en avant dans le prompt
+                          · standard : tags artiste(s) + tags titre
         ↓
    Playlists Spotify   →  créées automatiquement par genre
         ↓

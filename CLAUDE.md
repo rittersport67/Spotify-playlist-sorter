@@ -14,12 +14,16 @@ Likes Spotify
 fetch_new_liked_tracks()      → API Spotify /me/tracks (depuis le dernier run)
     ↓
 classify_track()
-    ├─ fetch_lastfm_artist_tags()  → API Last.fm artist.getTopTags
-    ├─ fetch_lastfm_tags()         → API Last.fm track.getTopTags
+    ├─ _resolve_artist_tags()      → résout les tags artiste selon le contexte :
+    │    ├─ extract_remixer()        · remix détecté (parens ou tiret) → tags du remixeur
+    │    └─ multi-artistes          · plusieurs artistes → union tags (max 3, dédupliqués)
+    ├─ fetch_lastfm_tags()         → API Last.fm track.getTopTags (tags du titre)
     ├─ rule_based_classify()       → matching exact tags Last.fm ↔ keywords config
     │                                (tags titre poids 1.0 > tags artiste poids 0.7)
     │                                → retourne (genre, "lastfm") si match unique
     └─ llm_classify()              → Groq llama-3.1-8b-instant (fallback si règles insuffisantes)
+         build_llm_prompt()          · remix : remixeur en tête du prompt (style de référence)
+                                     · standard : tags artiste(s)
                                      → retourne (genre, "llm") ou None
     ↓
 get_or_create_playlist()      → API Spotify /me/playlists + /playlists/{id}/items
@@ -166,3 +170,5 @@ ruff check sorter.py debug.py
 6. `rule_based_classify()` est le **premier filtre** — LLM Groq uniquement en fallback si aucun match clair
 7. `classify_track()` retourne `Optional[tuple[str, str]]` — toujours déstructurer `genre, method = result`
 8. `config.yaml` ne contient que des `keywords` — plus de `audio_features` ni `confidence_threshold`
+9. Pour les remixes, utiliser `extract_remixer()` puis `_resolve_artist_tags()` — le remixeur prime sur l'artiste original
+10. `fetch_lastfm_artist_tags()` est mis en cache (`lru_cache`) — appeler sans crainte de doublons API
