@@ -1,3 +1,33 @@
+# Run du 2026-03-28 10:23 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Legacy (feat. Travis Scott & 21 Savage) | Offset | Rap US |
+| Ric Flair Drip (with Metro Boomin) | Offset | Rap US |
+| Look Alive (feat. Drake) | BlocBoy JB | Rap US |
+| Pressure - Valentino Khan Remix | RL Grime | EDM |
+| Hellifornia | Gesaffelstein | EDM |
+| Knockout | Krimer | Rap FR |
+| Babatunde - VIP | PEEKABOO | Rap FR |
+| Them Ft. Virus Syndicate | Eliminate | Rap US |
+| My City | AFROJACK | EDM |
+| Flawless Victory | AFROJACK | EDM |
+
+---
+
 # Run du 2026-03-28 09:28 UTC
 
 ## Résumé
