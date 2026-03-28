@@ -1,3 +1,37 @@
+# Run du 2026-03-28 13:43 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 1 |
+
+## Nouveaux genres découverts cette session
+
+- `Je ne dispose pas d'informations sur le titre et l'artiste.`
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+|  |  | Je ne dispose pas d'informations sur le titre et l'artiste. |
+| Like A Bitch | Zomboy | Dubstep |
+| Babylon | Jauz | EDM |
+| Project 9 | YOOKiE | Rap FR |
+| State Of Emergency | PhaseOne | Rap FR |
+| Another Dimension - YOOKiE Remix | NGHTMRE | EDM |
+| Wraith | YOOKiE | Rap FR |
+| Get Loose | Hekler | Rap US |
+| Excommunicado | Hekler | Rap US |
+| Bands | Hekler | Rap US |
+
+---
+
 # Run du 2026-03-28 12:34 UTC
 
 ## Résumé
