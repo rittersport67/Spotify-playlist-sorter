@@ -131,22 +131,28 @@ def fetch_new_liked_tracks(sp: spotipy.Spotify, last_id: Optional[str]) -> list[
 
 
 
-# Cache en mémoire pour les genres artiste Spotify (durée du run)
-_artist_genres_cache: dict[str, list[str]] = {}
-
-
-def fetch_artist_genres_cached(sp: spotipy.Spotify, artist_id: str) -> list[str]:
-    """Retourne les genres Spotify d'un artiste via GET /artists/{id}. Cache en mémoire sur la durée du run."""
-    if artist_id in _artist_genres_cache:
-        return _artist_genres_cache[artist_id]
+def fetch_lastfm_artist_tags(artist: str) -> list[str]:
+    """Retourne les top tags Last.fm d'un artiste via artist.getTopTags (vide si API non configurée ou erreur)."""
+    if not LASTFM_API_KEY:
+        return []
     try:
-        genres: list[str] = sp.artist(artist_id).get("genres", [])
-    except Exception as exc:
-        log.warning(f"fetch_artist_genres_cached: artiste {artist_id!r} inaccessible — {exc}")
-        genres = []
-    _artist_genres_cache[artist_id] = genres
-    log.info(f"  [spotify] artiste {artist_id!r} → genres : {genres or 'aucun'}")
-    return genres
+        response = requests.get(
+            "https://ws.audioscrobbler.com/2.0/",
+            params={
+                "method": "artist.getTopTags",
+                "artist": artist,
+                "api_key": LASTFM_API_KEY,
+                "format": "json",
+            },
+            timeout=5,
+        )
+        tags = response.json().get("toptags", {}).get("tag", [])
+        tags_sorted = sorted(tags, key=lambda t: int(t.get("count", 0)), reverse=True)
+        result = [t["name"].lower() for t in tags_sorted[:10]]
+        log.info(f"  [lastfm] artiste {artist!r} → tags : {result or 'aucun'}")
+        return result
+    except Exception:
+        return []
 
 
 def fetch_existing_playlists(sp: spotipy.Spotify) -> dict[str, str]:
@@ -192,54 +198,48 @@ def add_tracks_to_playlist(sp: spotipy.Spotify, playlist_id: str, track_ids: lis
 # Classification
 # ---------------------------------------------------------------------------
 
+def _norm_tag(s: str) -> str:
+    """Normalise un tag/keyword : minuscules, sans tirets ni espaces."""
+    return s.lower().replace("-", "").replace(" ", "")
+
+
 def rule_based_classify(
-    track: dict,
-    features: dict,
-    artist_genres: list[str],
+    artist_tags: list[str],
+    track_tags: list[str],
     genre_rules: dict,
-) -> Optional[tuple[str, float]]:
+) -> Optional[str]:
     """
-    Tente de classifier le titre par règles.
-    Retourne (genre_name, confidence) ou None si ambigu.
+    Tente de classifier par correspondance exacte tags Last.fm ↔ keywords config.
+    Tags du titre (poids 1.0) ont priorité sur tags artiste (poids 0.7).
+    Chaque keyword ne compte qu'une fois — si match track ET artiste, on prend le meilleur.
+    Retourne le genre gagnant si score unique, None si tie ou aucun match.
     """
-    artist_genres_lower = [g.lower() for g in artist_genres]
+    track_norms = {_norm_tag(t) for t in track_tags}
+    artist_norms = {_norm_tag(t) for t in artist_tags}
+    scored: dict[str, float] = {}
 
     for genre_name, rules in genre_rules.items():
         score = 0.0
-        hits = 0
+        for keyword in rules.get("keywords", []):
+            kw = _norm_tag(keyword)
+            if kw in track_norms:
+                score += 1.0
+            elif kw in artist_norms:
+                score += 0.7
+        if score > 0:
+            scored[genre_name] = score
 
-        # Correspondance sur les genres Spotify de l'artiste
-        keywords = [k.lower() for k in rules.get("keywords", [])]
-        for keyword in keywords:
-            for ag in artist_genres_lower:
-                if keyword in ag:
-                    score += 0.6
-                    hits += 1
-                    break
+    if not scored:
+        return None
 
-        # Règles sur les audio features
-        af_rules = rules.get("audio_features", {})
-        for feature, condition in af_rules.items():
-            if feature not in features:
-                continue
-            value = features[feature]
-            passed = False
-            if "min" in condition and value >= condition["min"]:
-                passed = True
-            if "max" in condition and value <= condition["max"]:
-                passed = True
-            if "min" in condition and "max" in condition:
-                passed = value >= condition["min"] and value <= condition["max"]
-            if passed:
-                score += 0.3
-                hits += 1
+    best_score = max(scored.values())
+    winners = [g for g, s in scored.items() if s == best_score]
 
-        if hits > 0:
-            confidence = min(score, 1.0)
-            if confidence >= rules.get("confidence_threshold", 0.6):
-                return (genre_name, confidence)
+    # Tie → ambiguïté, laisser le LLM trancher
+    if len(winners) > 1:
+        return None
 
-    return None
+    return winners[0]
 
 
 def llm_classify(
@@ -282,7 +282,7 @@ Popularité Spotify : {popularity_str}/100
 Contenu explicite : {explicit_str}
 
 === Indices de genre ===
-Genres Spotify de l'artiste : {artist_genres_str}
+Tags Last.fm de l'artiste : {artist_genres_str}
 Tags Last.fm (triés par popularité) : {tags_str}
 
 === Classification ===
@@ -328,21 +328,32 @@ def fetch_lastfm_tags(artist: str, title: str) -> list[str]:
 
 def classify_track(
     track: dict,
-    sp: spotipy.Spotify,
     groq_client: Groq,
     available_genres: list[str],
     genre_rules: dict,
     stats: dict,
 ) -> Optional[str]:
-    """Pipeline de classification : genres Spotify artiste + tags Last.fm + LLM."""
-    artist_genres = fetch_artist_genres_cached(sp, track["artist_id"])
+    """Pipeline de classification : règles Last.fm → fallback LLM."""
+    artist_tags = fetch_lastfm_artist_tags(track["artist"])
     tags = fetch_lastfm_tags(track["artist"], track["name"])
-    track_enriched = {**track, "artist_genres": artist_genres}
+
+    # 1. Classification par règles (tags Last.fm — sans appel LLM)
+    genre = rule_based_classify(artist_tags, tags, genre_rules)
+    if genre is not None:
+        stats["lastfm_classified"] += 1
+        log.info(
+            f"  [rules] '{track['artist']} — {track['name']}' → {genre} "
+            f"(artist_tags: {artist_tags[:3]}, track_tags: {tags[:3]})"
+        )
+        return genre
+
+    # 2. Fallback LLM si les règles sont insuffisantes
+    track_enriched = {**track, "artist_genres": artist_tags}
     stats["llm_classified"] += 1
     genre = llm_classify(groq_client, track_enriched, available_genres, tags, genre_rules)
     log.info(
         f"  [llm] '{track['artist']} — {track['name']}' → {genre or 'aucun'} "
-        f"(spotify_genres: {artist_genres[:3]}, lastfm_tags: {tags[:3]})"
+        f"(artist_tags: {artist_tags[:3]}, track_tags: {tags[:3]})"
     )
     return genre
 
@@ -476,7 +487,6 @@ def main() -> None:
 
         genre = classify_track(
             track=track,
-            sp=sp,
             groq_client=groq_client,
             available_genres=available_genres,
             genre_rules=genre_rules,

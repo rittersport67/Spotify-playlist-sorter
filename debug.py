@@ -26,8 +26,9 @@ load_dotenv()
 # ---------------------------------------------------------------------------
 from sorter import (
     get_spotify_client,
-    fetch_artist_genres_cached,
+    fetch_lastfm_artist_tags,
     fetch_lastfm_tags,
+    rule_based_classify,
     load_config,
     GROQ_MODEL,
 )
@@ -133,7 +134,7 @@ Popularité Spotify : {popularity_str}/100
 Contenu explicite : {explicit_str}
 
 === Indices de genre ===
-Genres Spotify de l'artiste : {artist_genres_str}
+Tags Last.fm de l'artiste : {artist_genres_str}
 Tags Last.fm (triés par popularité) : {tags_str}
 
 === Classification ===
@@ -158,7 +159,7 @@ EXPECTED_SECTIONS = [
     "Popularité Spotify :",
     "Contenu explicite :",
     "=== Indices de genre ===",
-    "Genres Spotify de l'artiste :",
+    "Tags Last.fm de l'artiste :",
     "Tags Last.fm (triés par popularité) :",
     "=== Classification ===",
     "Genres disponibles et leurs mots-clés :",
@@ -182,14 +183,14 @@ def main() -> None:
     print("═" * 70)
 
     # --- 1. Config ---
-    section("1/6 · Chargement de la config")
+    section("1/7 · Chargement de la config")
     config = load_config()
     genre_rules: dict = config.get("genres", {})
     available_genres = list(genre_rules.keys())
     ok("Genres configurés", ", ".join(available_genres))
 
     # --- 2. Spotify client ---
-    section("2/6 · Connexion Spotify")
+    section("2/7 · Connexion Spotify")
     try:
         sp = get_spotify_client()
         me = sp.me()
@@ -199,7 +200,7 @@ def main() -> None:
         sys.exit(1)
 
     # --- 3. Résolution du track ---
-    section("3/6 · Résolution du track")
+    section("3/7 · Résolution du track")
     if len(sys.argv) >= 3:
         track_name, artist_name = sys.argv[1], sys.argv[2]
         print(f"  → Recherche : \"{track_name}\" par \"{artist_name}\"")
@@ -221,23 +222,23 @@ def main() -> None:
     ok("Durée",      f"{duration_ms // 60000}min{(duration_ms % 60000) // 1000}s" if duration_ms else "inconnue")
     ok("Explicit",   "oui" if track["explicit"] else "non")
 
-    # --- 4. Genres Spotify artiste ---
-    section("4/6 · API Spotify — Genres artiste (GET /artists/{id})")
-    artist_id = track["artist_id"]
-    print(f"  → Appel sp.artist('{artist_id}')")
-    try:
-        artist_genres = fetch_artist_genres_cached(sp, artist_id)
-        if artist_genres:
-            ok("Genres Spotify", ", ".join(artist_genres))
-        else:
-            warn("Genres Spotify", "aucun genre déclaré pour cet artiste")
-    except Exception as e:
-        fail("Genres Spotify", e)
+    # --- 4. Tags artiste Last.fm ---
+    section("4/7 · API Last.fm — artist.getTopTags")
+    lastfm_key_artist = os.environ.get("LASTFM_API_KEY")
+    if not lastfm_key_artist:
+        warn("Last.fm artiste", "LASTFM_API_KEY absent — tags ignorés")
         artist_genres = []
+    else:
+        print(f"  → Appel artist.getTopTags(artist='{track['artist']}')")
+        artist_genres = fetch_lastfm_artist_tags(track["artist"])
+        if artist_genres:
+            ok("Tags artiste Last.fm", ", ".join(artist_genres))
+        else:
+            warn("Tags artiste Last.fm", "aucun tag déclaré pour cet artiste")
     track["artist_genres"] = artist_genres
 
     # --- 5. Tags Last.fm ---
-    section("5/6 · API Last.fm — track.getTopTags")
+    section("5/7 · API Last.fm — track.getTopTags")
     lastfm_key = os.environ.get("LASTFM_API_KEY")
     if not lastfm_key:
         warn("Last.fm", "LASTFM_API_KEY absent — tags ignorés")
@@ -252,8 +253,16 @@ def main() -> None:
         else:
             warn("Tags Last.fm", "aucun tag retourné")
 
-    # --- 6. Prompt + Groq ---
-    section("6/6 · Groq — Prompt complet + réponse LLM")
+    # --- 6. Classification par règles ---
+    section("6/7 · Classification par règles Last.fm")
+    rules_genre = rule_based_classify(artist_genres, lastfm_tags, genre_rules)
+    if rules_genre is not None:
+        ok("Résultat", f"{rules_genre} → LLM court-circuité")
+    else:
+        warn("Résultat", "aucun match clair → fallback LLM")
+
+    # --- 7. Prompt + Groq ---
+    section("7/7 · Groq — Prompt complet + réponse LLM")
 
     prompt = build_prompt(track, lastfm_tags, genre_rules, available_genres)
 
