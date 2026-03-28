@@ -1,3 +1,33 @@
+# Run du 2026-03-28 21:21 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 1 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Five Hours | Deorro | EDM |
+| Reload - Radio Edit | Sebastian Ingrosso | EDM |
+| More Than You Know | Axwell /\ Ingrosso | EDM |
+| No Money | Galantis | EDM |
+| Show Me Love - Radio Edit | Steve Angello | EDM |
+| I Want You To Know | Zedd | EDM |
+| Dreamer - Matisse & Sadko Remix | Axwell /\ Ingrosso | EDM |
+| Gecko (Overdrive) - Radio Edit | Oliver Heldens | EDM |
+| Got the Feeling | Syn Cole | EDM |
+| Baby Shark | Pinkfong | K-Pop |
+
+---
+
 # Run du 2026-03-28 14:24 UTC
 
 ## Résumé
