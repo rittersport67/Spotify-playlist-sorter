@@ -107,12 +107,20 @@ def fetch_new_liked_tracks(sp: spotipy.Spotify, last_id: Optional[str]) -> list[
                 continue
             if last_id and track["id"] == last_id:
                 return tracks  # on a rattrapé le dernier run
+            release_date_raw: str = track.get("album", {}).get("release_date", "") or ""
+            release_year: Optional[int] = int(release_date_raw[:4]) if release_date_raw[:4].isdigit() else None
             tracks.append({
                 "id": track["id"],
                 "name": track["name"],
                 "artist": track["artists"][0]["name"],
                 "artist_id": track["artists"][0]["id"],
+                "all_artists": [a["name"] for a in track.get("artists", [])],
                 "added_at": item["added_at"],
+                "popularity": track.get("popularity"),
+                "duration_ms": track.get("duration_ms"),
+                "album_name": track.get("album", {}).get("name"),
+                "release_year": release_year,
+                "explicit": track.get("explicit", False),
             })
 
         if batch["next"] is None:
@@ -121,6 +129,24 @@ def fetch_new_liked_tracks(sp: spotipy.Spotify, last_id: Optional[str]) -> list[
 
     return tracks
 
+
+
+# Cache en mémoire pour les genres artiste Spotify (durée du run)
+_artist_genres_cache: dict[str, list[str]] = {}
+
+
+def fetch_artist_genres_cached(sp: spotipy.Spotify, artist_id: str) -> list[str]:
+    """Retourne les genres Spotify d'un artiste via GET /artists/{id}. Cache en mémoire sur la durée du run."""
+    if artist_id in _artist_genres_cache:
+        return _artist_genres_cache[artist_id]
+    try:
+        genres: list[str] = sp.artist(artist_id).get("genres", [])
+    except Exception as exc:
+        log.warning(f"fetch_artist_genres_cached: artiste {artist_id!r} inaccessible — {exc}")
+        genres = []
+    _artist_genres_cache[artist_id] = genres
+    log.info(f"  [spotify] artiste {artist_id!r} → genres : {genres or 'aucun'}")
+    return genres
 
 
 def fetch_existing_playlists(sp: spotipy.Spotify) -> dict[str, str]:
@@ -234,13 +260,32 @@ def llm_classify(
     )
     genres_list = ", ".join(available_genres)
 
+    all_artists = track.get("all_artists", [])
+    artists_str = ", ".join(all_artists) if len(all_artists) > 1 else track["artist"]
+    artist_genres_str = ", ".join(track.get("artist_genres", [])) or "inconnus"
+    popularity_str = str(track["popularity"]) if track.get("popularity") is not None else "inconnue"
+    release_year_str = str(track["release_year"]) if track.get("release_year") else "inconnue"
+    album_str = track.get("album_name") or "inconnu"
+    duration_ms: Optional[int] = track.get("duration_ms")
+    duration_str = f"{duration_ms // 60000}min{(duration_ms % 60000) // 1000}s" if duration_ms else "inconnue"
+    explicit_str = "oui" if track.get("explicit") else "non"
+
     prompt = f"""Tu es un expert en classification musicale. Classe ce titre dans UN genre de la liste ci-dessous.
 Si aucun genre ne correspond, réponds uniquement par "aucun".
 
+=== Informations sur le titre ===
 Titre : {track['name']}
-Artiste : {track['artist']}
-Tags Last.fm : {tags_str}
+Artiste(s) : {artists_str}
+Album : {album_str} ({release_year_str})
+Durée : {duration_str}
+Popularité Spotify : {popularity_str}/100
+Contenu explicite : {explicit_str}
 
+=== Indices de genre ===
+Genres Spotify de l'artiste : {artist_genres_str}
+Tags Last.fm (triés par popularité) : {tags_str}
+
+=== Classification ===
 Genres disponibles et leurs mots-clés :
 {genres_context}
 
@@ -275,23 +320,30 @@ def fetch_lastfm_tags(artist: str, title: str) -> list[str]:
             timeout=5,
         )
         tags = response.json().get("toptags", {}).get("tag", [])
-        return [t["name"].lower() for t in tags[:15]]
+        tags_sorted = sorted(tags, key=lambda t: int(t.get("count", 0)), reverse=True)
+        return [t["name"].lower() for t in tags_sorted[:15]]
     except Exception:
         return []
 
 
 def classify_track(
     track: dict,
+    sp: spotipy.Spotify,
     groq_client: Groq,
     available_genres: list[str],
     genre_rules: dict,
     stats: dict,
 ) -> Optional[str]:
-    """Pipeline de classification : LLM avec tags Last.fm comme contexte."""
+    """Pipeline de classification : genres Spotify artiste + tags Last.fm + LLM."""
+    artist_genres = fetch_artist_genres_cached(sp, track["artist_id"])
     tags = fetch_lastfm_tags(track["artist"], track["name"])
+    track_enriched = {**track, "artist_genres": artist_genres}
     stats["llm_classified"] += 1
-    genre = llm_classify(groq_client, track, available_genres, tags, genre_rules)
-    log.info(f"  [llm] '{track['artist']}-{track['name']}' → {genre or 'aucun'} (tags: {tags[:5]})")
+    genre = llm_classify(groq_client, track_enriched, available_genres, tags, genre_rules)
+    log.info(
+        f"  [llm] '{track['artist']} — {track['name']}' → {genre or 'aucun'} "
+        f"(spotify_genres: {artist_genres[:3]}, lastfm_tags: {tags[:3]})"
+    )
     return genre
 
 
@@ -424,6 +476,7 @@ def main() -> None:
 
         genre = classify_track(
             track=track,
+            sp=sp,
             groq_client=groq_client,
             available_genres=available_genres,
             genre_rules=genre_rules,
