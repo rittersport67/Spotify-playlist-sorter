@@ -1,3 +1,33 @@
+# Run du 2026-03-28 12:34 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 10 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Doom | Hekler | Rap US |
+| Move Mint - VIP | Herobust | Rap US |
+| RIGHT ON TIME | Kayzo | EDM |
+| Inside Out | The Chainsmokers | EDM |
+| Who Do You Love | The Chainsmokers | Pop |
+| Blacksmith | Sludge | Rock |
+| Symmetry | IBRA | Rap FR |
+| RVD | 12th Planet | Rap US |
+| Enzo (with Sheck Wes, feat. Offset, 21 Savage & Gucci Mane) | DJ Snake | Rap US |
+| Up In Flames (feat. Alex Gaskarth of All Time Low) | Kayzo | EDM |
+
+---
+
 # Run du 2026-03-28 11:21 UTC
 
 ## Résumé
