@@ -1,3 +1,33 @@
+# Run du 2026-03-29 09:35 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Throw It Up | Wooli | Dubstep |
+| Justice | Kompany | Dubstep |
+| Swag | BROHUG | EDM |
+| Choukar Elevator | Bellecour | EDM |
+| EPIPHANY RUSH | MUST DIE! | EDM |
+| CHAOS | MUST DIE! | EDM |
+| I'm Not Sorry | Hardwell | EDM |
+| Source | Lucas & Steve | EDM |
+| Hard City (PART TWO) | Lit Lords | EDM |
+| All You Need To Know (feat. Calle Lehmann) - Midnight Tyrannosaurus Remix | Gryffin | EDM |
+
+---
+
 # Run du 2026-03-29 08:38 UTC
 
 ## Résumé
