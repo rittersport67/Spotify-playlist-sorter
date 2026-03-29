@@ -1,3 +1,33 @@
+# Run du 2026-03-29 22:29 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Time Stood Still | Excision | Dubstep |
+| New Rave | SweetYetNuclear | Rap FR |
+| Modern Sorcery | SVDDEN DEATH | Dubstep |
+| Kickers | GODAMN | EDM |
+| Korean BBQ | Nömak | EDM |
+| Redlight | Marten Hørger | EDM |
+| Turn off the Lights (feat. Alexis Roberts) | Chris Lake | EDM |
+| Turn off the Lights (feat. Alexis Roberts) - Cages Remix | Chris Lake | Rock |
+| Jackie Chan - Holy Goof Remix | Tiësto | EDM |
+| REDLIGHT - Holy Goof Remix | NGHTMRE | EDM |
+
+---
+
 # Run du 2026-03-29 21:30 UTC
 
 ## Résumé
