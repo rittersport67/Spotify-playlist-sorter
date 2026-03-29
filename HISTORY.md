@@ -1,3 +1,33 @@
+# Run du 2026-03-29 21:30 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Blame | Ekali | EDM |
+| Babylon (feat. Denzel Curry) - Skrillex & Ronny J Remix | Ekali | Rap US |
+| STANK FACE | Lit Lords | EDM |
+| ALL NIGHT | Lit Lords | EDM |
+| Particle Arts | Virtual Self | EDM |
+| Cruel Love (feat. shYbeast & FRANK ZUMMO) | Kayzo | Dubstep |
+| Magenta Riddim | DJ Snake | EDM |
+| Fuego (with Sean Paul & Anitta, feat. Tainy) | DJ Snake | Rap US |
+| Taki Taki (feat. Selena Gomez, Ozuna & Cardi B) | DJ Snake | Trap |
+| Try Me (with Plastic Toy) | DJ Snake | EDM |
+
+---
+
 # Run du 2026-03-29 16:34 UTC
 
 ## Résumé
