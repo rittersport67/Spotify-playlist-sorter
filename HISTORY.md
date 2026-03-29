@@ -1,3 +1,33 @@
+# Run du 2026-03-29 05:10 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Jungle | Chilla | Rap US |
+| Simple Hit | Dombresky | EDM |
+| Infinite | Habstrakt | EDM |
+| Elévation | Vladimir Cauchemar | EDM |
+| Loco Contigo (with J. Balvin & Tyga) | DJ Snake | Rap US |
+| I Can't | Tony Romera | EDM |
+| Blackout | 4B | EDM |
+| Emergency | Sludge | Rock |
+| You Little Beauty | FISHER | EDM |
+| SHIT | MARAUDA | EDM |
+
+---
+
 # Run du 2026-03-29 02:23 UTC
 
 ## Résumé
