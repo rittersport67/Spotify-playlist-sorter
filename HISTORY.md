@@ -1,3 +1,33 @@
+# Run du 2026-03-29 10:32 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Con Calma | Daddy Yankee | Rap US |
+| Callaita | Bad Bunny | Rap US |
+| Panini | Lil Nas X | Rap US |
+| Money In The Grave (Drake ft. Rick Ross) | Drake | Rap US |
+| Old Town Road (feat. Billy Ray Cyrus) - Remix | Lil Nas X | Rap US |
+| Buggas | Hekler | EDM |
+| Fxck Around | Krimer | Dubstep |
+| Falling (VIP) | Monxx | Dubstep |
+| F.W.Y.S (feat. Pi$ces) | Calcium | Dubstep |
+| Slept On (feat. Malcolm Flex!) | Gl0bal | Rap FR |
+
+---
+
 # Run du 2026-03-29 09:35 UTC
 
 ## Résumé
