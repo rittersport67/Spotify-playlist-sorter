@@ -1,3 +1,33 @@
+# Run du 2026-03-29 23:31 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| 2008 | Basstrick | EDM |
+| DROP IT | SLANDER | Dubstep |
+| B.L.O.D | Basstrick | Rap US |
+| Falling | Trivecta | Dubstep |
+| Riot | Crankdat | Dubstep |
+| Demon Hunter | PhaseOne | Dubstep |
+| Multiverse | 1788-L | EDM |
+| Lonely (feat. The Rigs) | Rezz | EDM |
+| Long Way Home - Club Mix | Lucas & Steve | EDM |
+| In Your Head - RL Grime Edit | G Jones | Trap |
+
+---
+
 # Run du 2026-03-29 22:29 UTC
 
 ## Résumé
