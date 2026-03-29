@@ -1,3 +1,33 @@
+# Run du 2026-03-29 16:34 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 10 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Smile (feat. Bryson Tiller) | DJ Snake | Rap US |
+| Loco Contigo (feat. J. Balvin & Tyga) | DJ Snake | Rap US |
+| No More (feat. ZHU) | DJ Snake | EDM |
+| Movement | Kompany | Dubstep |
+| Ghost Voices | Virtual Self | EDM |
+| Frequency 75 | DJ Snake | EDM |
+| Depression & Anger | Tisoki | EDM |
+| Torque - Gammer Remix | Space Laces | Hardstyle |
+| BLISS 2K | MUST DIE! | EDM |
+| NO GAMES | K-NINE | Dubstep |
+
+---
+
 # Run du 2026-03-29 15:31 UTC
 
 ## Résumé
