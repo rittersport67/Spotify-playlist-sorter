@@ -1,3 +1,33 @@
+# Run du 2026-03-30 19:58 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Sinkhole | Eliminate | Dubstep |
+| You're Gonna Love Me | Eliminate | Dubstep |
+| Weeble Wobble VIP | Eliminate | Dubstep |
+| Numb | Eliminate | Dubstep |
+| MAD | Moody Good | Dubstep |
+| Loopholes | Subtronics | Dubstep |
+| Glitch Fight | Subtronics | Dubstep |
+| Everything | Eliminate | Dubstep |
+| Stupid | Eliminate | Dubstep |
+| SELECTA 19 | JOYRYDE | EDM |
+
+---
+
 # Run du 2026-03-30 18:59 UTC
 
 ## Résumé
