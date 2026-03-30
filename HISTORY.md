@@ -1,3 +1,33 @@
+# Run du 2026-03-30 18:59 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Perfect (feat. Haris) | Lucas & Steve | EDM |
+| S.O.S | Basstrick | EDM |
+| Get To Me | Jauz | EDM |
+| Headlights | Fox Stevenson | Drum and Bass |
+| Real (feat. Cecelia) - VIP Mix | NOTION | Rap US |
+| Pay For Thrills | Zero | Rock |
+| Desire (Sub Focus & Dimension) | Sub Focus | Drum and Bass |
+| Baggage (with AlunaGeorge) | Gryffin | EDM |
+| Rushing Back | Flume | Pop |
+| Ricochet | Sullivan King | Dubstep |
+
+---
+
 # Run du 2026-03-30 17:53 UTC
 
 ## Résumé
