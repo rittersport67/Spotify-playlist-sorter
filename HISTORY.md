@@ -1,3 +1,33 @@
+# Run du 2026-03-30 21:47 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Send It - MVRDA & Samplifire Remix | 12th Planet | EDM |
+| Super Hott | Jauz | EDM |
+| Big Ting Vibe | SQWAD | EDM |
+| WARDOGZ | GRAVEDGR | Rap US |
+| ASMODEUS | Kai Wachi | Dubstep |
+| We Don't Play | 12th Planet | Dubstep |
+| Rapture - VIP | Kompany | Dubstep |
+| Death Rail | Hi I'm Ghost | Dubstep |
+| Crush 'Em | Sludge | Rock |
+| Braincase | Kayzo | EDM |
+
+---
+
 # Run du 2026-03-30 20:57 UTC
 
 ## Résumé
