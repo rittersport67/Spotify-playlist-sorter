@@ -1,3 +1,33 @@
+# Run du 2026-03-30 05:23 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 4 |
+| Classifiés par LLM | 6 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Bleed | SVDDEN DEATH | Dubstep |
+| Behemoth VIP | SVDDEN DEATH | Dubstep |
+| Booty Time - Yellow Claw & Stoltenhoff Remix | Aazar | EDM |
+| Beastmode - Bellorum Remix | Yellow Claw | Trap |
+| Horizon | Bellorum | Rap FR |
+| Fever Dream | Aazar | Rap FR |
+| Bonaparte | Aazar | EDM |
+| Without You | SLANDER | Dubstep |
+| BRUH?! | Herobust | Dubstep |
+| Light | San Holo | EDM |
+
+---
+
 # Run du 2026-03-30 02:26 UTC
 
 ## Résumé
