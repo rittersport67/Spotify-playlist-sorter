@@ -1,3 +1,33 @@
+# Run du 2026-03-30 09:11 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| I Dare You | Jauz | EDM |
+| Bring That Back | BARELY ALIVE | Dubstep |
+| Thunder | Jauz | EDM |
+| Antidance | Kayzo | Dubstep |
+| Broken | SLANDER | Dubstep |
+| Holy Moly (feat. Terror Bass) | Carnage | Trap |
+| Monster (feat. Matty Mullins) | Kayzo | EDM |
+| Dark Skies | Kayzo | Dubstep |
+| Lost (feat. xo sad) | Kayzo | EDM |
+| LA Never Says Goodbye (feat. Kyle Pavone) | Kayzo | Dubstep |
+
+---
+
 # Run du 2026-03-30 07:26 UTC
 
 ## Résumé
