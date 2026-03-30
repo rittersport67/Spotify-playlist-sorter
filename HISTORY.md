@@ -1,3 +1,33 @@
+# Run du 2026-03-30 20:57 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 4 |
+| Classifiés par LLM | 6 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Bodies (feat. TITUS) - Phiso Remix | Riot Ten | Dubstep |
+| Real | Habstrakt | Dubstep |
+| Archangel | Zomboy | EDM |
+| Anton aus Tirol | Anton | Rap US |
+| Und ich flieg wie ein Flieger | Favorite Star | Rap FR |
+| Vantablack | Dirtyphonics | Drum and Bass |
+| Smasha | Ecraze | Dubstep |
+| Skullcrack | Kompany | Dubstep |
+| 6 FEET UNDER | GRAVEDGR | Trap |
+| Boss (Kai Wachi Remix) | AFK | Dubstep |
+
+---
+
 # Run du 2026-03-30 19:58 UTC
 
 ## Résumé
