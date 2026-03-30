@@ -1,3 +1,33 @@
+# Run du 2026-03-30 13:17 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| thankful | bbno$ | Rap US |
+| Lalala | Y2K | Rap US |
+| Dead Limit | Noisia | Drum and Bass |
+| WET | Wax Motif | EDM |
+| Go Like - D&B Remix | Fox Stevenson | Drum and Bass |
+| Shake | Zeds Dead | EDM |
+| Bruises - Macky Gee Remix | Fox Stevenson | Drum and Bass |
+| Strobe - Dimension Remix | deadmau5 | Drum and Bass |
+| Miss You - D&B Mix | Fox Stevenson | Drum and Bass |
+| This Is The End | Gammer | Hardstyle |
+
+---
+
 # Run du 2026-03-30 11:01 UTC
 
 ## Résumé
