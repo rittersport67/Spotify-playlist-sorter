@@ -1,3 +1,33 @@
+# Run du 2026-03-30 11:01 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Fade | Jauz | EDM |
+| Frequency | Jauz | EDM |
+| Velvet Paradise | Jauz | EDM |
+| Cyclops Army | Subtronics | Dubstep |
+| Divided Souls | Wax Motif | Rap US |
+| The Devil | Oddprophet | Dubstep |
+| Liftoff! | CSO | EDM |
+| Mercy | Bailo | Rap US |
+| Turtle Neck | PhaseOne | Dubstep |
+| UK | Dimension | Drum and Bass |
+
+---
+
 # Run du 2026-03-30 09:11 UTC
 
 ## Résumé
