@@ -1,3 +1,33 @@
+# Run du 2026-03-30 22:34 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Spaceships | AREA21 | EDM |
+| Insane | Dion Timmer | Drum and Bass |
+| Battle Drums | Kayzo | Rock |
+| Bussback | Kompany | Dubstep |
+| Pompeii | Bastille | Pop |
+| Supreme Symbiote - VIP | Midnight Tyrannosaurus | EDM |
+| Choppaz - SVDDEN DEATH Remix | Space Laces | Dubstep |
+| Jungle Juice | Ganja White Night | Dubstep |
+| Straya | Bandlez | Dubstep |
+| You're Gonna Love Me | Eliminate | Dubstep |
+
+---
+
 # Run du 2026-03-30 21:47 UTC
 
 ## Résumé
