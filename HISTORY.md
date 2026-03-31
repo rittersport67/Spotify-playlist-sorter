@@ -1,3 +1,33 @@
+# Run du 2026-03-31 23:33 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Seven Forty Five | Formvla | Rap FR |
+| Mr Happy | DJ Hazard | Drum and Bass |
+| Battlefields | Zomboy | EDM |
+| Flex (feat. JB Scofield) | JAY1 | Rap US |
+| Set Fire | Stoutty | Rap US |
+| Bust This Roof | ACRAZE | EDM |
+| Lighters Up | Macky Gee | Drum and Bass |
+| Dreaming Out Loud | Dion Timmer | Drum and Bass |
+| Dog Fight | Virtual Riot | Dubstep |
+| FuccaVIP | Oski | Trap |
+
+---
+
 # Run du 2026-03-31 22:33 UTC
 
 ## Résumé
