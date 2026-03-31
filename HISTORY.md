@@ -1,3 +1,33 @@
+# Run du 2026-03-31 20:41 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 2 |
+| Classifiés par LLM | 8 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Ball Licker VIP | MVRDA | Dubstep |
+| Mustard | Fugitives | Dubstep |
+| Fuck Off | YAKZ | Dubstep |
+| Going Nowhere | Modestep | Dubstep |
+| Ectoplasm - Gentlemens Club Remix | Eptic | Dubstep |
+| Run | Tourist | EDM |
+| Break It | FREAKY | Rap US |
+| Worldwide Suicide - Phaseone Remix | In Hearts Wake | Dubstep |
+| Take on the World | Subsonic | Drum and Bass |
+| Control | Jay Faded | Rap FR |
+
+---
+
 # Run du 2026-03-31 19:07 UTC
 
 ## Résumé
