@@ -1,3 +1,33 @@
+# Run du 2026-03-31 13:17 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Watch This | TRVCY | EDM |
+| Cardiac Arrest | K-NINE | Dubstep |
+| Dolphin Flex | Megalodon | Dubstep |
+| Platinum - Dion Timmer VIP | Megalodon | Dubstep |
+| Sick Gang | IVORY | Rap US |
+| Unspoken - MUZZ & Oliverse Remix | Oliverse | Dubstep |
+| See You Again (feat. David Kuncio) | Tisoki | EDM |
+| The Hunt | Megalodon | EDM |
+| OHAWU | Lit Lords | EDM |
+| Creatures | FLOBU | Rap FR |
+
+---
+
 # Run du 2026-03-31 11:49 UTC
 
 ## Résumé
