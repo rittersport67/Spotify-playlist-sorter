@@ -1,3 +1,33 @@
+# Run du 2026-03-31 11:49 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| RAWSIDE | GRAVEDGR | Trap |
+| Riddim Killa | IVORY | Riddim |
+| Dubstep Ruined My Life | Red Hood Squad | Dubstep |
+| Ooh | SAYMYNAME | Rap US |
+| Transparency | Hekler | Dubstep |
+| Promise (feat. LiL Lotus) | Tisoki | Dubstep |
+| Rock & Rolla | Atrip | EDM |
+| IT’S OK (feat. Kozze) | Tisoki | EDM |
+| Get High | Oliverse | Dubstep |
+| Love Potion VIP - VIP | Midnight Tyrannosaurus | EDM |
+
+---
+
 # Run du 2026-03-31 10:11 UTC
 
 ## Résumé
