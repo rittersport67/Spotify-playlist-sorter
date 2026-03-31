@@ -1,3 +1,33 @@
+# Run du 2026-03-31 22:33 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Bulletproof - Chime Remix | Doctor P | Dubstep |
+| Blood | Modestep | Dubstep |
+| Alarm | Modestep | Dubstep |
+| The Nuke | KILL FEED | Dubstep |
+| Shake It | Carbin | Dubstep |
+| Hellcat - Habstrakt Remix | MUST DIE! | Dubstep |
+| God Damn | San Pacho | EDM |
+| Impossible | PEEKABOO | Dubstep |
+| Super Hot | Oski | Trap |
+| Tentacles | Noisia | Drum and Bass |
+
+---
+
 # Run du 2026-03-31 21:38 UTC
 
 ## Résumé
