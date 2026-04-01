@@ -1,3 +1,33 @@
+# Run du 2026-04-01 15:03 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Getcho | Kompany | Dubstep |
+| Money Talk | Gentlemens Club | Dubstep |
+| Hyphy | Riot Ten | Rap US |
+| Common Courtesy | Soltan | Dubstep |
+| Facebreaker | Krimer | Dubstep |
+| Into The Abyss | Zeds Dead | EDM |
+| In Your Skull | Dirtyphonics | Drum and Bass |
+| All Together (with OEKIIN) | ILLENIUM | Dubstep |
+| Jailhouse Rock | Elvis Presley | Rock |
+| Enola Gay - Remastered 2003 | Orchestral Manoeuvres In The Dark | Pop |
+
+---
+
 # Run du 2026-04-01 13:20 UTC
 
 ## Résumé
