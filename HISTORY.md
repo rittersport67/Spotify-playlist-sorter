@@ -1,3 +1,33 @@
+# Run du 2026-04-01 16:54 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 3 |
+| Classifiés par LLM | 7 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Step Aside | Subtronics | Dubstep |
+| Jerk It Out | Caesars | Rock |
+| Chunky | Kompany | Dubstep |
+| Fly so High | YAKZ | Dubstep |
+| Blow Stuff Up | Subtronics | Dubstep |
+| Sandman Sleeps | Dion Timmer | Drum and Bass |
+| Without | FuntCase | Dubstep |
+| Death Wish | Subtronics | Dubstep |
+| Ichor | SVDDEN DEATH | Dubstep |
+| Cruel Love - Wooli Remix | Kayzo | Dubstep |
+
+---
+
 # Run du 2026-04-01 15:03 UTC
 
 ## Résumé
