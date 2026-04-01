@@ -1,3 +1,33 @@
+# Run du 2026-04-01 05:23 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| OCB | Malaa | EDM |
+| Tastemaker | Ray Volpe | Dubstep |
+| Go Dumb (feat. blackbear, The Kid LAROI and Bankrol Hayden) | Y2K | Rap US |
+| Spin It Back | Kayzo | Dubstep |
+| B2F | Swifty | Rap FR |
+| Black Suit | MNNR | EDM |
+| Keep Raving | Wax Motif | EDM |
+| Merckx | Honey & Badger | EDM |
+| Plata o Plomo | Remady | EDM |
+| America - Original Mix | Javi Viana | Rap FR |
+
+---
+
 # Run du 2026-04-01 02:31 UTC
 
 ## Résumé
