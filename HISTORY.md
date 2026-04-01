@@ -1,3 +1,33 @@
+# Run du 2026-04-01 11:52 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 4 |
+| Classifiés par LLM | 6 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Es Isso | Habstrakt | EDM |
+| Real Raver (Tsuki Remix) | TS7 | Drum and Bass |
+| Illusion (feat. Born I) | Bassnectar | Dubstep |
+| Drink In My Cup | Dubloadz | Dubstep |
+| Womp Womp | Big Florida | Rap US |
+| Neon Phantom | Dion Timmer | Dubstep |
+| Witch Doctor - G-Rex & Peekaboo Remix | ATLiens | EDM |
+| Potions - TYNAN Remix | SLANDER | Dubstep |
+| No Clue | Control Freak | EDM |
+| Psycho - ECRAZE & Graphyt Remix | Modestep | Dubstep |
+
+---
+
 # Run du 2026-04-01 10:55 UTC
 
 ## Résumé
