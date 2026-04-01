@@ -1,3 +1,33 @@
+# Run du 2026-04-01 20:42 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Won't Back Down | Eminem | Rap US |
+| Snapchat VIP | DJ Q | EDM |
+| Ya Fool | K Dot | Dubstep |
+| God Damnit (with Call Me Karizma) | ILLENIUM | Dubstep |
+| Save You (feat. Megan Stokes) | Riot Ten | EDM |
+| Ride It | Regard | EDM |
+| Never Never (feat. Indiiana) | Drenchill | EDM |
+| Didn't I | OneRepublic | Rock |
+| Roses - Imanbek Remix | SAINt JHN | EDM |
+| No One Knows | Queens of the Stone Age | Rock |
+
+---
+
 # Run du 2026-04-01 19:00 UTC
 
 ## Résumé
