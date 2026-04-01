@@ -1,3 +1,33 @@
+# Run du 2026-04-01 10:55 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Beat Rip | Red Hood Squad | Rap FR |
+| Four Twenty | Malaa | EDM |
+| Break Em - Dirtyphonics Remix | PhaseOne | Drum and Bass |
+| Ravedash | Badklaat | Dubstep |
+| Walls Cave In | Soltan | Dubstep |
+| Lost It - VIP | Virtual Riot | Dubstep |
+| Night Terror (feat. Of Mice & Men) | Kayzo | Dubstep |
+| KAMIKAZE | GRAVEDGR | Trap |
+| ON FIRE | JOYRYDE | EDM |
+| After All | SLANDER | Dubstep |
+
+---
+
 # Run du 2026-04-01 09:03 UTC
 
 ## Résumé
