@@ -1,3 +1,33 @@
+# Run du 2026-04-01 21:40 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Phantasm | Oddprophet | Dubstep |
+| Pressure | Charlie Zane | Rap FR |
+| Hong Kong | GCY | Dubstep |
+| Era - Shadient & Wavedash Remix | RL Grime | Trap |
+| Hometown Girl | ZHU | EDM |
+| Save You (feat. Megan Stokes) - VIP Mix | Riot Ten | Rap US |
+| Crashing vs. Destiny (feat. Bahari) | ILLENIUM | Dubstep |
+| Get A Way | Maxx | EDM |
+| Children | Robert Miles | EDM |
+| Will Grigg's On Fire | DJ B3LFAST | Rap FR |
+
+---
+
 # Run du 2026-04-01 20:42 UTC
 
 ## Résumé
