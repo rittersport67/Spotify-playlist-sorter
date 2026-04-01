@@ -1,3 +1,33 @@
+# Run du 2026-04-01 13:20 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Funkytown | Lipps Inc. | Pop |
+| Ca plane pour moi | Plastic Bertrand | Rock |
+| Maldòn - Version originale | Zouk Machine | Pop |
+| Paris Latino - Original Version 1983 | Bandolero | Rock |
+| Last Night - Official Madison Song | Chris Anderson | EDM |
+| Lonely (with Chandler Leighton) [Friction Remix] | ILLENIUM | Dubstep |
+| In Your Arms (with X Ambassadors) [Alan Walker Remix] | ILLENIUM | Dubstep |
+| Hold On (with Georgia Ku) [Tisoki Remix] | ILLENIUM | Dubstep |
+| Good Things Fall Apart (with Jon Bellion) [SLANDER Remix] | ILLENIUM | Dubstep |
+| Savage | Megan Thee Stallion | Rap US |
+
+---
+
 # Run du 2026-04-01 11:52 UTC
 
 ## Résumé
