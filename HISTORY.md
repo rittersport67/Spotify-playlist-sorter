@@ -1,3 +1,33 @@
+# Run du 2026-04-02 20:34 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 10 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Alane | Robin Schulz | EDM |
+| ROCKSTAR (feat. Roddy Ricch) | DaBaby | Rap US |
+| Million Voices | Otto Knows | EDM |
+| Lady - Hear Me Tonight | Modjo | EDM |
+| One Heart (Radio Edit) [feat. P. Moody] | ItaloBrothers | EDM |
+| Seek Bromance - Avicii Vocal Edit | Tim Berg | EDM |
+| Levels - Radio Edit | Avicii | EDM |
+| Music Sounds Better With You - Radio Edit | Stardust | EDM |
+| Infinity 2008 - Klaas Vocal Edit | Guru Josh Project | EDM |
+| Call on Me - Radio Mix | Eric Prydz | EDM |
+
+---
+
 # Run du 2026-04-02 19:50 UTC
 
 ## Résumé
