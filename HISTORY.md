@@ -1,3 +1,33 @@
+# Run du 2026-04-02 17:05 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 1 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Hardcore | LAXX | Hardstyle |
+| Beat Like This | Bleu Clair | EDM |
+| RATPI WORLD | Booba | Rap FR |
+| Another Life (feat. Alida) - Club Mix | Lucas & Steve | EDM |
+| All Night | Icona Pop | Pop |
+| Mind Heist: Evolution | Zack Hemsey | Classique |
+| Wait | M83 | Pop |
+| Oblivion | M83 | Pop |
+| Outro | M83 | Pop |
+| Power Rangers | Lorenzo | Rap US |
+
+---
+
 # Run du 2026-04-02 16:00 UTC
 
 ## Résumé
