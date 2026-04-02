@@ -1,3 +1,33 @@
+# Run du 2026-04-02 22:34 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 10 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Dybala | Maes | Rap US |
+| Grand bain | Dadju | Rap US |
+| Ne reviens pas | Gradur | Rap US |
+| Bande organisée | 13 Organisé | Rap US |
+| Blinding Lights | The Weeknd | Pop |
+| What's Love Got to Do with It | Kygo | EDM |
+| Never Let Me Down | VIZE | EDM |
+| Toosie Slide | Drake | Rap US |
+| In Your Eyes (feat. Alida) | Robin Schulz | EDM |
+| Fingertips | Tom Gregory | Pop |
+
+---
+
 # Run du 2026-04-02 21:36 UTC
 
 ## Résumé
