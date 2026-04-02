@@ -1,3 +1,33 @@
+# Run du 2026-04-02 13:12 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| I Found You (Neptune) - Hollaphonic Remix Edit | EDX | EDM |
+| damn Right Pt. 2 | AUDREY NUNA | Rap US |
+| Colossal | PEEKABOO | Dubstep |
+| Right Here | Habstrakt | EDM |
+| Tinnitus | Sullivan King | Dubstep |
+| Bad Mood | Wooli | Dubstep |
+| forget me too (feat. Halsey) | mgk | Pop |
+| Blindside | Kayzo | EDM |
+| Untz Untz | Dimitri Vegas & Like Mike | EDM |
+| CAME FROM HELL | GRAVEDGR | Dubstep |
+
+---
+
 # Run du 2026-04-02 11:43 UTC
 
 ## Résumé
