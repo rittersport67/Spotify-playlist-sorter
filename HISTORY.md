@@ -1,3 +1,33 @@
+# Run du 2026-04-02 18:55 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Good For You | Selena Gomez | Rap US |
+| Sober | Selena Gomez | Pop |
+| Selfish Love (with Selena Gomez) | DJ Snake | Pop |
+| Crystallize | Eliminate | Dubstep |
+| Love To Give (with Billy Lockett) | Dimension | Drum and Bass |
+| All Eyes On Me | Fox Stevenson | Drum and Bass |
+| Blue - Flume Remix | Eiffel 65 | Rap US |
+| I Am Ready | Marten Hørger | EDM |
+| Hollywood | Bassboy | Dubstep |
+| Green Crack - Riot Ten Remix | Apashe | Trap |
+
+---
+
 # Run du 2026-04-02 17:05 UTC
 
 ## Résumé
