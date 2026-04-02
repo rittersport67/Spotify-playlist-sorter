@@ -1,3 +1,33 @@
+# Run du 2026-04-02 08:55 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Funeral | Lukas Graham | R&B |
+| Don't You Worry 'Bout Me | Lukas Graham | R&B |
+| 7 Years | Lukas Graham | R&B |
+| Djomb - Bien ou quoi | Bosh | Rap US |
+| Into The Abyss | Zeds Dead | EDM |
+| Stars Tonight - G-REX Remix | Zeds Dead | EDM |
+| RUFF | Zeds Dead | Dubstep |
+| Trust Nobody - Valentino Khan Remix | DJ Snake | EDM |
+| Burning | NOTION | Drum and Bass |
+| Surrender | Natalie Taylor | Pop |
+
+---
+
 # Run du 2026-04-02 07:11 UTC
 
 ## Résumé
