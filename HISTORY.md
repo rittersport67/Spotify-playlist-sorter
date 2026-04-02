@@ -1,3 +1,33 @@
+# Run du 2026-04-02 16:00 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| WAW | SEB | EDM |
+| D4TN | Lit Lords | EDM |
+| Told Ya - B.O.M Remix | WHIPPED CREAM | Rap US |
+| COSMIC SUB | HOL! | Dubstep |
+| This Is Nightlife (Video Edit) | ItaloBrothers | Rock |
+| Stamp On The Ground | ItaloBrothers | EDM |
+| The Way I Are | Timbaland | Rap US |
+| Freaky Like Me (feat. Ameerah) - Main Mix | Madcon | EDM |
+| Party Shaker (Video Edit) | R.I.O. | Rock |
+| The Riddle Anthem - Rework | Mike Candys | EDM |
+
+---
+
 # Run du 2026-04-02 14:55 UTC
 
 ## Résumé
