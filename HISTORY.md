@@ -1,3 +1,33 @@
+# Run du 2026-04-02 11:43 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Bomb | SPAG | Rap FR |
+| Demons (VIP) | Lit Lords | EDM |
+| Blindside | Kayzo | EDM |
+| MEVTR | Damso | Rap FR |
+| D'JA ROULÉ | Damso | Rap FR |
+| BPM | Damso | Rap FR |
+| Kiss Your Lips | Yellow Claw | EDM |
+| Shiawase - VIP | Dion Timmer | Drum and Bass |
+| Shake Ass | 705 Starboyz | Rap US |
+| What You Want | Lit Lords | EDM |
+
+---
+
 # Run du 2026-04-02 10:02 UTC
 
 ## Résumé
