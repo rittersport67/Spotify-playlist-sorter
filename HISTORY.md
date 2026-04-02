@@ -1,3 +1,33 @@
+# Run du 2026-04-02 02:10 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Fox on the Run - Single Version | Sweet | Rock |
+| Bla Bla Bla | Gigi D'Agostino | EDM |
+| We like to Party! (The Vengabus) Six Flags | Vengaboys | EDM |
+| Mr. Vain - Original Radio Edit | Culture Beat | EDM |
+| Rasputin | Boney M. | Pop |
+| Resistance | Excision | Dubstep |
+| ALL I WANT | GRAVEDGR | Trap |
+| 6 FEET UNDER | GRAVEDGR | Trap |
+| Bring It Back | Finderz Keeperz | Rap FR |
+| Another Day | L.U.X | Dubstep |
+
+---
+
 # Run du 2026-04-01 23:35 UTC
 
 ## Résumé
