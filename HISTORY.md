@@ -1,3 +1,33 @@
+# Run du 2026-04-02 19:50 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 10 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Tell Me Why - Radio Edit | Supermode | EDM |
+| Sandstorm | Darude | EDM |
+| Satisfaction - Isak Original Extended | Benny Benassi | EDM |
+| Calling - Original Instrumental Radio Edit | Sebastian Ingrosso | EDM |
+| Infinity | Infinity Ink | EDM |
+| Pursuit Of Happiness - Extended Steve Aoki Remix (Explicit) | Kid Cudi | Pop |
+| Heads Will Roll - A-Trak Remix | Yeah Yeah Yeahs | EDM |
+| Push The Feeling On - Mk Dub Revisited Edit | Nightcrawlers | EDM |
+| Wolves | Selena Gomez | EDM |
+| Slow Down | Selena Gomez | Pop |
+
+---
+
 # Run du 2026-04-02 18:55 UTC
 
 ## Résumé
