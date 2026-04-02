@@ -1,3 +1,33 @@
+# Run du 2026-04-02 07:11 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Formula | RL Grime | Trap |
+| Wompum - Macky Gee Remix | BARELY ALIVE | Drum and Bass |
+| Monster | LUM!X | EDM |
+| L'Amour Toujours | Gigi D'Agostino | EDM |
+| Lambé An Dro | Matmatah | Rock |
+| Video Killed The Radio Star | The Buggles | Pop |
+| Yo Vivirer - I Will Survive Version Flamenco | Gloria Gaynor | R&B |
+| I Will Survive - Single Version | Gloria Gaynor | R&B |
+| Survive (feat. Emeli Sandé, Gucci Mane) | Don Diablo | EDM |
+| Miami | DJ Kayz | Rap US |
+
+---
+
 # Run du 2026-04-02 05:02 UTC
 
 ## Résumé
