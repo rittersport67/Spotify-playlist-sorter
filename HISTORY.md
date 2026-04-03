@@ -1,3 +1,33 @@
+# Run du 2026-04-03 13:02 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| La Seleçao | Alonzo | Rap FR |
+| La kiffance | Naps | Rap US |
+| Petrouchka (feat. PLK) | Soso Maness | Drum and Bass |
+| Do It To It | ACRAZE | EDM |
+| Prophecy | Kanine | Drum and Bass |
+| Popular | Upgrade (UK) | Drum and Bass |
+| Nothing | Modestep | Dubstep |
+| Your Love | Friction | Drum and Bass |
+| Just Like You | Kompany | Dubstep |
+| Electronic Memories (feat. Mickey Kojak) | k?d | EDM |
+
+---
+
 # Run du 2026-04-03 11:37 UTC
 
 ## Résumé
