@@ -1,3 +1,33 @@
+# Run du 2026-04-03 20:35 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Love The Way You Lie | Eminem | Rap US |
+| Heroes (we could be) | Alesso | Pop |
+| I Wanna Know - Alesso & Deniz Koyu Remix | Alesso | EDM |
+| Gravity | Tom Staar | EDM |
+| Ma chérie 2K12 - DJ Antoine vs. Mad Mark 2k12 Radio Edit | DJ Antoine | EDM |
+| Narcotic - Radio Edit | Liquido | Rock |
+| Welcome To St. Tropez - DJ Antoine vs. Timati / DJ Antoine vs. Mad Mark Radio Edit | DJ Antoine | EDM |
+| Streetside | Bru-C | Drum and Bass |
+| La Mamá de la Mamá (feat. El Cherry Scom) | El Alfa | Rap US |
+| La Mamá De La Mamá (Tik Tok Remix) | DJ Niar | Rap FR |
+
+---
+
 # Run du 2026-04-03 19:37 UTC
 
 ## Résumé
