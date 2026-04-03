@@ -1,3 +1,33 @@
+# Run du 2026-04-03 21:32 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Fireflies | Owl City | Pop |
+| The Time (Dirty Bit) | Black Eyed Peas | Rap US |
+| Not Afraid | Eminem | Rap US |
+| DJ Got Us Fallin' In Love (feat. Pitbull) | USHER | R&B |
+| I Gotta Feeling | Black Eyed Peas | Rap US |
+| Replay | Iyaz | Rap US |
+| Club Can't Handle Me (feat. David Guetta) | Flo Rida | EDM |
+| One (Your Name) - Radio Edit | Swedish House Mafia | EDM |
+| Like A G6 | Far East Movement | Pop |
+| Dynamite | Taio Cruz | R&B |
+
+---
+
 # Run du 2026-04-03 20:35 UTC
 
 ## Résumé
