@@ -1,3 +1,33 @@
+# Run du 2026-04-03 15:41 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Bande organisée | 13 Organisé | Rap US |
+| Je t’aime de ouf | Wejdene | Rap FR |
+| 13 balles | 13 Organisé | Rap US |
+| Chandon et Moët (feat. Heuss l'Enfoiré) | PLK | Rap FR |
+| Mon poto - Extrait de la BO de « En Passant Pécho » | Kore | Rap US |
+| Casanova | Were-vana | Rap FR |
+| En détente | Naps | Rap US |
+| Champion | Serge Ibaka | Rap US |
+| C'est la night | Bengous | EDM |
+| Puta Madre (feat. Jul) | Soso Maness | Rap US |
+
+---
+
 # Run du 2026-04-03 14:41 UTC
 
 ## Résumé
