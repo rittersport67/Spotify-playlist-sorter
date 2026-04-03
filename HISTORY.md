@@ -1,3 +1,33 @@
+# Run du 2026-04-03 10:42 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Save You (feat. Megan Stokes) - Kompany Remix | Riot Ten | Dubstep |
+| Energy Drink | Virtual Riot | Dubstep |
+| We Won't Be Alone | Feint | Drum and Bass |
+| Fight Back | NEFFEX | Rap US |
+| Symbolism | Electro-Light | EDM |
+| Run Boy Run - Instrumental | Woodkid | Pop |
+| In Da Getto | J Balvin | EDM |
+| Thrills (feat. Jaxon Rose) | Wax Motif | EDM |
+| LOUD (feat. Jason Aalon from FEVER 333) | Sullivan King | Dubstep |
+| It's Raining Men | The Weather Girls | Pop |
+
+---
+
 # Run du 2026-04-03 09:52 UTC
 
 ## Résumé
