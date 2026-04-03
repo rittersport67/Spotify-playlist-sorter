@@ -1,3 +1,33 @@
+# Run du 2026-04-03 18:45 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| The Moments I'm Missing - RANJI vs WHITENO1SE | Ranji | EDM |
+| Light | Jerome | Hardstyle |
+| Deep End | John Summit | EDM |
+| Animal | Vicetone | EDM |
+| Pepas | Farruko | Rap US |
+| Ellos | Ceky Viciny | Rap FR |
+| Heads Will Roll - A-Trak Remix Radio Edit | Yeah Yeah Yeahs | Rock |
+| Gimme Gimme Gimme (a man after midnight) - Club Mix | Syzz | EDM |
+| Pon De Replay - 2020 Edit | Ed Marquis | EDM |
+| Seven Nation Army | DMNDS | EDM |
+
+---
+
 # Run du 2026-04-03 17:33 UTC
 
 ## Résumé
