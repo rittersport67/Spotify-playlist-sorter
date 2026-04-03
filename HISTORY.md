@@ -1,3 +1,33 @@
+# Run du 2026-04-03 02:11 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Bad | Don Diablo | EDM |
+| Bunker Buster | Excision | Dubstep |
+| Moonchild | M83 | Pop |
+| Holograms | M83 | Pop |
+| Don't Go - Original Mix | Gaga | Rock |
+| Skin of the Night | M83 | Pop |
+| Antistress | SEB | EDM |
+| StarWaves | M83 | EDM |
+| Un nouveau soleil | M83 | Pop |
+| Deep End Freestyle | Sleepy Hallow | Rap US |
+
+---
+
 # Run du 2026-04-02 23:34 UTC
 
 ## Résumé
