@@ -1,3 +1,33 @@
+# Run du 2026-04-03 07:06 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| What’s Next | Drake | Rap US |
+| Astronomia | 32Stitches | EDM |
+| Requiem for a Dream | 32Stitches | Rap US |
+| Midnight City | Player1 | Trap |
+| Drip Too Hard (Lil Baby & Gunna) | Lil Baby | Rap US |
+| Whoopty | CJ | Rap US |
+| Midnight City | M83 | Pop |
+| Children Of A Miracle | Don Diablo | EDM |
+| In the Name of Love - DallasK Remix | Martin Garrix | EDM |
+| Chemicals - Radio Edit | Tiësto | EDM |
+
+---
+
 # Run du 2026-04-03 05:04 UTC
 
 ## Résumé
