@@ -1,3 +1,33 @@
+# Run du 2026-04-03 17:33 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Day 'N' Nite - Crookers Remix | Kid Cudi | EDM |
+| Moonlight | Gaullin | EDM |
+| Sweater Weather | Gaullin | EDM |
+| Redo | Crankdat | Dubstep |
+| Hislerim | Serhat Durmus | Trap |
+| WHEREVER U GO - Kompany Remix | MUST DIE! | Dubstep |
+| CHOOSE ONE - TYNAN Remix | MUST DIE! | Dubstep |
+| ERROR - Slippy Remix | MUST DIE! | Dubstep |
+| HELLBURST - BadKlaat Remix | MUST DIE! | Dubstep |
+| LIFE SUCK - Trampa Remix | MUST DIE! | Rock |
+
+---
+
 # Run du 2026-04-03 16:39 UTC
 
 ## Résumé
