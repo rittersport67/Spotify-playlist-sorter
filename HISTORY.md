@@ -1,3 +1,33 @@
+# Run du 2026-04-03 22:32 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Scream & Shout | will.i.am | Rap US |
+| Hangover | Taio Cruz | Rap US |
+| Firewall - VIP | Kompany | Dubstep |
+| Disassociation | Oddprophet | Dubstep |
+| Gasolina | Daddy Yankee | Rap US |
+| Good Feeling | Flo Rida | Pop |
+| Mr. Saxobeat - Radio Edit | Alexandra Stan | EDM |
+| Party Rock Anthem | LMFAO | EDM |
+| Can't Hold Us (feat. Ray Dalton) | Macklemore | Rap US |
+| Pump It | Black Eyed Peas | Rap US |
+
+---
+
 # Run du 2026-04-03 21:32 UTC
 
 ## Résumé
