@@ -1,3 +1,33 @@
+# Run du 2026-04-03 09:52 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| 4 Minutes (feat. Justin Timberlake & Timbaland) | Madonna | Pop |
+| Hips Don't Lie (feat. Wyclef Jean) | Shakira | Rap US |
+| 99 Luftballons | Nena | Pop |
+| No Cap | Bear Grillz | EDM |
+| Rise Of The Beast | Caster | Dubstep |
+| Teen Scene (ft Buddy) - Wax Motif Remix | Maeta | EDM |
+| Someone Else - Malaa Remix | Rezz | EDM |
+| Don't Talk | Malaa | EDM |
+| Hell | Malaa | EDM |
+| Anything - Malaa Remix | Alison Wonderland | EDM |
+
+---
+
 # Run du 2026-04-03 08:53 UTC
 
 ## Résumé
