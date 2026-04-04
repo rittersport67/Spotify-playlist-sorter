@@ -1,3 +1,33 @@
+# Run du 2026-04-04 08:39 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 10 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Take It Up (with Sub Focus) | Wilkinson | Drum and Bass |
+| Rock It - Wilkinson Remix | Sub Focus | Drum and Bass |
+| Airplane - Culture Shock Remix | Sub Focus | Drum and Bass |
+| Siren | Sub Focus | Drum and Bass |
+| Easier (feat. LOWES) - Sub Focus Remix | CamelPhat | Drum and Bass |
+| Tonight (I'm Fuckin' You) | Enrique Iglesias | Rap US |
+| Pondicherry | DJ Snake | EDM |
+| Solar System | Sub Focus | Drum and Bass |
+| Habits (Stay High) | Tove Lo | Pop |
+| Higher | Kanine | Drum and Bass |
+
+---
+
 # Run du 2026-04-04 07:04 UTC
 
 ## Résumé
