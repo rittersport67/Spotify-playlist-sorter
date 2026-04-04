@@ -1,3 +1,33 @@
+# Run du 2026-04-04 05:56 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Solar System | Sub Focus | Drum and Bass |
+| Hustlers | IVORY | Dubstep |
+| Inevitable Outcome | PhaseOne | Dubstep |
+| Frequency Shifter | Graphyt | Dubstep |
+| Avoidable cause | MARAUDA | EDM |
+| Planet Purge Pt. 2 | Midnight Tyrannosaurus | EDM |
+| Odyssey VIP | BARELY ALIVE | Dubstep |
+| Moshpit | NITTI | Rap US |
+| Ghosts (feat. Hana) [GODAMN Remix] | Tchami | EDM |
+| My Favourite Game | The Cardigans | Rock |
+
+---
+
 # Run du 2026-04-04 04:49 UTC
 
 ## Résumé
