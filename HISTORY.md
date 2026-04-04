@@ -1,3 +1,33 @@
+# Run du 2026-04-04 20:30 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 10 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Personally | P-Square | Rap US |
+| Les rois du monde - Roméo & Juliette, Les enfants de Vérone | Damien Sargue | Pop |
+| Candy Shop | 50 Cent | Rap US |
+| What I Want - Radio Club Mix Radio Edit | Fireball | EDM |
+| Hot Summer Night (Oh La La La) | The Sean Shiney Family | EDM |
+| Shonen | Orelsan | Rap FR |
+| Welcome to the Fire | SLANDER | Dubstep |
+| Last Stand | Dirtyphonics | Drum and Bass |
+| Stars Tonight | Zeds Dead | EDM |
+| Could U | GRiZ | EDM |
+
+---
+
 # Run du 2026-04-04 19:30 UTC
 
 ## Résumé
