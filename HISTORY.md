@@ -1,3 +1,33 @@
+# Run du 2026-04-04 15:31 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Chasing Stars (feat. James Bay) [VIP] | Alesso | EDM |
+| Moth To A Flame (with The Weeknd) | Swedish House Mafia | EDM |
+| One More Day (with Chandler Leighton) - Kompany Remix | Jason Ross | Dubstep |
+| Hot Girl Bummer | Fella | Rap US |
+| Goosebumps | HVME | EDM |
+| F.E.E.L. | Lucky Luke | EDM |
+| My Best Life (feat. Mike Waters) - Club Mix | KSHMR | EDM |
+| Monster - Robin Schulz Remix | LUM!X | EDM |
+| Can't Get You Out Of My Head | Ugg'A | Pop |
+| Marea (we’ve lost dancing) | Fred again.. | EDM |
+
+---
+
 # Run du 2026-04-04 14:32 UTC
 
 ## Résumé
