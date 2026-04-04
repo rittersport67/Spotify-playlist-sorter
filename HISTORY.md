@@ -1,3 +1,33 @@
+# Run du 2026-04-04 13:54 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| WTF - MARAUDA Remix | Herobust | EDM |
+| Casket | MARAUDA | EDM |
+| Gates Of Hell | SVDDEN DEATH | Dubstep |
+| The Paradox | Excision | Dubstep |
+| Robbin' | 2FAC3D | Dubstep |
+| Power | SVDDEN DEATH | Dubstep |
+| Marauders | SVDDEN DEATH | Dubstep |
+| Wack | BARELY ALIVE | Dubstep |
+| Overkill | Dack Janiels | Dubstep |
+| Ceremony | Trampa | Rock |
+
+---
+
 # Run du 2026-04-04 12:54 UTC
 
 ## Résumé
