@@ -1,3 +1,33 @@
+# Run du 2026-04-04 18:40 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Livin' On A Prayer | Bon Jovi | Rock |
+| Back Up | The Seige | Rap US |
+| Welcome to Mayhem | PhaseOne | Dubstep |
+| Praise | Tchami | EDM |
+| Proud | Tchami | EDM |
+| Ni**as In Paris | JAŸ-Z | Rap US |
+| Invincible | Pop Smoke | Rap US |
+| Loading | Central Cee | Rap US |
+| Rasputin | Majestic | Pop |
+| Come Close | Vini Vici | EDM |
+
+---
+
 # Run du 2026-04-04 17:28 UTC
 
 ## Résumé
