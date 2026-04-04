@@ -1,3 +1,33 @@
+# Run du 2026-04-04 23:30 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Middle | Noizu | EDM |
+| ØUT ØF THE WØRLD | Marten Hørger | EDM |
+| Love To The World | Diplo | EDM |
+| On My Mind | Diplo | EDM |
+| Turn Back Time | Diplo | EDM |
+| Beast | Rob Bailey & The Hustle Standard | Dubstep |
+| J'entends | Angèle | Pop |
+| Démons | Angèle | Pop |
+| Breathe (feat. kaspara) | Syn Cole | EDM |
+| 21 | AREA21 | EDM |
+
+---
+
 # Run du 2026-04-04 22:28 UTC
 
 ## Résumé
