@@ -1,3 +1,33 @@
+# Run du 2026-04-04 09:36 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Love | Subsonic | Drum and Bass |
+| Panic Room - Culture Shock Remix | Au/Ra | Drum and Bass |
+| Games | Macky Gee | Drum and Bass |
+| All I Know - M&F's Rolling Out Radio Mix | Matrix & Futurebound | Drum and Bass |
+| Don't Save Us From The Flames | M83 | Pop |
+| Kim & Jessie | M83 | Pop |
+| Safe In Sound | Sub Focus | Drum and Bass |
+| Whatcha Say | Jason Derulo | R&B |
+| Deep Space - Data 3 Remix | Sub Focus | Drum and Bass |
+| Follow the Light - Pola & Bryson Remix | Sub Focus | Drum and Bass |
+
+---
+
 # Run du 2026-04-04 08:39 UTC
 
 ## Résumé
