@@ -1,3 +1,33 @@
+# Run du 2026-04-04 14:32 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Ok Pal | M83 | Pop |
+| Complicated | Ragunde | Rock |
+| Skyscrapers - Radio Edit | Nina Kraviz | EDM |
+| Last Man Standing | Bainbridge | Riddim |
+| U Are My High | DJ Snake | EDM |
+| SHADOWS | BLVCK CROWZ | Drum and Bass |
+| Payback | Eptic | Dubstep |
+| World War Rave | Ray Volpe | Dubstep |
+| EVERYTHING2ME | Dion Timmer | Drum and Bass |
+| RIP | MARAUDA | EDM |
+
+---
+
 # Run du 2026-04-04 13:54 UTC
 
 ## Résumé
