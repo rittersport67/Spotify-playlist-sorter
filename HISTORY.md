@@ -1,3 +1,33 @@
+# Run du 2026-04-04 16:35 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Take You Down | ILLENIUM | Dubstep |
+| Summertime Sadness | Behmer | EDM |
+| Somebody's Watching Me | Chico Rose | EDM |
+| Swish! | Eliott | Rock |
+| Louder (feat. Sian Evans) - Radio Edit | DJ Fresh | Drum and Bass |
+| Rave Love | W&W | EDM |
+| Bittersweet | Michael Calfan | EDM |
+| Unholy | Miley Cyrus | Pop |
+| Gang | Mister V | Rap FR |
+| Prends d'la vitesse | SEB | EDM |
+
+---
+
 # Run du 2026-04-04 15:31 UTC
 
 ## Résumé
