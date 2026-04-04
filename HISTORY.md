@@ -1,3 +1,33 @@
+# Run du 2026-04-04 02:04 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Our Church | Headhunterz | Hardstyle |
+| Touhou Riddim | Virtual Riot | Riddim |
+| Flat Line | Dodge & Fuski | Drum and Bass |
+| Mawlee (feat. Young Buck & DJ Afterthought) | Riot Ten | Rap US |
+| On The Floor | Jennifer Lopez | Rap US |
+| Suave (Kiss Me) (feat. Mohombi & Pitbull) | Nayer | Pop |
+| You Make Me Feel... (feat. Sabi) | Cobra Starship | Rock |
+| Don't Wake Me Up - Single Version | Dont Wake Me Up | Rap US |
+| I Gotta Feeling - Edit | Black Eyed Peas | Rap US |
+| Got 2 Luv U (I Don't Even Want to Fight) | Jeff Mills | EDM |
+
+---
+
 # Run du 2026-04-03 23:32 UTC
 
 ## Résumé
