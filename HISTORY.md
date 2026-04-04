@@ -1,3 +1,33 @@
+# Run du 2026-04-04 17:28 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Sandcastles - Radio Edit | Volt & State | EDM |
+| Resist | Ace Aura | Dubstep |
+| The Feeling | Crankdat | Dubstep |
+| Need Me | Subsonic | Drum and Bass |
+| WAITING | Ace Aura | Dubstep |
+| Poker | Clara Doxal | Pop |
+| Briller | DFG | Hardstyle |
+| Guerrier (Doigby) | Direkt | Rock |
+| Minnet Eylemem | Serhat Durmus | Rap US |
+| Amaro | Serhat Durmus | Rap US |
+
+---
+
 # Run du 2026-04-04 16:35 UTC
 
 ## Résumé
