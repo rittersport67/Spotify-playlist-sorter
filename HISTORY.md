@@ -1,3 +1,33 @@
+# Run du 2026-04-04 11:28 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 10 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Walk n Skank (feat. Jah Screechy) | Dux n Bass | Drum and Bass |
+| Black Widow | Macky Gee | Drum and Bass |
+| Aint My Fault | Macky Gee | Drum and Bass |
+| Glue Gun | Fox Stevenson | Drum and Bass |
+| Satellites | Don Diablo | EDM |
+| Kaleidoscope | Delta Heavy | Drum and Bass |
+| Freefall (feat. Julie Hardy) - High Maintenance Remix | Dirtyphonics | Drum and Bass |
+| Reach - The Prototypes Remix | Tantrum Desire | Drum and Bass |
+| Day 'N' Nite - Martin Jensen Edit | Stefy De Cicco | EDM |
+| Poison | Martin Garrix | EDM |
+
+---
+
 # Run du 2026-04-04 10:32 UTC
 
 ## Résumé
