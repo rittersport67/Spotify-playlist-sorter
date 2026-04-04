@@ -1,3 +1,33 @@
+# Run du 2026-04-04 12:54 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Deceiver | SVDDEN DEATH | Dubstep |
+| HITTIN EERBODY (feat. TITUS) | BLVK JVCK | Rap US |
+| Out My Head (Fox Stevenson and Feint Remix) | Fox Stevenson | Drum and Bass |
+| Poison (With Paris Shadows) - VIP | Kayzo | Dubstep |
+| Drops - Kanine Remix | Darkzy | Drum and Bass |
+| Take You Higher | Wilkinson | Drum and Bass |
+| Super Mario | Hizzleguy | Dubstep |
+| Mr Happy | DJ Hazard | Drum and Bass |
+| Mash Up The Place (feat. Messinian) - A.M.C Remix | Riot Ten | Drum and Bass |
+| Black Church | Dimension | Drum and Bass |
+
+---
+
 # Run du 2026-04-04 11:28 UTC
 
 ## Résumé
