@@ -1,3 +1,33 @@
+# Run du 2026-04-04 04:49 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Audio, Video, Disco. | Justice | EDM |
+| Serious Mood | Point Point | EDM |
+| Buenos Aires | Tchami | EDM |
+| One Night | Aazar | Rap US |
+| Danza Kuduro - Original Mix | Don Lore V | EDM |
+| Stereo Love | Edward Maya | EDM |
+| Summer Jam 2003 - Remix | The Underdog Project | EDM |
+| Nothing Like The Oldschool | D-Sturb | Hardstyle |
+| Promises - Skrillex & Nero Remix | NERO | Drum and Bass |
+| White Flag | Delta Heavy | Drum and Bass |
+
+---
+
 # Run du 2026-04-04 02:04 UTC
 
 ## Résumé
