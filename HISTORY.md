@@ -1,3 +1,33 @@
+# Run du 2026-04-05 19:32 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 10 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| LE ZEN ET LES SEINS | Green Montana | Rap US |
+| LA OU LE VENT NOUS MENE | Green Montana | Rap US |
+| MPIAKA | Green Montana | Rap US |
+| CHAQUE JOUR DE LA SEMAINE | Green Montana | Rap US |
+| FUM22 NOCIVE | Green Montana | Rap US |
+| Don’t Let Me Let Go (with ILLENIUM & EVAN GIIA) | Dillon Francis | EDM |
+| Tell Me Why - Radio Edit | Supermode | EDM |
+| When You Call (NoValue Remix) | VOLK | Pop |
+| Father Stretch My Hands Pt. 1 | Kanye West | Rap US |
+| Hold My Liquor | Kanye West | Rap US |
+
+---
+
 # Run du 2026-04-05 18:42 UTC
 
 ## Résumé
