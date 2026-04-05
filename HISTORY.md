@@ -1,3 +1,33 @@
+# Run du 2026-04-05 20:32 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Perfect (Exceeder) [Mix Cut] - Vocal Club Mix | Mason | EDM |
+| Underground | Basstrick | Rap US |
+| I Follow Rivers (Deep Sea Baby) | Darren Styles | Hardstyle |
+| Heaven | Delta Heavy | Drum and Bass |
+| Get Through | Fox Stevenson | Drum and Bass |
+| Trigue Lycee - Remix | Khaled | EDM |
+| Legends Never Die | League of Legends | Rock |
+| Burn It All Down | League of Legends | EDM |
+| How to Treat You Right (Ruzer Remix) | Mia Pfirrman | Drum and Bass |
+| RISE | League of Legends | Drum and Bass |
+
+---
+
 # Run du 2026-04-05 19:32 UTC
 
 ## Résumé
