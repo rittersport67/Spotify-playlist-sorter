@@ -1,3 +1,33 @@
+# Run du 2026-04-05 13:54 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Jota | Niska | Rap US |
+| The Throw Down | Gregg Lehrman | EDM |
+| GIRL LIKE ME | Black Eyed Peas | Rap US |
+| By the Border | Henrik Wikström | Pop |
+| Paradise | Over October | Rock |
+| Don't Hold Me | Rachel | Pop |
+| Lose Control | Charles Drew | Drum and Bass |
+| On My Mind | Richard Pilkington | EDM |
+| Flickering Lights | Karma | EDM |
+| December Night | Nowhere Nowhere | Pop |
+
+---
+
 # Run du 2026-04-05 12:55 UTC
 
 ## Résumé
