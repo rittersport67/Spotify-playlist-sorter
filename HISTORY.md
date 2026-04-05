@@ -1,3 +1,33 @@
+# Run du 2026-04-05 23:32 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Le même que moi (feat. Léo Rispal) | Gary Fico | Pop |
+| The Hanging Tree - From "The Hunger Games: Mockingjay" Soundtraclk | James Newton Howard | Classique |
+| Titanium (feat. Sia) - David Guetta & MORTEN Future Rave Remix | David Guetta | EDM |
+| HEAVE | MARAUDA | Rap US |
+| Belly Dancer | Imanbek | EDM |
+| Prologue & Subtitle 1 | Dragon Ball | Rock |
+| Alter Ego | Big Florida | Rap FR |
+| Rumble - Mixed | Space Laces | EDM |
+| Safety First | Versa | Dubstep |
+| Construction Block | Versa | Dubstep |
+
+---
+
 # Run du 2026-04-05 22:29 UTC
 
 ## Résumé
