@@ -1,3 +1,33 @@
+# Run du 2026-04-05 16:35 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| EVIDEMMENT | Green Montana | Rap US |
+| Booska Promesse | Kekra | Rap US |
+| Dope | Kekra | Rap US |
+| Dubaï | Kekra | Rap US |
+| Numéro 9 | Kekra | Rap US |
+| Putain de salaire | Kekra | Rap US |
+| in heat. | Hentai Xander | Pop |
+| Ultralight Beam | Kanye West | Rap US |
+| Frank's Track | Kanye West | Rap US |
+| Wolves | Kanye West | Pop |
+
+---
+
 # Run du 2026-04-05 15:31 UTC
 
 ## Résumé
