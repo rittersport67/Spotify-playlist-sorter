@@ -1,3 +1,33 @@
+# Run du 2026-04-05 21:31 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 10 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Hot Summer Night (Oh La La La) | David Tavaré | EDM |
+| No Stress | Laurent Wolf | EDM |
+| Right Here, Right Now | Fatboy Slim | EDM |
+| Let Me Think About It | Ida Corr | EDM |
+| Rapture - Avicii New Generation Mix | Nadia Ali | EDM |
+| Bromance - Avicii Remix | Tim Berg | EDM |
+| Ayla Pt. 2 | Ayla | EDM |
+| Maniac | Michael Sembello | Pop |
+| Run Away | Ian Storm | EDM |
+| Pjanoo - Radio Edit | Eric Prydz | EDM |
+
+---
+
 # Run du 2026-04-05 20:32 UTC
 
 ## Résumé
