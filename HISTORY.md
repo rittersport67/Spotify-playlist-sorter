@@ -1,3 +1,33 @@
+# Run du 2026-04-05 02:26 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Calabria (feat. Lunis & Lujavo) | Dance Fruits Music | EDM |
+| NIHILISM BEGINS AT HOME | MUST DIE! | EDM |
+| Just Like You - Ace Aura Remix | Kompany | Dubstep |
+| ALL NIGHT | Tisoki | EDM |
+| Kaleidoscope | Delta Heavy | Drum and Bass |
+| Secret | Gourski | Drum and Bass |
+| Every Morning | Chris Lorenzo | EDM |
+| Caliente (Na Na Na) | Matroda | EDM |
+| Tokyo | Wax Motif | EDM |
+| Want You | NITTI | Dubstep |
+
+---
+
 # Run du 2026-04-04 23:30 UTC
 
 ## Résumé
