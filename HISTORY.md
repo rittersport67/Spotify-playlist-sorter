@@ -1,3 +1,33 @@
+# Run du 2026-04-05 07:04 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Me & U (Remix) [feat. P. Diddy & Yung Joc] | Cassie | Rap US |
+| Work - Freemasons Radio Edit | Kelly Rowland | R&B |
+| Ayy Ladies (feat. Tyga) | Travis Porter | Rap US |
+| Get Up (feat. Chamillionaire) | Ciara | Rap US |
+| Down Under (feat. Colin Hay) | Luude | EDM |
+| Vice City | Mister V | Rap US |
+| Fichu | Django | Rap FR |
+| Mauvais cœur | SEB | EDM |
+| Tchin tchin | 2TH | Rap US |
+| Dancer | Vladimir Cauchemar | EDM |
+
+---
+
 # Run du 2026-04-05 05:11 UTC
 
 ## Résumé
