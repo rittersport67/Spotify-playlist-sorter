@@ -1,3 +1,33 @@
+# Run du 2026-04-06 18:58 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| After Dark | Mr.Kitty | EDM |
+| The Hills | The Weeknd | R&B |
+| Too Late | Kilian K | Rap FR |
+| Running Up That Hill | Kilian K | Pop |
+| A Brief Tutorial On Dubstep Production - Kayzo Remix | Dubba Jonny | Dubstep |
+| Call It Love | Felix Jaehn | EDM |
+| La La La | Kilian K | Rap FR |
+| Dusk Till Dawn | LANNÉ | EDM |
+| Something | Martin Garrix | EDM |
+| Wildfire | Against The Current | Rock |
+
+---
+
 # Run du 2026-04-06 17:43 UTC
 
 ## Résumé
