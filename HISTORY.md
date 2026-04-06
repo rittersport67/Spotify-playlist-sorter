@@ -1,3 +1,33 @@
+# Run du 2026-04-06 10:55 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Nothing Without You | Doctor Neiman | EDM |
+| Tired Of Being Sorry (Laisse Le Destin L'Emporter) - Radio Edit | Enrique Iglesias | Rap US |
+| Self Control | Raf | Pop |
+| Alexandrie Alexandra | Claude François | Pop |
+| L'italiano | Toto Cutugno | Pop |
+| Bamboléo | Gipsy Kings | Acoustique |
+| Sognando California | Dik Dik | Rock |
+| Words - Original Version 1983 | F.R. David | Pop |
+| Comanchero - Vocal Radio | Moon Ray | Pop |
+| Quand la musique est bonne | Jean-Jacques Goldman | Pop |
+
+---
+
 # Run du 2026-04-06 09:07 UTC
 
 ## Résumé
