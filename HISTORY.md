@@ -1,3 +1,33 @@
+# Run du 2026-04-06 02:27 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Shadows | NAZAAR | Dubstep |
+| WAR CRY | NAZAAR | Rap US |
+| What's the Move (feat. General Degree) | Henry Fong | EDM |
+| dashstar* | Knock2 | EDM |
+| Deep (with DJ Snake & Yung Felix) | Malaa | EDM |
+| THREE IN THE MORNING | k?d | Dubstep |
+| AMOi-AMOi | AMOi-AMOi | Rap FR |
+| We Gotta Power - Tv Size | Dragon Ball | Rock |
+| The Kids Aren't Alright | The Offspring | Rock |
+| The Parade | Joel Corry | EDM |
+
+---
+
 # Run du 2026-04-05 23:32 UTC
 
 ## Résumé
