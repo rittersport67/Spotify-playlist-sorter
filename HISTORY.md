@@ -1,3 +1,33 @@
+# Run du 2026-04-06 14:45 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Restraint | Wooli | Dubstep |
+| Merci les bleus | KABONGO-DJ | Rap US |
+| Guddi Riddim | DJ Snake | EDM |
+| Raise The Black Flag | Teminite | EDM |
+| Down With Your Love | RIOT | Rock |
+| Save Yourself - NGHTMRE VIP REMIX | The Chainsmokers | EDM |
+| LOW | Oliver Heldens | EDM |
+| Day & Nite | Don Diablo | EDM |
+| Moth To A Flame (with The Weeknd, Chris Lake) - Chris Lake Remix | Swedish House Mafia | EDM |
+| THE RECKONING | MARAUDA | EDM |
+
+---
+
 # Run du 2026-04-06 13:08 UTC
 
 ## Résumé
