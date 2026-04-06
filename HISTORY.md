@@ -1,3 +1,33 @@
+# Run du 2026-04-06 07:28 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| papi bones (feat. shygirl) | FKA twigs | Pop |
+| Beep | M.I.A. | EDM |
+| Daydreaming | Harry Stone | Pop |
+| READY4DEM | Watch the Ride | Drum and Bass |
+| Smthng | Muddy Monk | Pop |
+| Sirens | Flume | Pop |
+| Ounana | Bianca Costa | Pop |
+| Sorry I'm Not Sorry | P Money | Drum and Bass |
+| Sleep (with Calcium) | Sullivan King | Dubstep |
+| Trigger Happy | Calcium | Dubstep |
+
+---
+
 # Run du 2026-04-06 05:23 UTC
 
 ## Résumé
