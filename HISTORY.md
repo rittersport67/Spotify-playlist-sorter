@@ -1,3 +1,33 @@
+# Run du 2026-04-07 13:17 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 4 |
+| Classifiés par LLM | 6 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Hold On Tight | aespa | K-Pop |
+| Let Me Go | Sullivan King | Dubstep |
+| Protocol | Dion Timmer | Drum and Bass |
+| Majestic 12 | 12th Planet | Dubstep |
+| Chaos In The Confines | Ruvlo | Dubstep |
+| Unidentified Flying Objects | ATLiens | Dubstep |
+| 길개 (Road Dog Anthem) | Sullivan King | Dubstep |
+| Trensetter | Kai Wachi | Trap |
+| Restraint | Wooli | Dubstep |
+| After Dark | Mr.Kitty | EDM |
+
+---
+
 # Run du 2026-04-07 11:53 UTC
 
 ## Résumé
