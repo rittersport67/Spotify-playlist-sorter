@@ -1,3 +1,33 @@
+# Run du 2026-04-07 02:22 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| PUMPANY | Kai Wachi | Dubstep |
+| WORTH NOTHING (feat. Oliver Tree) - Crankdat Remix / Fast & Furious: Drift Tape/Phonk Vol 1 | TWISTED | Dubstep |
+| La La La - Live on Planet Earth | AREA21 | EDM |
+| The Greatest | Sia | Pop |
+| Animals | Maroon 5 | Rock |
+| High Hopes | Panic! At The Disco | Rock |
+| Maps | Maroon 5 | Rock |
+| Reasons | Excision | Dubstep |
+| Hurtful Intentions | Emorfik | Dubstep |
+| Artificial Intelligence | HUMANSION | Dubstep |
+
+---
+
 # Run du 2026-04-06 23:34 UTC
 
 ## Résumé
