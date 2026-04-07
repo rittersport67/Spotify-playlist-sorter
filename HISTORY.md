@@ -1,3 +1,33 @@
+# Run du 2026-04-07 09:01 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| BABYDOLL (Speed) | Ari Abdul | Pop |
+| Let Me Down Slowly | fenekot | Pop |
+| Love Story | Indila | Pop |
+| In the morning | ITZY | K-Pop |
+| Haegeum | Agust D | K-Pop |
+| Cupid | FIFTY FIFTY | K-Pop |
+| Boy's a liar Pt. 2 | PinkPantheress | Rap US |
+| Démons | Angèle | Pop |
+| Ceux qui rêvent | Pomme | Pop |
+| S.O.S | Indila | Pop |
+
+---
+
 # Run du 2026-04-07 07:15 UTC
 
 ## Résumé
