@@ -1,3 +1,33 @@
+# Run du 2026-04-07 20:47 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| MONEY | LISA | K-Pop |
+| Astronaut In The Ocean | Masked Wolf | Rap US |
+| Frozen | Madonna | Rap US |
+| Infinity | Jaymes Young | Pop |
+| Leave The Door Open | Bruno Mars | R&B |
+| Woman | Doja Cat | Rap US |
+| Miss You | Oliver Tree | EDM |
+| Just Wanna Rock | Lil Uzi Vert | Rap US |
+| abcdefu | GAYLE | Pop |
+| MIDDLE OF THE NIGHT | Elley Duhé | EDM |
+
+---
+
 # Run du 2026-04-07 19:55 UTC
 
 ## Résumé
