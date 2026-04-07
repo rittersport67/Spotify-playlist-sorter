@@ -1,3 +1,33 @@
+# Run du 2026-04-07 10:54 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Left and Right (Feat. Jung Kook of BTS) | Charlie Puth | K-Pop |
+| I AM | IVE | K-Pop |
+| Like Crazy | Jimin | K-Pop |
+| Dynamite | BTS | K-Pop |
+| My Universe | Coldplay | K-Pop |
+| Set Me Free Pt.2 | Jimin | K-Pop |
+| Time Stood Still VIP | Excision | Dubstep |
+| Elastic Heart | Sia | Pop |
+| Dusk Till Dawn (feat. Sia) - Radio Edit | ZAYN | Pop |
+| Toca Toca | Fly Project | EDM |
+
+---
+
 # Run du 2026-04-07 09:01 UTC
 
 ## Résumé
