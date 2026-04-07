@@ -1,3 +1,33 @@
+# Run du 2026-04-07 15:07 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Good to Me | Friction | Drum and Bass |
+| Hold On | Subsonic | EDM |
+| Only You | K Motionz | Drum and Bass |
+| Off The Ground | Sub Focus | Drum and Bass |
+| Arms | Luude | Drum and Bass |
+| Devil Eyes | Hippie Sabotage | Rap US |
+| Human (feat. Echoes) | John Summit | EDM |
+| Show Me (feat. Hannah Boleyn) | John Summit | EDM |
+| With That | HE$H | Rap US |
+| Neglect | Mr.Kitty | Pop |
+
+---
+
 # Run du 2026-04-07 13:17 UTC
 
 ## Résumé
