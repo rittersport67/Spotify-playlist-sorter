@@ -1,3 +1,33 @@
+# Run du 2026-04-08 19:14 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Horizon - Moore Kismet Remix | Noisia | Dubstep |
+| Prada | cassö | EDM |
+| HEY DJ | Junkie Kid | Hardstyle |
+| It's That Time - Dimension Remix | Marlon Hoffstadt | Drum and Bass |
+| Lose This Feeling - Dimension Remix | Armin van Buuren | Drum and Bass |
+| Bap U | Party Favor | EDM |
+| Strapped | Kompany | Dubstep |
+| Balearic Mornings (Rave Mix) | Reinier Zonneveld | EDM |
+| Zombie (feat. Valerie Broussard) | ILLENIUM | Dubstep |
+| Cracks - Flux Pavilion Remix | Freestylers | Dubstep |
+
+---
+
 # Run du 2026-04-08 17:01 UTC
 
 ## Résumé
