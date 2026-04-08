@@ -1,3 +1,33 @@
+# Run du 2026-04-08 05:10 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Chemical Bond | Rezz | EDM |
+| Sacrificial | Rezz | Dubstep |
+| Haunted Eyes | Rezz | EDM |
+| Fine Day Anthem | Skrillex | EDM |
+| Unidentified Flying Objects (Stoned Level Remix) | ATLiens | Dubstep |
+| Puzzle Box | Rezz | Dubstep |
+| Seven (feat. Latto) | Jung Kook | Rap US |
+| All The Stars (with SZA) - From "Black Panther: The Album" | Kendrick Lamar | Rap US |
+| Kereberot | SVDDEN DEATH | Dubstep |
+| WANNABE | ITZY | K-Pop |
+
+---
+
 # Run du 2026-04-08 02:23 UTC
 
 ## Résumé
