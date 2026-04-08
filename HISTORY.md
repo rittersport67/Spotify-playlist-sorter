@@ -1,3 +1,33 @@
+# Run du 2026-04-08 20:41 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Oui mais Non - Nicolas Julian Remix | SM:LY | EDM |
+| Vois sur ton chemin - Techno Mix | BENNETT | Rap US |
+| Si No Estás | Íñigo Quintero | Acoustique |
+| Take Me | Andromedik | Drum and Bass |
+| Ready To Fly | Sub Focus | Drum and Bass |
+| Deeper | Original Sin | Drum and Bass |
+| Put It On Me (feat. Mila Falls) | Holy Goof | Drum and Bass |
+| The Boys | Duckworthsound | Rock |
+| Make U SWEAT! | Knock2 | EDM |
+| One Chance (feat. Marlhy) | Knock2 | EDM |
+
+---
+
 # Run du 2026-04-08 19:14 UTC
 
 ## Résumé
