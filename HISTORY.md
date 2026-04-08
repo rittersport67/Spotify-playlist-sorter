@@ -1,3 +1,33 @@
+# Run du 2026-04-08 17:01 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| On My Mind | Hedex | Dubstep |
+| The Weekend | Hedex | Drum and Bass |
+| Closer - Hedex Remix | Bou | Drum and Bass |
+| Decomposed - VIP | Calcium | Rap US |
+| Control - Versa Remix | Calcium | Dubstep |
+| Pretty Savage | BLACKPINK | K-Pop |
+| 7 rings | Ariana Grande | Rap US |
+| Sweet but Psycho | Ava Max | Pop |
+| No Gravity | Delta Heavy | Drum and Bass |
+| PAINT IT BLACK | Big Florida | Rap FR |
+
+---
+
 # Run du 2026-04-08 15:09 UTC
 
 ## Résumé
