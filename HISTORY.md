@@ -1,3 +1,33 @@
+# Run du 2026-04-08 23:37 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| I Wanna Be Yours | Arctic Monkeys | Rock |
+| Roadgame | Kavinsky | EDM |
+| Nightcall | Kavinsky | EDM |
+| Talk To Me | Bou | Drum and Bass |
+| Streetside | Bru-C | Drum and Bass |
+| Liquor & Cigarettes (feat. ArrDee) | Chase & Status | Drum and Bass |
+| Eyes on Fire - Zeds Dead Remix | Blue Foundation | Dubstep |
+| I Remember - John Summit Remix | deadmau5 | EDM |
+| Skelebus | Calcium | Dubstep |
+| Frozen (Aweminus Remix) | Calcium | EDM |
+
+---
+
 # Run du 2026-04-08 22:37 UTC
 
 ## Résumé
