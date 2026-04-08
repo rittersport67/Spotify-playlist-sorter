@@ -1,3 +1,33 @@
+# Run du 2026-04-08 09:00 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 4 |
+| Classifiés par LLM | 6 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Played-A-Live (The Bongo Song) | Safri Duo | EDM |
+| Atmosphere | FISHER | EDM |
+| 돌덩이 | Ha Hyun Woo | Acoustique |
+| Red Alert - Perry Wayne Remix | Bear Grillz | Dubstep |
+| Clean Up | Calcium | Dubstep |
+| Battle Queens - 2020 | League of Legends | EDM |
+| m.A.A.d city | Kendrick Lamar | Rap US |
+| Take Off Everything, Pt. 2 | Lønelo | Rap US |
+| See Tình - Cukak Remix | Hoàng Thùy Linh | Pop |
+| Walk On Water - Love Is Gone pt. 2 | SLANDER | Dubstep |
+
+---
+
 # Run du 2026-04-08 07:18 UTC
 
 ## Résumé
