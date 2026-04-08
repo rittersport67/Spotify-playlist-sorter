@@ -1,3 +1,33 @@
+# Run du 2026-04-08 11:54 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| DJ Turn It Up | Dimension | Drum and Bass |
+| Bittersweet Goodbye - Tiësto’s Hardcore Remix | Issey Cross | EDM |
+| Brazil | A.M.C | Drum and Bass |
+| Don't Know What To Do | BLACKPINK | K-Pop |
+| As If It's Your Last | BLACKPINK | K-Pop |
+| Moth To A Flame x After Hours - Remix | Gatito Malo | Rap FR |
+| Fast Forward | JEON SOMI | K-Pop |
+| Don't Look Down (Hold On) | Excision | Dubstep |
+| Bass To The Dome | Excision | Dubstep |
+| Control | Calcium | Dubstep |
+
+---
+
 # Run du 2026-04-08 10:15 UTC
 
 ## Résumé
