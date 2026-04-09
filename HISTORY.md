@@ -1,3 +1,33 @@
+# Run du 2026-04-09 09:06 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| TUTA GOLD | Mahmood | Pop |
+| Firestarter - Andy C Remix | The Prodigy | Drum and Bass |
+| Heaven | Tsuki | Drum and Bass |
+| Light It Up | Kanine | Drum and Bass |
+| ten | Fred again.. | Rap US |
+| Rock It - Wilkinson Remix | Sub Focus | Drum and Bass |
+| Ready To Fly - Sub Focus & Dimension | Sub Focus | Drum and Bass |
+| Voodoo People - Pendulum Mix | The Prodigy | Drum and Bass |
+| Hydra | Delta Heavy | Drum and Bass |
+| leavemealone | Fred again.. | EDM |
+
+---
+
 # Run du 2026-04-09 07:21 UTC
 
 ## Résumé
