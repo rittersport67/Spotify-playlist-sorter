@@ -1,3 +1,33 @@
+# Run du 2026-04-09 05:08 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Happier By Now | Kai Wachi | Dubstep |
+| Conquer | Marshmello | EDM |
+| Breathe - Mefjus & Camo & Krooked Remix | The Prodigy | Drum and Bass |
+| Firestarter | The Prodigy | EDM |
+| Triumphant | Marshmello | EDM |
+| Tap Ho - A.M.C Remix | TC | Drum and Bass |
+| Мой мармеладный (Speed Up) | Katya Lel | Pop |
+| Thank You (Not So Bad) | Dimitri Vegas & Like Mike | EDM |
+| Shiver | John Summit | EDM |
+| No Problem | Chase & Status | Drum and Bass |
+
+---
+
 # Run du 2026-04-09 02:09 UTC
 
 ## Résumé
