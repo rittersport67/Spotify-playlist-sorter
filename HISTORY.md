@@ -1,3 +1,33 @@
+# Run du 2026-04-09 10:58 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Sientelo | Mefjus | Drum and Bass |
+| THE VEIL | Jiqui | Dubstep |
+| Off The Ground | Sub Focus | Drum and Bass |
+| So Much In Love - Sub Focus Remix | D.O.D | Drum and Bass |
+| stayinit | Fred again.. | EDM |
+| Slow | Primate | Rock |
+| Way You Are | UNREFINED | Rap FR |
+| FEEL MY POWER | $j | Dubstep |
+| Machete - A.M.C Remix | SOTA | Drum and Bass |
+| Hammer Time - VIP | SPAG | Dubstep |
+
+---
+
 # Run du 2026-04-09 09:06 UTC
 
 ## Résumé
