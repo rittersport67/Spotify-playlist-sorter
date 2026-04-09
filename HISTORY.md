@@ -1,3 +1,33 @@
+# Run du 2026-04-09 17:06 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Magnetic | ILLIT | K-Pop |
+| You & I (feat. Simula) | Bru-C | Drum and Bass |
+| Oh Baby (feat. bshp & Issey Cross) | Nathan Dawe | EDM |
+| Let It Go (feat. Shapes) | Bru-C | Drum and Bass |
+| In The Distance | Disrupta | Drum and Bass |
+| Rotten | Disrupta | Drum and Bass |
+| NRG - Skepsis & Disrupta Remix | Jazzy | Drum and Bass |
+| Wild - Disrupta Remix | Bru-C | Drum and Bass |
+| Escape The Lights | A Little Sound | Drum and Bass |
+| IMY (feat. Bella Renee) | REAPER | EDM |
+
+---
+
 # Run du 2026-04-09 15:43 UTC
 
 ## Résumé
