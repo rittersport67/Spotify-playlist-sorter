@@ -1,3 +1,33 @@
+# Run du 2026-04-09 22:39 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Cyclone | 1991 | Drum and Bass |
+| Here For You | Wilkinson | Drum and Bass |
+| Satellite | Dimension | EDM |
+| Alarm (feat. MC ID) | Sub Focus | Drum and Bass |
+| Heavyweight | K Motionz | Rap US |
+| Take Me Away | Kanine | Drum and Bass |
+| Waves | Zeds Dead | Rap US |
+| Say The Word (feat. Clementine Douglas) | Chase & Status | Drum and Bass |
+| Closer | Bou | Drum and Bass |
+| Get Down Tonight | Delta Heavy | Drum and Bass |
+
+---
+
 # Run du 2026-04-09 21:44 UTC
 
 ## Résumé
