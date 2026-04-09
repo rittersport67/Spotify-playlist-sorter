@@ -1,3 +1,30 @@
+# Run du 2026-04-09 13:58 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 7 |
+| Ignorés | 3 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Sinner | Dawn Wall | Drum and Bass |
+| Trouble VIP | Murdock | Drum and Bass |
+| Immortal | Metrik | Drum and Bass |
+| Take You Higher - VIP | Tsuki | Drum and Bass |
+| Gravity | Metrik | Drum and Bass |
+| Tormento | Automhate | Dubstep |
+| Silence 2 | Sibewest | EDM |
+
+---
+
 # Run du 2026-04-09 11:57 UTC
 
 ## Résumé
