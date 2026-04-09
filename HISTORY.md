@@ -1,3 +1,33 @@
+# Run du 2026-04-09 02:09 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Over & Done (feat. Pip Millett) | Chase & Status | Drum and Bass |
+| Delete | Chase & Status | Drum and Bass |
+| Strangers | Kenya Grace | Drum and Bass |
+| PARANOIA (48h) | Gianluca Modanese | Acoustique |
+| Lowkey (LDN Drift) [feat. Takura] | Hedex | Rap US |
+| Dinosaurs From Outer Space | Excision | Dubstep |
+| Codename: Reckless | Excision | Dubstep |
+| Black Ice | Subtronics | Dubstep |
+| Mon cœur épris | Dominique Barret | Classique |
+| One Of The Girls (with JENNIE, Lily Rose Depp) | The Weeknd | Pop |
+
+---
+
 # Run du 2026-04-08 23:37 UTC
 
 ## Résumé
