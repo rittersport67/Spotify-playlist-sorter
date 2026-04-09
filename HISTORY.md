@@ -1,3 +1,33 @@
+# Run du 2026-04-09 07:21 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Liquor & Cigarettes (feat. ArrDee) | Chase & Status | Drum and Bass |
+| Give It To Me - Full Vocal Mix | Matt Sassari | EDM |
+| Dogma - Original Mix | MUERTE | Rock |
+| Selecta (feat. Stefflon Don) | Chase & Status | Drum and Bass |
+| STORM THE CASTLE | LAYZ | Dubstep |
+| BASS FACE | Bear Grillz | EDM |
+| You Will Die | Vastive | Drum and Bass |
+| Nightmare | Vastive | Drum and Bass |
+| Gutter | Calcium | Dubstep |
+| Desire (with Sam Smith) - Sub Focus Remix | Calvin Harris | Drum and Bass |
+
+---
+
 # Run du 2026-04-09 05:08 UTC
 
 ## Résumé
