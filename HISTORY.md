@@ -1,3 +1,33 @@
+# Run du 2026-04-09 11:57 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| SUICIDE YEAR - airshade Remix | WEEDMANE | EDM |
+| Worm Army | Hans Zimmer | Classique |
+| PULL UP GHOST-CLAN - feat. 2 Chainz | Chief Keef | Rap US |
+| Trampoline - Jauz Remix | SHAED | EDM |
+| Lights Go Out (LOVRA Remix) | Jauz | EDM |
+| Memory Reboot | VØJ | EDM |
+| Fireball | Marshmello | EDM |
+| Wavey One | Bru-C | Drum and Bass |
+| Insomnia - Radio Edit | Faithless | EDM |
+| leavemealone | Fred again.. | EDM |
+
+---
+
 # Run du 2026-04-09 10:58 UTC
 
 ## Résumé
