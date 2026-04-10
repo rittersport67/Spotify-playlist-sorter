@@ -1,3 +1,33 @@
+# Run du 2026-04-10 21:36 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 1 |
+| Classifiés par LLM | 9 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| TEMPEST | INFEKT | Dubstep |
+| Starfall - VLCN Remix | ILLENIUM | Dubstep |
+| Bullet Rain - MAD DUBZ Remix | Calcium | Dubstep |
+| Take That! - MAD DUBZ Remix | INFEKT | Dubstep |
+| MONSTER | MAD DUBZ | Dubstep |
+| Spitfire | INFEKT | Dubstep |
+| RETRIBUTION | MARAUDA | EDM |
+| Never Come Back | Sullivan King | Dubstep |
+| MOIN! | HOL! | Dubstep |
+| Into Pieces (Wooli x Grabbitz Remix) | Subtronics | Dubstep |
+
+---
+
 # Run du 2026-04-10 20:35 UTC
 
 ## Résumé
