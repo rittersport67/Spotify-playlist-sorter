@@ -1,3 +1,32 @@
+# Run du 2026-04-10 02:29 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 9 |
+| Ignorés | 1 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Mädchen auf dem Pferd | Luca-Dante Spadafora | Hardstyle |
+| Muzika - Sefa Remix | Dr. Peacock | Hardstyle |
+| GO STUPID | Sickmode | Hardstyle |
+| Chase The Sun | Dimitri K | Hardstyle |
+| DDU-DU DDU-DU | BLACKPINK | K-Pop |
+| 紅蓮華 | LiSA | K-Pop |
+| Breathe | Culture Shock | Drum and Bass |
+| LOUDER | Krimer | Dubstep |
+| Gameplay | SPAG | Rap FR |
+
+---
+
 # Run du 2026-04-09 23:36 UTC
 
 ## Résumé
