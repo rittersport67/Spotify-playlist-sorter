@@ -1,3 +1,33 @@
+# Run du 2026-04-10 11:48 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Trigga Finga | Upgrade (UK) | Rap US |
+| Popular - Friction Remix | Friction | Drum and Bass |
+| how2fly | ISOxo | Dubstep |
+| Tonal Riddim | Automhate | Riddim |
+| HOL! | HOL! | Dubstep |
+| COUNTRY RIDDIM VIP | HOL! | Riddim |
+| ID - HOL! Remix | Monxx | Dubstep |
+| Hold You | ATMOS | EDM |
+| Never Give Up On You (with Elle Vee) | SLANDER | Dubstep |
+| (It Goes Like) Nanana | midnight Berlin | EDM |
+
+---
+
 # Run du 2026-04-10 10:53 UTC
 
 ## Résumé
