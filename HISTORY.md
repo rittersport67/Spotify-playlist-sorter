@@ -1,3 +1,33 @@
+# Run du 2026-04-10 05:24 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Espresso | Sabrina Carpenter | Pop |
+| Zeros (feat. Headie One) | cassö | Rap US |
+| DOPO LE 4 (feat. Bresh & Tedua) | Tony Effe | Rap US |
+| MIU MIU | Tony Effe | Rap US |
+| SESSO E SAMBA (feat. Gaia) | Tony Effe | Rap US |
+| Lose Control | Teddy Swims | R&B |
+| The Sound of Silence - CYRIL Remix | Disturbed | EDM |
+| 10:35 | Tiësto | EDM |
+| Hypnotic Cycle | Calcium | Dubstep |
+| It's That Time | Marlon Hoffstadt | EDM |
+
+---
+
 # Run du 2026-04-10 02:29 UTC
 
 ## Résumé
