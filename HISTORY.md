@@ -1,3 +1,33 @@
+# Run du 2026-04-10 14:47 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Tax Evasion | Kompany | Dubstep |
+| Metro - EDMMARO Remix | Nico Parisi | EDM |
+| Gathering Storm | Pentakill | Rock |
+| Call Your Name - Andromedik Remix | Alesso | Drum and Bass |
+| Howling - Andromedik Remix | Cartoon | Drum and Bass |
+| Make It | Murdock | Drum and Bass |
+| Ver92is Quo | Veridis Project | Rap FR |
+| Solo | Automhate | Dubstep |
+| If Tomorrow Never Happens | SLANDER | Dubstep |
+| Light | Andromedik | Drum and Bass |
+
+---
+
 # Run du 2026-04-10 13:08 UTC
 
 ## Résumé
