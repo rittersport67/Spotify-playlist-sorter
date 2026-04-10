@@ -1,3 +1,33 @@
+# Run du 2026-04-10 09:08 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Thicc Boi Mega VIP | Wooli | Dubstep |
+| WORLD DESTROY | LAYZ | Dubstep |
+| Save Yourself | Bear Grillz | EDM |
+| SEE YOU DROP | Ray Volpe | Dubstep |
+| Void - Gino Remix | A.M.C | Rap US |
+| SECONDS | REAPER | EDM |
+| The Beginning | Sullivan King | Dubstep |
+| SMACK TALK | ISOxo | EDM |
+| Rockstar | LISA | K-Pop |
+| L’AMOUR DE MA VIE [OVER NOW EXTENDED EDIT] | Billie Eilish | Pop |
+
+---
+
 # Run du 2026-04-10 07:26 UTC
 
 ## Résumé
