@@ -1,3 +1,32 @@
+# Run du 2026-04-11 19:34 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 9 |
+| Ignorés | 1 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Retro Shirt | Trettmann | Rap US |
+| Gameboy - Sped Up Version | KATSEYE | K-Pop |
+| ANTIFRAGILE | LE SSERAFIM | K-Pop |
+| Mediterranea | Irama | Pop |
+| Smack Yo' | Beltran | EDM |
+| Streetlife - feat. Takura | Chase & Status | Drum and Bass |
+| Paint The Town Blue (from the series Arcane League of Legends) | Arcane | Rap US |
+| No Broke Boys | Disco Lines | EDM |
+| Abracadabra | Lady Gaga | Pop |
+
+---
+
 # Run du 2026-04-11 18:43 UTC
 
 ## Résumé
