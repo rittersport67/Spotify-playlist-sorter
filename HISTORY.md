@@ -1,3 +1,33 @@
+# Run du 2026-04-11 17:30 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| (It Goes Like) Nanana - Edit | Peggy Gou | EDM |
+| Messy (From F1® The Movie) | ROSÉ | K-Pop |
+| 3am | ROSÉ | K-Pop |
+| Who Do You Love | The Chainsmokers | EDM |
+| OMG! (From F1® The Movie) | Tiësto | EDM |
+| 1-800 | bbno$ | EDM |
+| Dopamine | Wooli | Dubstep |
+| Chaos Theory | GRiZ | EDM |
+| Bring It | Kompany | Dubstep |
+| crystallized (feat. Inéz) | John Summit | EDM |
+
+---
+
 # Run du 2026-04-11 16:35 UTC
 
 ## Résumé
