@@ -1,3 +1,33 @@
+# Run du 2026-04-11 07:49 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| APT. | ROSÉ | K-Pop |
+| Whiplash | aespa | K-Pop |
+| Push The Tempo | Sub Focus | Drum and Bass |
+| Punk | Andy C | Drum and Bass |
+| KNOCKOUT - INFEKT Remix | HURTBOX | Dubstep |
+| KNOCKOUT - Aweminus Remix | HURTBOX | EDM |
+| hold my hand | Knock2 | EDM |
+| EAT UR HEART OUT | CRAY | Pop |
+| Combust | Ganja White Night | EDM |
+| Rise Up | Ganja White Night | EDM |
+
+---
+
 # Run du 2026-04-11 06:00 UTC
 
 ## Résumé
