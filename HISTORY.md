@@ -1,3 +1,33 @@
+# Run du 2026-04-11 16:35 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| GALA | XG | K-Pop |
+| Dang! (feat. Anderson .Paak) | Mac Miller | R&B |
+| No Faith in Brooklyn (feat. Jhameel) | Hoodie Allen | Rap US |
+| NUEVAYoL | Bad Bunny | Rap US |
+| AMARGURA | KAROL G | Pop |
+| La Bachata | Manuel Turizo | Pop |
+| LA CANCIÓN | J Balvin | Rap US |
+| Itchy Scratchy | Subtronics | Dubstep |
+| Dingus | Subtronics | Dubstep |
+| Drunken Sailor | The Irish Rovers | Acoustique |
+
+---
+
 # Run du 2026-04-11 15:32 UTC
 
 ## Résumé
