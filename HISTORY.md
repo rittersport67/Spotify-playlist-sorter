@@ -1,3 +1,33 @@
+# Run du 2026-04-11 08:41 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Limitless - Arcando Remix | Martin Garrix | Drum and Bass |
+| The Kill (Bury Me) | Thirty Seconds To Mars | Rock |
+| Ma Meilleure Ennemie (from the series Arcane League of Legends) | Arcane | EDM |
+| Heavy Is the Crown | Linkin Park | Rock |
+| toxic till the end | ROSÉ | K-Pop |
+| GIVE IT TO ME | $j | Dubstep |
+| Rapid Fire | Excision | Dubstep |
+| Drama | aespa | K-Pop |
+| Perfect Night | LE SSERAFIM | K-Pop |
+| UP - KARINA Solo | aespa | K-Pop |
+
+---
+
 # Run du 2026-04-11 07:49 UTC
 
 ## Résumé
