@@ -1,3 +1,33 @@
+# Run du 2026-04-11 12:56 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Miracle - VIP Mix | Sub Focus | Rap US |
+| Hypnotized (feat. Ellie Goulding) | Anyma | Pop |
+| All That Really Matters | ILLENIUM | Dubstep |
+| Eidolon Hex - Mad Dubz Remix | SVDDEN DEATH | Dubstep |
+| Creator | SVDDEN DEATH | Dubstep |
+| Shallow Land Burial - Hedex Remix | SVDDEN DEATH | Drum and Bass |
+| Suffocate | Three or Die | Rap US |
+| TRUST & TREAT | OLIVER GRIND | Rap FR |
+| do killers ring the doorbell? | Scrim | Rap US |
+| CHAOS - INFEKT Remix | MUST DIE! | Dubstep |
+
+---
+
 # Run du 2026-04-11 11:29 UTC
 
 ## Résumé
