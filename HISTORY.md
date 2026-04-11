@@ -1,3 +1,33 @@
+# Run du 2026-04-11 02:08 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| How We Roll | Disciple | Rock |
+| Play It Twice | INFEKT | Dubstep |
+| BRING IT | Bellorum | Rap FR |
+| FELT LIKE THIS | $j | Dubstep |
+| Give in to you | Rezz | EDM |
+| RUN DAT AGAIN | HURTBOX | EDM |
+| Got What I Got | Fox Stevenson | Drum and Bass |
+| Forget My Name | Kayzo | Dubstep |
+| Fallback | Upgrade (UK) | Drum and Bass |
+| Light In The Dark | Seven Lions | EDM |
+
+---
+
 # Run du 2026-04-10 23:34 UTC
 
 ## Résumé
