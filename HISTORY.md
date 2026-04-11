@@ -1,3 +1,33 @@
+# Run du 2026-04-11 14:38 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Killin' It Girl (feat. GloRilla) | j-hope | K-Pop |
+| Dirty Work | aespa | K-Pop |
+| Golden | HUNTR/X | K-Pop |
+| Animal | DJ DIESEL | EDM |
+| BRING THE PAIN | DJ DIESEL | Rap US |
+| Wish I Could Forget - Vastive Remix | SLANDER | Drum and Bass |
+| Firework Eyes | Excision | Dubstep |
+| So Cynical (Badum) | LE SSERAFIM | K-Pop |
+| 비닐장판위의 딱정벌레 | Insooni | K-Pop |
+| Knock Out - Remix | CHa05Dr01D | Dubstep |
+
+---
+
 # Run du 2026-04-11 13:56 UTC
 
 ## Résumé
