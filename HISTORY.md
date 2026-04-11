@@ -1,3 +1,33 @@
+# Run du 2026-04-11 09:39 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| feel U luv Me | Knock2 | EDM |
+| come aliv3 | RL Grime | EDM |
+| select@ | Knock2 | EDM |
+| SMACK TALK | ISOxo | EDM |
+| Rock Ur World | Knock2 | EDM |
+| Chop Suey! | System Of A Down | Rock |
+| Paradise (with Bipolar Sunshine) | DJ Snake | EDM |
+| Hijack | 1991 | Drum and Bass |
+| HOT | LE SSERAFIM | K-Pop |
+| MILLION PLACES | XG | K-Pop |
+
+---
+
 # Run du 2026-04-11 08:41 UTC
 
 ## Résumé
