@@ -1,3 +1,33 @@
+# Run du 2026-04-11 06:00 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 4 |
+| Classifiés par LLM | 6 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Rock n Roll | Leony | Rap US |
+| So Low | 49th & Main | EDM |
+| Delete Me | Zomboy | EDM |
+| Can't Slow Down | Kayzo | Rock |
+| レイリー | sanetii | Rap FR |
+| KNOCKOUT - INFEKT Remix | HURTBOX | Dubstep |
+| Mr. Brightside | Arcando | Drum and Bass |
+| Buss Back (feat. Hachi Day) | Arcando | Drum and Bass |
+| O.M.G | カライドスコープ | Rock |
+| Kamado Tanjirou no Uta (From "Demon Slayer: Kimetsu no Yaiba") [Full Version] | Akano | Jazz |
+
+---
+
 # Run du 2026-04-11 04:53 UTC
 
 ## Résumé
