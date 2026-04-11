@@ -1,3 +1,32 @@
+# Run du 2026-04-11 10:33 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 9 |
+| Ignorés | 1 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| PUNCH | SampliFire | Dubstep |
+| Entropy (feat. fknsyd) | Anyma | EDM |
+| RELOADED | DJ Snake | EDM |
+| Midnight | SVDDEN DEATH | Dubstep |
+| Click (Knock2 Remix) | ISOxo | EDM |
+| Beam (Knock2 Remix) | ISOxo | EDM |
+| SIGNAL | ISOKNOCK | EDM |
+| BLIND (RAVE MIX) | ISOKNOCK | Hardstyle |
+| THRASH (PARTY STARTER) | ISOKNOCK | EDM |
+
+---
+
 # Run du 2026-04-11 09:39 UTC
 
 ## Résumé
