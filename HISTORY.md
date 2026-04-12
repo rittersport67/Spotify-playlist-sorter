@@ -1,3 +1,30 @@
+# Run du 2026-04-12 17:33 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 7 |
+| Ajoutés aux playlists | 7 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 4 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| The Less I Know The Better | Mau P | EDM |
+| INFECTED | INFEKT | Dubstep |
+| I'm Not Alone - 2019 Edit | Calvin Harris | Rock |
+| SATA | John Summit | Drum and Bass |
+| palm of my hands - Odd Mob Remix | John Summit | EDM |
+| Victory | Modal Nodes | Dubstep |
+| Actin' Tough | Dean Turnley | Rap FR |
+
+---
+
 # Run du 2026-04-12 16:38 UTC
 
 ## Résumé
