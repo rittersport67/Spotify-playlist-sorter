@@ -1,3 +1,33 @@
+# Run du 2026-04-12 09:43 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 7 |
+| Classifiés par LLM | 3 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| In Mezzo ai Guai (feat. Neima Ezza) | Vale Pain | Rap US |
+| The First Time | Damiano David | Pop |
+| sexy bitch | gladde paling | Drum and Bass |
+| Bass Keeps Coming | Eskei83 | Drum and Bass |
+| F*ck Jump Up (feat. B Live) | Bou | Drum and Bass |
+| かたな (KATANA) | DéJà-Vu | Rock |
+| Badman | Malaa (Alter Ego) | Drum and Bass |
+| 666 - So Juice 667 Edit | Riot Shift | Hardstyle |
+| NEXT! | NCTS | R&B |
+| Getaway - Koven Remix | Tritonal | Dubstep |
+
+---
+
 # Run du 2026-04-12 08:46 UTC
 
 ## Résumé
