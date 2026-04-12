@@ -1,3 +1,32 @@
+# Run du 2026-04-12 07:13 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 9 |
+| Ignorés | 1 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| What's a Girl to Do in '25 | KI/KI | EDM |
+| On écrit sur les murs | Kids United | Pop |
+| Escapism. | RAYE | Rap US |
+| The Lost Soul Down - Slowed & Reverb | NBSPLV | EDM |
+| Transgender | Crystal Castles | EDM |
+| No Cock Like Horse Cock | Pepper Coyote | Acoustique |
+| 冠军情歌 (feat. 罗言) | Masiwei | Rap US |
+| Crush On You (feat. step.jad) | Masiwei | Rap US |
+| Обессутил | Заги Бок | Rap US |
+
+---
+
 # Run du 2026-04-12 05:22 UTC
 
 ## Résumé
