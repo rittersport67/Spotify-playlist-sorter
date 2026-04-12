@@ -1,3 +1,33 @@
+# Run du 2026-04-12 14:02 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 8 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Seen It All | John Summit | EDM |
+| Stan | Eminem | Rap US |
+| Taking Me Higher | ARTY | EDM |
+| Bloody Mary | Lady Gaga | Pop |
+| Mao's Red Sun | Shabl1 | Rap FR |
+| The Lost Soul Down | NBSPLV | EDM |
+| I'll Do It - Sped Up Version | Heidi Montag | Pop |
+| Ojitos Lindos | Bad Bunny | Rap US |
+| It Gets Better - Forever Mix | KETTAMA | EDM |
+| That's My Girl | Fifth Harmony | Pop |
+
+---
+
 # Run du 2026-04-12 12:59 UTC
 
 ## Résumé
