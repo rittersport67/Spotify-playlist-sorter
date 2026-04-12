@@ -1,3 +1,33 @@
+# Run du 2026-04-12 11:33 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 10 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Von dutch | Charli xcx | Pop |
+| 1-800 | bbno$ | EDM |
+| SOMETHING AIN'T RIGHT | XG | K-Pop |
+| Supernatural | NewJeans | K-Pop |
+| Chk Chk Boom | Stray Kids | K-Pop |
+| 1-800-hot-n-fun | LE SSERAFIM | K-Pop |
+| HOWLING | XG | K-Pop |
+| CHANEL | Tyla | Pop |
+| snowfall | Øneheart | EDM |
+| BURNING UP | MEOVV | K-Pop |
+
+---
+
 # Run du 2026-04-12 10:37 UTC
 
 ## Résumé
