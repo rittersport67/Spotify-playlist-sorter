@@ -1,3 +1,32 @@
+# Run du 2026-04-12 08:46 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 9 |
+| Ignorés | 1 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 5 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| All Good Things (Come To An End) | Nelly Furtado | Acoustique |
+| OUT OF MY MIND | Kai Wachi | Dubstep |
+| Turn The Lights Off | Kato | EDM |
+| In This Shirt | The Irrepressibles | Classique |
+| RIOT | HAMRO | Riddim |
+| Black Rover | VK Blanka | K-Pop |
+| Air | Andromedik | Drum and Bass |
+| Dirty | grandson | Rock |
+| Apocalypse | Revanth | Rap FR |
+
+---
+
 # Run du 2026-04-12 07:13 UTC
 
 ## Résumé
