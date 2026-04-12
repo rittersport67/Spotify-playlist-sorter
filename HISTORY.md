@@ -1,3 +1,33 @@
+# Run du 2026-04-12 15:35 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 3 |
+| Classifiés par LLM | 7 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| It's ok I'm ok | Tate McRae | Pop |
+| i'll find you | Holseek | Rap FR |
+| Titans | Excision | Dubstep |
+| HIGH KNEES | IVORY | Rock |
+| HIGH KNEES | IVORY | Rock |
+| Stateside + Zara Larsson | PinkPantheress | Pop |
+| Erika (German Soldier's Song) | German Folk Regiment | Acoustique |
+| QWENGDEM | MVRDA | Dubstep |
+| his name is | TYNAN | Dubstep |
+| Trip | John Summit | EDM |
+
+---
+
 # Run du 2026-04-12 14:02 UTC
 
 ## Résumé
