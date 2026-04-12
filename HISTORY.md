@@ -1,3 +1,33 @@
+# Run du 2026-04-12 02:30 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 6 |
+| Classifiés par LLM | 4 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Coco Elva Tia | Masiwei | Rap US |
+| NOW OR NEVER | Tkandz | Rap US |
+| Final Fantasy (with The Outlaw) | DJ Snake | EDM |
+| Tsunami (feat. Future & Travis Scott) | DJ Snake | Rap US |
+| In The Dark (with Stray Kids) | DJ Snake | EDM |
+| Synthetic World | MitroWave | EDM |
+| WHISPER | $atori Zoom | Rap US |
+| I'm So Done | Computer Kill | Rock |
+| Stuck In The Middle | Kkoki | Rap FR |
+| are you sure? | yuusef | Rap FR |
+
+---
+
 # Run du 2026-04-11 23:33 UTC
 
 ## Résumé
