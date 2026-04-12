@@ -1,3 +1,33 @@
+# Run du 2026-04-12 10:37 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 10 |
+| Ajoutés aux playlists | 10 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 9 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| That’s So True | Gracie Abrams | Pop |
+| São Paulo (feat. Anitta) | The Weeknd | R&B |
+| I Came I Saw I Conquered | tell me something | Rap FR |
+| CROOKED | G-DRAGON | K-Pop |
+| The Great Escape | BOYS LIKE GIRLS | Rock |
+| POWER | G-DRAGON | K-Pop |
+| SHEGUEY #8 - DANI ALVES | Gradur | Rap US |
+| Space Song | Beach House | Pop |
+| PAPARAZZI ARRIVE - English Ver. | A2O | Pop |
+| Party In The U.S.A. | Miley Cyrus | Pop |
+
+---
+
 # Run du 2026-04-12 09:43 UTC
 
 ## Résumé
