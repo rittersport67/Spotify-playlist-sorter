@@ -1,3 +1,18 @@
+# Run du 2026-04-26 02:38 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 0 |
+| Ajoutés aux playlists | 0 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+---
+
 # Run du 2026-04-25 23:37 UTC
 
 ## Résumé
