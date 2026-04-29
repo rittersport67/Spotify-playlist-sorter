@@ -1,3 +1,28 @@
+# Run du 2026-04-29 07:22 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 5 |
+| Ajoutés aux playlists | 5 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 5 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Pressure - Alesso Remix | Nadia Ali | EDM |
+| Sweet Disposition (Axwell & Dirty South Remix) | The Temper Trap | EDM |
+| Operate - The Chainsmokers Remix | ASTR | EDM |
+| Chase the Sun (Odd Mob Remix) | Planet Funk | EDM |
+| Symphony (feat. Zara Larsson) - CYA Remix | Clean Bandit | K-Pop |
+
+---
+
 # Run du 2026-04-29 04:28 UTC
 
 ## Résumé
