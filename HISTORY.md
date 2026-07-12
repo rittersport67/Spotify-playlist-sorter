@@ -1,3 +1,25 @@
+# Run du 2026-07-12 09:58 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 2 |
+| Ajoutés aux playlists | 2 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 1 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Somewhere I Belong | Linkin Park | Rock |
+| Disarm You (feat. Ilsey) | Kaskade | EDM |
+
+---
+
 # Run du 2026-07-11 09:44 UTC
 
 ## Résumé
