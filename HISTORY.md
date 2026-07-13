@@ -1,3 +1,25 @@
+# Run du 2026-07-13 11:21 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 2 |
+| Ajoutés aux playlists | 2 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 2 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Elevate - SOTA Remix | Sub Focus | Drum and Bass |
+| Gut Genug (mit Blumengarten & Shirin David) | KITSCHKRIEG | Rap US |
+
+---
+
 # Run du 2026-07-12 09:58 UTC
 
 ## Résumé
