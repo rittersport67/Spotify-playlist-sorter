@@ -1,3 +1,24 @@
+# Run du 2026-07-16 10:18 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 1 |
+| Ajoutés aux playlists | 1 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 0 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Kylian Mbappé Dictador | FIFA MIX | Rap FR |
+
+---
+
 # Run du 2026-07-15 10:09 UTC
 
 ## Résumé
