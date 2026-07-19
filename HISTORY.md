@@ -1,3 +1,25 @@
+# Run du 2026-07-19 09:58 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 2 |
+| Ajoutés aux playlists | 2 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 2 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| 내 입술... 따뜻한 커피처럼 | 샵 | K-Pop |
+| Cry | Cigarettes After Sex | Pop |
+
+---
+
 # Run du 2026-07-18 09:40 UTC
 
 ## Résumé
