@@ -1,3 +1,27 @@
+# Run du 2026-07-23 10:31 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 4 |
+| Ajoutés aux playlists | 4 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 2 |
+| Classifiés par LLM | 2 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| Sweet Nothing (feat. Florence Welch) | Calvin Harris | EDM |
+| The Amakna Plains | Guillaume Pladys | Classique |
+| Adrenaline | Jack Wall | EDM |
+| Adrenaline | Bruno Lacerda | Rap FR |
+
+---
+
 # Run du 2026-07-22 10:31 UTC
 
 ## Résumé
