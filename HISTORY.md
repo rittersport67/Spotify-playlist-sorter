@@ -1,3 +1,24 @@
+# Run du 2026-08-06 10:46 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 1 |
+| Ajoutés aux playlists | 1 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 1 |
+| Classifiés par LLM | 0 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| AEAO | Dynamicduo | K-Pop |
+
+---
+
 # Run du 2026-08-05 10:43 UTC
 
 ## Résumé
