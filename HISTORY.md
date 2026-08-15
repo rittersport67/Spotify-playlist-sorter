@@ -1,3 +1,25 @@
+# Run du 2026-08-15 08:37 UTC
+
+## Résumé
+
+| Métrique | Valeur |
+|----------|--------|
+| Titres traités | 2 |
+| Ajoutés aux playlists | 2 |
+| Ignorés | 0 |
+| Classifiés par Last.fm | 1 |
+| Classifiés par LLM | 1 |
+| Nouvelles playlists créées | 0 |
+
+## Détail des classifications
+
+| Titre | Artiste | Genre |
+|-------|---------|-------|
+| LEMONADE | aespa | K-Pop |
+| Lady amnesia | yes, mama ok? | Pop |
+
+---
+
 # Run du 2026-08-14 09:13 UTC
 
 ## Résumé
